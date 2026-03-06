@@ -45,101 +45,136 @@ const POLICIES_TEXT = `TERMOS DE USO – MEU PROVADOR VIRTUAL
 
 1. APRESENTAÇÃO
 O presente Termo de Uso regula o acesso e utilização do serviço denominado Meu Provador Virtual, disponibilizado por meio de aplicativos de mensagens, incluindo o WhatsApp, bem como por páginas web ou outras interfaces digitais associadas.
+
 O serviço consiste em uma ferramenta baseada em inteligência artificial que permite ao usuário visualizar virtualmente roupas, acessórios ou produtos aplicados sobre sua própria imagem.
+
 Ao utilizar o serviço, o usuário declara que leu, compreendeu e concorda integralmente com estes Termos de Uso. Caso não concorde com qualquer disposição aqui prevista, o usuário não deverá utilizar o serviço.
 
 2. IDENTIFICAÇÃO DO SERVIÇO
-O Meu Provador Virtual é uma solução digital que permite:
-• envio de fotografia do usuário;
-• envio de imagem de roupa ou produto;
-• geração de imagem simulada com aplicação virtual do produto; e
-• entrega do resultado ao usuário.
+O Meu Provador Virtual é uma solução digital que permite: envio de fotografia do usuário, envio de imagem de roupa ou produto, geração de imagem simulada com aplicação virtual do produto e entrega do resultado ao usuário.
 
-O serviço possui caráter meramente ilustrativo e não garante correspondência exata com o produto físico, considerando variações de tecido, iluminação, caimento e outros fatores.
+O serviço possui caráter meramente ilustrativo e experimental, não representando garantia exata de caimento, tamanho, textura ou aparência real do produto.
 
-3. CONDIÇÕES DE USO E ELEGIBILIDADE
-3.1. O usuário declara ter capacidade civil plena ou estar devidamente assistido/representado, conforme a legislação aplicável.
-3.2. É vedada a utilização do serviço para fins ilícitos, fraudulentos ou que violem direitos de terceiros.
-3.3. O serviço não se destina ao uso com imagens de moda infantil ou provador de roupas íntimas.
+3. CONDIÇÕES DE USO
+Para utilizar o serviço, o usuário declara possuir capacidade civil para aceitar estes termos, possuir direitos sobre a imagem enviada ou autorização para utilizá-la e não utilizar o serviço para finalidades ilegais.
 
-4. CADASTRO, ACESSO E RESPONSABILIDADES DO USUÁRIO
-4.1. O acesso ao serviço pode ocorrer sem cadastro formal, por meio de número de telefone e conversas em plataformas de mensagens.
-4.2. O usuário é responsável pela veracidade das informações fornecidas e pelas imagens enviadas.
-4.3. O usuário deve utilizar imagens de sua própria titularidade ou autorizadas pelo titular.
-4.4. O usuário reconhece que o conteúdo gerado pode variar conforme a qualidade e contexto das imagens fornecidas.
+O usuário concorda em fornecer apenas imagens verdadeiras e de sua própria autoria ou com autorização.
 
-5. LIMITAÇÕES DO SERVIÇO
-5.1. O Meu Provador Virtual não garante resultados perfeitos, sendo o resultado dependente de condições como iluminação, enquadramento, resolução e composição da foto.
-5.2. O serviço pode apresentar falhas, indisponibilidades temporárias ou alterações a qualquer momento.
-5.3. O usuário reconhece que o serviço é fornecido “como está” (as is), sem garantias expressas ou implícitas.
+4. REGRAS DE UTILIZAÇÃO
+É proibido utilizar o serviço para gerar conteúdo de natureza sexual ou pornográfica, gerar provador de roupas íntimas, gerar conteúdo envolvendo crianças ou menores de idade, produzir conteúdo ofensivo, discriminatório ou ilegal, manipular imagens de terceiros sem autorização ou utilizar o sistema para fins de fraude ou falsificação.
 
-6. PROPRIEDADE INTELECTUAL
-6.1. O nome Meu Provador Virtual, logotipos, layout, textos e demais elementos são protegidos por legislação de propriedade intelectual.
-6.2. É proibida a reprodução, distribuição, modificação ou uso comercial sem autorização expressa.
+Caso seja identificado uso indevido, o acesso poderá ser suspenso ou bloqueado imediatamente, sem aviso prévio.
 
-7. DIREITOS SOBRE IMAGENS E CONTEÚDO GERADO
-7.1. O usuário mantém os direitos sobre as imagens enviadas e sobre o conteúdo gerado a partir delas.
-7.2. O usuário concede autorização limitada para que o serviço processe as imagens estritamente para a finalidade de geração do provador virtual.
+5. USO DE IMAGEM
+Ao enviar uma fotografia, o usuário declara que possui autorização para uso da imagem, autoriza o processamento da imagem pelo sistema e compreende que a imagem será utilizada exclusivamente para geração do resultado solicitado.
 
-8. COMUNICAÇÕES E MENSAGENS
-8.1. O número de telefone utilizado pelo usuário poderá receber comunicações operacionais sobre o serviço e também conteúdos informativos e de marketing, observadas as disposições legais aplicáveis.
-8.2. O usuário poderá interromper o recebimento de mensagens de marketing a qualquer momento, respondendo “PARAR”, “STOP”, “SAIR” ou solicitando o descadastro por qualquer canal de atendimento.
+O Meu Provador Virtual não reivindica propriedade sobre a imagem do usuário.
 
-9. ATENDIMENTO E CONTATO
-Para dúvidas, solicitações ou reclamações, o usuário pode contatar:
-E-mail: meuprovadorvirtual@gmail.com
+6. LIMITAÇÕES TECNOLÓGICAS
+O Meu Provador Virtual utiliza sistemas de inteligência artificial que podem gerar resultados que não representem perfeitamente a realidade, apresentem pequenas alterações visuais ou variem conforme iluminação, pose ou qualidade da foto enviada.
 
-10. ALTERAÇÕES DOS TERMOS
-10.1. Estes Termos poderão ser atualizados a qualquer momento. A versão vigente estará disponível na página web do serviço.
-10.2. O uso continuado após alterações significa concordância com a nova versão.
+O serviço possui caráter demonstrativo e experimental.
 
-11. LEGISLAÇÃO APLICÁVEL E FORO
-11.1. Aplica-se a legislação da República Federativa do Brasil.
-11.2. Fica eleito o foro da comarca do domicílio do usuário, nos termos do Código de Defesa do Consumidor, para dirimir quaisquer controvérsias.
+7. RESPONSABILIDADE DO USUÁRIO
+O usuário é responsável por garantir que possui direitos sobre as imagens enviadas, não violar direitos de terceiros e não utilizar o sistema para atividades ilegais.
+
+O usuário assume total responsabilidade pelos conteúdos enviados ao sistema.
+
+8. PROPRIEDADE INTELECTUAL
+Todos os elementos do sistema, incluindo tecnologia, interface, software, fluxos de processamento, design da plataforma e identidade visual são protegidos por legislação de propriedade intelectual e direitos autorais.
+
+É proibida a reprodução, cópia ou exploração comercial sem autorização prévia.
+
+9. DISPONIBILIDADE DO SERVIÇO
+O Meu Provador Virtual poderá sofrer interrupções, passar por manutenção, ser atualizado ou modificado sem aviso prévio.
+
+Não há garantia de disponibilidade contínua do serviço.
+
+10. LIMITAÇÃO DE RESPONSABILIDADE
+O Meu Provador Virtual não se responsabiliza por decisões de compra baseadas na simulação gerada, diferenças entre imagem simulada e produto real ou uso indevido do serviço por terceiros.
+
+11. PROTEÇÃO DE DADOS PESSOAIS
+O tratamento de dados pessoais segue os princípios da Lei Geral de Proteção de Dados – LGPD (Lei nº 13.709/2018).
+
+Os dados tratados podem incluir número de telefone, imagens enviadas e registros de uso do serviço.
+
+12. COMUNICAÇÕES
+O usuário poderá receber comunicações relacionadas ao funcionamento da plataforma, atualizações do serviço, novidades ou conteúdos informativos relacionados ao aplicativo.
+
+O usuário poderá solicitar a interrupção dessas comunicações a qualquer momento.
+
+13. ALTERAÇÃO DOS TERMOS
+Estes Termos de Uso poderão ser atualizados a qualquer momento. A versão vigente será sempre a publicada oficialmente pela plataforma.
+
+14. LEGISLAÇÃO APLICÁVEL
+Estes Termos são regidos pelas leis da República Federativa do Brasil, incluindo a LGPD, Marco Civil da Internet, Código de Defesa do Consumidor e Lei de Direitos Autorais.
+
+15. CONTATO
+E-mail de contato: meuprovadorvirtual@gmail.com
+
 
 POLÍTICA DE PRIVACIDADE – MEU PROVADOR VIRTUAL
 Última atualização: Março de 2026
 
-1. OBJETIVO
-Esta Política descreve como o Meu Provador Virtual coleta, utiliza, armazena e compartilha dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).
+1. INTRODUÇÃO
+Esta Política de Privacidade descreve como o Meu Provador Virtual coleta, utiliza, armazena e protege os dados pessoais dos usuários em conformidade com a Lei Geral de Proteção de Dados (LGPD).
 
 2. DADOS COLETADOS
-Podemos coletar:
-• Dados de identificação e contato: número de telefone, nome (se disponível).
-• Imagens enviadas pelo usuário para processamento do provador virtual.
-• Dados técnicos: informações de dispositivo, registros de acesso e logs de uso.
+Podemos coletar número de telefone, fotografias enviadas pelos usuários, imagens de produtos enviadas para simulação, registros de interação com o sistema e dados técnicos como horário de acesso e registros de uso.
 
-3. FINALIDADES DO TRATAMENTO
-Utilizamos os dados para:
-• Prestar o serviço de provador virtual (processar imagens e entregar resultados).
-• Melhorar a experiência, desempenho e segurança do serviço.
-• Comunicações operacionais e, quando permitido, mensagens informativas e de marketing.
+3. FINALIDADE DO TRATAMENTO
+Os dados são utilizados para permitir o funcionamento do provador virtual, gerar imagens simuladas, melhorar o desempenho do sistema, garantir segurança e fornecer suporte ao usuário.
 
-4. BASES LEGAIS
-O tratamento ocorre com base em:
-• Execução de contrato/serviço solicitado pelo titular.
-• Legítimo interesse, quando aplicável (melhoria do serviço e prevenção a fraudes).
-• Consentimento, quando exigido por lei.
+4. PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
+O serviço utiliza tecnologias de inteligência artificial para processar imagens e gerar simulações visuais de roupas ou produtos aplicados sobre a fotografia do usuário.
 
-5. COMPARTILHAMENTO
-Os dados podem ser compartilhados com fornecedores de tecnologia e processamento (ex.: provedores de infraestrutura e IA), estritamente para viabilizar o serviço, mediante medidas de segurança e contratos.
-Não vendemos dados pessoais.
+5. NÃO UTILIZAÇÃO PARA TREINAMENTO DE IA
+As imagens enviadas pelos usuários não são utilizadas para treinamento de modelos de inteligência artificial ou construção de bases de dados comerciais.
 
-6. ARMAZENAMENTO E RETENÇÃO
-As imagens e dados são mantidos pelo tempo necessário para a finalidade do serviço e cumprimento de obrigações legais. Podemos aplicar políticas de exclusão e anonimização.
+6. COMPARTILHAMENTO DE DADOS
+Os dados podem ser processados por serviços tecnológicos necessários para o funcionamento da plataforma, incluindo provedores de infraestrutura, serviços de inteligência artificial e plataformas de comunicação.
 
-7. SEGURANÇA
-Adotamos medidas técnicas e administrativas para proteger dados contra acessos não autorizados, incidentes e vazamentos.
+7. SEGURANÇA DAS INFORMAÇÕES
+A plataforma adota medidas técnicas e administrativas para proteger os dados contra acesso não autorizado, perda, destruição ou uso indevido.
 
-8. DIREITOS DO TITULAR
-Nos termos da LGPD, o usuário pode solicitar: confirmação de tratamento, acesso, correção, anonimização, portabilidade, eliminação, informações sobre compartilhamento e revogação de consentimento.
+8. RETENÇÃO DOS DADOS
+Os dados são armazenados apenas pelo período necessário para cumprimento das finalidades do serviço ou conforme exigido por obrigações legais.
 
-9. COMO EXERCER SEUS DIREITOS
-O usuário pode contatar:
-E-mail: meuprovadorvirtual@gmail.com
+9. DIREITOS DOS TITULARES
+Nos termos da LGPD, o usuário poderá solicitar confirmação de tratamento de dados, acesso aos dados, correção de informações, anonimização ou exclusão dos dados pessoais.
 
-10. ALTERAÇÕES DESTA POLÍTICA
-Esta Política pode ser atualizada a qualquer momento. A versão vigente estará disponível na página web do serviço.
+10. CONTATO
+Para solicitações relacionadas a dados pessoais ou privacidade, entre em contato pelo e-mail:
+meuprovadorvirtual@gmail.com
+
+
+TERMO DE CONSENTIMENTO PARA USO DE IMAGEM E PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
+Última atualização: Março de 2026
+
+1. OBJETIVO DO TERMO
+Este Termo de Consentimento tem como objetivo informar e obter autorização do usuário para o envio e processamento de imagens pessoais no serviço Meu Provador Virtual.
+
+2. CONSENTIMENTO PARA ENVIO DE IMAGEM
+Ao utilizar o serviço, o usuário autoriza o envio de fotografias pessoais para processamento pela plataforma e declara possuir direitos sobre a imagem enviada.
+
+3. FINALIDADE DO USO DA IMAGEM
+A imagem enviada será utilizada exclusivamente para gerar simulações de roupas ou produtos sobre a fotografia do usuário e permitir a visualização de diferentes combinações de looks.
+
+4. PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
+Durante o uso do serviço, as imagens podem ser processadas por sistemas automatizados de inteligência artificial com o objetivo exclusivo de gerar a simulação solicitada.
+
+5. ARMAZENAMENTO DA FOTO BASE
+Com autorização do usuário, a plataforma poderá armazenar a foto base do usuário para facilitar novas simulações futuras.
+
+6. LIMITAÇÕES DA TECNOLOGIA
+As imagens geradas pela inteligência artificial possuem caráter ilustrativo e podem apresentar variações em relação ao produto real.
+
+7. DIREITOS DO USUÁRIO
+O usuário poderá solicitar exclusão da foto base armazenada ou revogação do consentimento a qualquer momento.
+
+8. CONTATO
+Para dúvidas ou solicitações relacionadas a este termo, entre em contato pelo e-mail:
+meuprovadorvirtual@gmail.com
 `;
 
 function runSelfTests() {
