@@ -235,7 +235,7 @@ function TopNav() {
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow"
-              style={{ background: COLORS.primary }}
+              style={{ background: COLORS.primary, color: COLORS.white }}
             >
               Testar Agora <MessageCircle className="h-4 w-4" />
             </a>
@@ -282,7 +282,7 @@ function Hero() {
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:shadow-md"
-              style={{ background: COLORS.primary }}
+              style={{ background: COLORS.primary, color: COLORS.white }}
             >
               Começar no WhatsApp
               <ArrowRight className="h-5 w-5" />
@@ -390,7 +390,7 @@ function Hero() {
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:shadow-md"
-                      style={{ background: COLORS.primary }}
+                      style={{ background: COLORS.primary, color: COLORS.white }}
                     >
                       Testar agora no WhatsApp
                       <MessageCircle className="h-5 w-5" />
@@ -625,7 +625,7 @@ function FinalCTA() {
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:shadow-md"
-                style={{ background: COLORS.primary }}
+                style={{ background: COLORS.primary, color: COLORS.white }}
               >
                 Testar no WhatsApp
                 <MessageCircle className="h-5 w-5" />
