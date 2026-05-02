@@ -23,18 +23,19 @@ const LOGO = {
 };
 
 const COLORS = {
-  primary: "#2563EB",
-  secondary: "#7C3AED",
-  dark: "#111827",
-  light: "#F9FAFB",
-  success: "#10B981",
+  primary: "#1C1C1C",
+  secondary: "#2A2A2A",
+  dark: "#1C1C1C",
+  graphite: "#2A2A2A",
+  gray: "#6B7280",
+  light: "#F5F5F4",
+  border: "#E7E5E4",
+  white: "#FFFFFF",
+  success: "#1C1C1C",
 };
 
 const TEXT_GRADIENT_STYLE: React.CSSProperties = {
-  background: `linear-gradient(90deg, ${COLORS.primary} 0%, ${COLORS.secondary} 65%, ${COLORS.primary} 100%)`,
-  WebkitBackgroundClip: "text",
-  backgroundClip: "text",
-  color: "transparent",
+  color: COLORS.primary,
 };
 
 const BRAND_FONT =
@@ -202,7 +203,7 @@ function TopNav() {
             <div
               className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full"
               style={{
-                background: `linear-gradient(135deg, ${COLORS.primary}, ${COLORS.secondary})`,
+                background: COLORS.primary,
               }}
             >
               <img
@@ -247,13 +248,13 @@ function TopNav() {
 
 function Hero() {
   return (
-    <section className="bg-white">
+    <section style={{ background: COLORS.light }}>
       <div className="mx-auto max-w-6xl px-5 pb-14 pt-16 sm:px-6 sm:pb-20 sm:pt-20">
         <div className="text-center">
           <motion.h1
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl"
+            className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
             style={{ color: COLORS.dark }}
           >
             Experimente antes <br />
@@ -265,7 +266,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.06 }}
             className="mx-auto mt-7 max-w-2xl text-base leading-relaxed sm:text-lg md:text-xl"
-            style={{ color: "rgba(17,24,39,0.72)" }}
+            style={{ color: "rgba(28,28,28,0.72)" }}
           >
             Veja como qualquer look fica em você em segundos, direto no seu WhatsApp.
           </motion.p>
@@ -313,7 +314,7 @@ function Hero() {
                       />
                     </div>
                   </div>
-                  <p className="mt-4 text-center text-sm" style={{ color: "rgba(17,24,39,0.65)" }}>
+                  <p className="mt-4 text-center text-sm" style={{ color: "rgba(28,28,28,0.65)" }}>
                     Demonstração do Provador Virtual
                   </p>
                 </div>
@@ -327,7 +328,7 @@ function Hero() {
                   </div>
 
                   <h3
-                    className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl"
+                    className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl"
                     style={{ color: COLORS.dark }}
                   >
                     Veja o processo acontecendo
@@ -337,7 +338,7 @@ function Hero() {
 
                   <p
                     className="mx-auto mt-5 max-w-xl text-base leading-relaxed sm:text-lg"
-                    style={{ color: "rgba(17,24,39,0.72)" }}
+                    style={{ color: "rgba(28,28,28,0.72)" }}
                   >
                     No vídeo ao lado você vê exatamente o que o cliente faz: envia a foto,
                     escolhe o look e recebe o resultado pronto — sem instalar app e sem criar conta.
@@ -364,7 +365,7 @@ function Hero() {
                       <div key={item.title} className="flex gap-4 text-left">
                         <div
                           className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                          style={{ background: "rgba(37,99,235,0.10)" }}
+                          style={{ background: "rgba(28,28,28,0.08)" }}
                         >
                           <item.icon className="h-6 w-6" style={{ color: COLORS.primary }} />
                         </div>
@@ -374,7 +375,7 @@ function Hero() {
                           </div>
                           <div
                             className="mt-1 text-sm leading-relaxed"
-                            style={{ color: "rgba(17,24,39,0.70)" }}
+                            style={{ color: "rgba(28,28,28,0.70)" }}
                           >
                             {item.desc}
                           </div>
@@ -394,7 +395,7 @@ function Hero() {
                       Testar agora no WhatsApp
                       <MessageCircle className="h-5 w-5" />
                     </a>
-                    <div className="text-xs" style={{ color: "rgba(17,24,39,0.55)" }}>
+                    <div className="text-xs" style={{ color: "rgba(28,28,28,0.55)" }}>
                       Resposta em segundos • Sem baixar nada
                     </div>
                   </div>
@@ -418,18 +419,18 @@ function ProcessSection() {
   ];
 
   return (
-    <section id="processo" className="bg-white">
+    <section id="processo" style={{ background: COLORS.white }}>
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
         <div className="text-center">
           <h2
-            className="text-4xl font-semibold tracking-tight sm:text-5xl"
+            className="text-4xl font-bold tracking-tight sm:text-5xl"
             style={{ color: COLORS.dark }}
           >
             Como funciona
           </h2>
           <p
             className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
-            style={{ color: "rgba(17,24,39,0.72)" }}
+            style={{ color: "rgba(28,28,28,0.72)" }}
           >
             3 passos simples. Você envia sua foto, envia o look e recebe o resultado.
           </p>
@@ -462,7 +463,7 @@ function ProcessSection() {
                   </div>
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-full"
-                    style={{ background: "rgba(37,99,235,0.10)" }}
+                    style={{ background: "rgba(28,28,28,0.08)" }}
                     aria-hidden
                   >
                     <step.icon className="h-5 w-5" style={{ color: COLORS.primary }} />
@@ -508,11 +509,11 @@ function Benefits() {
   ];
 
   return (
-    <section id="beneficios" className="bg-white">
+    <section id="beneficios" style={{ background: COLORS.light }}>
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
         <div className="text-center">
           <h2
-            className="text-4xl font-semibold tracking-tight sm:text-5xl"
+            className="text-4xl font-bold tracking-tight sm:text-5xl"
             style={{ color: COLORS.dark }}
           >
             Vantagens
@@ -527,7 +528,7 @@ function Benefits() {
               <span
                 className="ml-1 inline-flex items-center rounded-full px-2 py-0.5"
                 style={{
-                  background: `linear-gradient(135deg, ${COLORS.primary}, ${COLORS.secondary})`,
+                  background: COLORS.primary,
                   color: "white",
                 }}
               >
@@ -546,7 +547,7 @@ function Benefits() {
               <div
                 className="absolute left-0 top-0 h-full w-[6px]"
                 style={{
-                  background: `linear-gradient(180deg, ${COLORS.primary}, ${COLORS.secondary})`,
+                  background: COLORS.primary,
                 }}
                 aria-hidden
               />
@@ -555,7 +556,7 @@ function Benefits() {
                 <div
                   className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-1 text-xs font-semibold"
                   style={{
-                    background: "linear-gradient(135deg, rgba(37,99,235,0.14), rgba(124,58,237,0.12))",
+                    background: "linear-gradient(135deg, rgba(28,28,28,0.08), rgba(42,42,42,0.06))",
                     color: COLORS.dark,
                   }}
                 >
@@ -567,7 +568,7 @@ function Benefits() {
               <div className="flex items-center gap-3 pr-20">
                 <div
                   className="flex h-11 w-11 items-center justify-center rounded-full"
-                  style={{ background: "rgba(37,99,235,0.10)" }}
+                  style={{ background: "rgba(28,28,28,0.08)" }}
                 >
                   <item.icon className="h-6 w-6" style={{ color: COLORS.primary }} />
                 </div>
@@ -575,14 +576,14 @@ function Benefits() {
                   {item.title}
                 </h3>
               </div>
-              <p className="mt-4 leading-relaxed" style={{ color: "rgba(17,24,39,0.72)" }}>
+              <p className="mt-4 leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
                 {item.desc}
               </p>
 
               <div
                 className="mt-6 h-[3px] w-24 rounded-full"
                 style={{
-                  background: `linear-gradient(90deg, ${COLORS.primary}, ${COLORS.secondary})`,
+                  background: COLORS.primary,
                   opacity: 0.9,
                 }}
                 aria-hidden
@@ -597,24 +598,24 @@ function Benefits() {
 
 function FinalCTA() {
   return (
-    <section className="bg-white">
+    <section style={{ background: COLORS.light }}>
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
         <div
           className="overflow-hidden rounded-[32px] border border-zinc-200 bg-white shadow-[0_18px_60px_rgba(0,0,0,0.10)]"
           style={{
-            background: "linear-gradient(180deg, rgba(37,99,235,0.08), rgba(124,58,237,0.03))",
+            background: "linear-gradient(180deg, rgba(28,28,28,0.08), rgba(42,42,42,0.03))",
           }}
         >
           <div className="px-7 py-12 text-center sm:px-10 sm:py-14">
             <h2
-              className="text-4xl font-semibold tracking-tight sm:text-5xl"
+              className="text-4xl font-bold tracking-tight sm:text-5xl"
               style={{ color: COLORS.dark }}
             >
               Pronto para o futuro <br />da moda?
             </h2>
             <p
               className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
-              style={{ color: "rgba(17,24,39,0.72)" }}
+              style={{ color: "rgba(28,28,28,0.72)" }}
             >
               Experimente agora gratuitamente e veja a mágica acontecer direto no seu WhatsApp.
             </p>
@@ -639,11 +640,11 @@ function FinalCTA() {
 
 function PoliciesPage() {
   return (
-    <section className="bg-white">
+    <section style={{ background: COLORS.light }}>
       <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 sm:py-16">
         <div className="flex items-center justify-between gap-4">
           <h1
-            className="text-3xl font-semibold tracking-tight sm:text-4xl"
+            className="text-3xl font-bold tracking-tight sm:text-4xl"
             style={{ color: COLORS.dark }}
           >
             Política de Uso e Privacidade
@@ -657,19 +658,19 @@ function PoliciesPage() {
           </a>
         </div>
 
-        <p className="mt-4 text-sm" style={{ color: "rgba(17,24,39,0.65)" }}>
+        <p className="mt-4 text-sm" style={{ color: "rgba(28,28,28,0.65)" }}>
           Abaixo está o texto completo do documento.
         </p>
 
         <div className="mt-8 overflow-hidden rounded-[24px] border border-zinc-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
           <div
             className="border-b border-zinc-200 px-5 py-4 sm:px-7"
-            style={{ background: "linear-gradient(90deg, rgba(37,99,235,0.08), rgba(124,58,237,0.05))" }}
+            style={{ background: "linear-gradient(90deg, rgba(28,28,28,0.08), rgba(42,42,42,0.05))" }}
           >
             <div className="text-sm font-semibold" style={{ color: COLORS.dark }}>
               Documento oficial
             </div>
-            <div className="text-xs" style={{ color: "rgba(17,24,39,0.60)" }}>
+            <div className="text-xs" style={{ color: "rgba(28,28,28,0.60)" }}>
               Para dúvidas: meuprovadorvirtual@gmail.com
             </div>
           </div>
@@ -677,7 +678,7 @@ function PoliciesPage() {
           <div className="p-5 sm:p-7">
             <pre
               className="whitespace-pre-wrap text-sm leading-relaxed"
-              style={{ color: "rgba(17,24,39,0.78)", fontFamily: BRAND_FONT }}
+              style={{ color: "rgba(28,28,28,0.78)", fontFamily: BRAND_FONT }}
             >
               {POLICIES_TEXT}
             </pre>
@@ -697,7 +698,7 @@ function Footer() {
             <div
               className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full"
               style={{
-                background: `linear-gradient(135deg, ${COLORS.primary}, ${COLORS.secondary})`,
+                background: COLORS.primary,
               }}
             >
               <img src={LOGO.icon} alt="Meu Provador Virtual" className="h-6 w-6 object-contain" />
@@ -706,7 +707,7 @@ function Footer() {
               <span className="font-semibold" style={{ color: COLORS.dark }}>
                 Meu Provador Virtual
               </span>
-              <span className="text-xs" style={{ color: "rgba(17,24,39,0.55)" }}>
+              <span className="text-xs" style={{ color: "rgba(28,28,28,0.55)" }}>
                 meuprovadorvirtual@gmail.com
               </span>
             </div>
