@@ -708,7 +708,7 @@ function Footer() {
                 Meu Provador Virtual
               </span>
               <span className="text-xs" style={{ color: "rgba(28,28,28,0.55)" }}>
-                meuprovadorvirtual@gmail.com
+                contato@meuprovadorvirtual.com
               </span>
             </div>
           </div>
