@@ -14,11 +14,11 @@ body {
   margin: 0;
   min-width: 320px;
 
-  /* 🎨 CORES DA MARCA */
-  background: #F5F5F4; /* off-white */
-  color: #1C1C1C; /* preto suave */
+  /* mantém estilo original */
+  background: #111827;
+  color: #f9fafb;
 
-  /* ✍️ TIPOGRAFIA */
+  /* aplica Inter corretamente */
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   -webkit-font-smoothing: antialiased;
