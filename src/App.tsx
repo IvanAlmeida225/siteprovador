@@ -1,26 +1,22 @@
 import React, { useEffect, useMemo, useState } from "react";
 import {
   ArrowRight,
-  Check,
   CheckCircle2,
   Copy,
   ExternalLink,
-  Instagram,
   MessageCircle,
   Shirt,
   Sparkles,
   Store,
   User,
+  Users,
   Zap,
 } from "lucide-react";
 import { motion } from "motion/react";
 
-const BOT_WHATSAPP_NUMBER = "553598762499";
-const SITE_BASE_URL = "https://meuprovadorvirtual.com";
-const WA_LINK = `https://wa.me/${BOT_WHATSAPP_NUMBER}`;
-const MERCHANT_TEST_LINK = `https://wa.me/${BOT_WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Olá, sou lojista e quero testar o Meu Provador Virtual antes de divulgar para minhas clientes.",
-)}`;
+const WA_NUMBER = "553598762499";
+const SITE_URL = "https://meuprovadorvirtual.com";
+const WA_LINK = `https://wa.me/${WA_NUMBER}`;
 
 const EMBED = {
   suaFoto: "/imagem-1.png",
@@ -44,12 +40,12 @@ const COLORS = {
   success: "#1C1C1C",
 };
 
+const BRAND_FONT =
+  'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif';
+
 const TEXT_GRADIENT_STYLE: React.CSSProperties = {
   color: COLORS.primary,
 };
-
-const BRAND_FONT =
-  'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif';
 
 const POLICIES_TEXT = `TERMOS DE USO – MEU PROVADOR VIRTUAL
 Última atualização: Março de 2026
@@ -121,7 +117,7 @@ Estes Termos de Uso poderão ser atualizados a qualquer momento. A versão vigen
 Estes Termos são regidos pelas leis da República Federativa do Brasil, incluindo a LGPD, Marco Civil da Internet, Código de Defesa do Consumidor e Lei de Direitos Autorais.
 
 15. CONTATO
-E-mail de contato: meuprovadorvirtual@gmail.com
+E-mail de contato: contato@meuprovadorvirtual.com
 
 
 POLÍTICA DE PRIVACIDADE – MEU PROVADOR VIRTUAL
@@ -156,162 +152,119 @@ Nos termos da LGPD, o usuário poderá solicitar confirmação de tratamento de 
 
 10. CONTATO
 Para solicitações relacionadas a dados pessoais ou privacidade, entre em contato pelo e-mail:
-meuprovadorvirtual@gmail.com
-
-
-TERMO DE CONSENTIMENTO PARA USO DE IMAGEM E PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
-Última atualização: Março de 2026
-
-1. OBJETIVO DO TERMO
-Este Termo de Consentimento tem como objetivo informar e obter autorização do usuário para o envio e processamento de imagens pessoais no serviço Meu Provador Virtual.
-
-2. CONSENTIMENTO PARA ENVIO DE IMAGEM
-Ao utilizar o serviço, o usuário autoriza o envio de fotografias pessoais para processamento pela plataforma e declara possuir direitos sobre a imagem enviada.
-
-3. FINALIDADE DO USO DA IMAGEM
-A imagem enviada será utilizada exclusivamente para gerar simulações de roupas ou produtos sobre a fotografia do usuário e permitir a visualização de diferentes combinações de looks.
-
-4. PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
-Durante o uso do serviço, as imagens podem ser processadas por sistemas automatizados de inteligência artificial com o objetivo exclusivo de gerar a simulação solicitada.
-
-5. ARMAZENAMENTO DA FOTO BASE
-Com autorização do usuário, a plataforma poderá armazenar a foto base do usuário para facilitar novas simulações futuras.
-
-6. LIMITAÇÕES DA TECNOLOGIA
-As imagens geradas pela inteligência artificial possuem caráter ilustrativo e podem apresentar variações em relação ao produto real.
-
-7. DIREITOS DO USUÁRIO
-O usuário poderá solicitar exclusão da foto base armazenada ou revogação do consentimento a qualquer momento.
-
-8. CONTATO
-Para dúvidas ou solicitações relacionadas a este termo, entre em contato pelo e-mail:
-meuprovadorvirtual@gmail.com
+contato@meuprovadorvirtual.com
 `;
 
 function slugify(value: string) {
-  return String(value || "")
+  return value
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
+    .trim()
     .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 60);
+    .replace(/^-+|-+$/g, "");
 }
 
-function titleCaseFromSlug(slug: string) {
-  return String(slug || "")
-    .split("-")
-    .filter(Boolean)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
+function useRoute() {
+  const [route, setRoute] = useState(() => window.location.hash || "#/");
+
+  useEffect(() => {
+    const onHashChange = () => setRoute(window.location.hash || "#/");
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  const pathname = window.location.pathname || "/";
+
+  if (pathname.startsWith("/l/")) return { type: "store-link" as const, slug: pathname.replace("/l/", "") };
+  if (route === "#/criar-link") return { type: "create-link" as const };
+  if (route === "#/politicas") return { type: "policies" as const };
+  return { type: "home" as const };
 }
 
-function buildWhatsAppLink(message: string) {
-  return `https://wa.me/${BOT_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-}
-
-async function copyTextSafely(text: string) {
-  if (!text) return false;
-
-  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
-    try {
-      await navigator.clipboard.writeText(text);
-      return true;
-    } catch {
-      // fallback abaixo
-    }
+function buildWhatsMessage(shopName?: string, slug?: string) {
+  const cleanName = shopName?.trim();
+  if (cleanName) {
+    return `Oi, vim da loja ${cleanName} e quero testar um look gratuitamente. Código: ${slug || slugify(cleanName)}`;
   }
-
-  if (typeof document === "undefined") return false;
-
-  try {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    textarea.setAttribute("readonly", "");
-    textarea.style.position = "fixed";
-    textarea.style.top = "-9999px";
-    textarea.style.left = "-9999px";
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-    const copied = document.execCommand("copy");
-    document.body.removeChild(textarea);
-    return copied;
-  } catch {
-    return false;
-  }
+  return "Oi, quero testar um look no Meu Provador Virtual.";
 }
 
-function runSelfTests() {
-  try {
-    console.assert(typeof WA_LINK === "string" && WA_LINK.length > 0, "WA_LINK vazio");
-    console.assert(typeof LOGO.icon === "string" && LOGO.icon.startsWith("/"), "LOGO.icon inválido");
-    console.assert(EMBED.suaFoto.startsWith("/"), "EMBED.suaFoto inválida");
-    console.assert(EMBED.look.startsWith("/"), "EMBED.look inválida");
-    console.assert(EMBED.resultado.startsWith("/"), "EMBED.resultado inválida");
-    console.assert(/^#([0-9a-fA-F]{6})$/.test(COLORS.primary), "COLORS.primary inválida");
-    console.assert(/^#([0-9a-fA-F]{6})$/.test(COLORS.secondary), "COLORS.secondary inválida");
-    console.assert(slugify("Ana Modas") === "ana-modas", "slugify básico inválido");
-    console.assert(slugify("Boutique São João") === "boutique-sao-joao", "slugify com acento inválido");
-    console.assert(buildWhatsAppLink("teste").includes("wa.me"), "link WhatsApp inválido");
-  } catch {
-    // noop
-  }
+function buildWhatsLink(message: string) {
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-if (typeof window !== "undefined") runSelfTests();
+function BrandMark() {
+  return (
+    <div
+      className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full"
+      style={{ background: COLORS.primary }}
+    >
+      <img
+        src={LOGO.icon}
+        alt="Meu Provador Virtual"
+        className="h-6 w-6 object-contain"
+        onError={(e) => {
+          (e.currentTarget as HTMLImageElement).style.display = "none";
+        }}
+      />
+    </div>
+  );
+}
+
+function PrimaryButton({
+  href,
+  children,
+  target = "_self",
+}: {
+  href: string;
+  children: React.ReactNode;
+  target?: "_self" | "_blank";
+}) {
+  return (
+    <a
+      href={href}
+      target={target}
+      rel={target === "_blank" ? "noreferrer" : undefined}
+      className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+      style={{ background: COLORS.primary, color: COLORS.white }}
+    >
+      {children}
+    </a>
+  );
+}
 
 function TopNav() {
   return (
-    <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-200">
+    <div className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-zinc-200">
       <div className="mx-auto max-w-6xl px-5 py-3 sm:px-6">
         <div className="flex items-center justify-between gap-4">
-          <div className="flex min-w-[180px] items-center gap-3">
-            <div
-              className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full"
-              style={{
-                background: COLORS.primary,
-              }}
-            >
-              <img
-                src={LOGO.icon}
-                alt="Meu Provador Virtual"
-                className="h-6 w-6 object-contain"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
-                }}
-              />
-            </div>
+          <a href="#/" className="flex min-w-[190px] items-center gap-3">
+            <BrandMark />
             <span className="font-semibold" style={{ color: COLORS.dark }}>
               Meu Provador Virtual
             </span>
-          </div>
+          </a>
 
-          <nav className="hidden items-center gap-8 text-sm text-zinc-700 md:flex">
-            <a href="#lojistas" className="hover:text-zinc-900">
+          <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-700 md:flex">
+            <a href="#lojistas" className="hover:text-zinc-950">
               Para lojistas
             </a>
-            <a href="#processo" className="hover:text-zinc-900">
+            <a href="#processo" className="hover:text-zinc-950">
               Processo
             </a>
-            <a href="#beneficios" className="hover:text-zinc-900">
+            <a href="#beneficios" className="hover:text-zinc-950">
               Vantagens
             </a>
-            <a href="#/criar-link" className="hover:text-zinc-900">
+            <a href="#/criar-link" className="hover:text-zinc-950">
               Criar link
             </a>
           </nav>
 
-          <div className="flex min-w-[180px] justify-end">
-            <a
-              href={MERCHANT_TEST_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow"
-              style={{ background: COLORS.primary, color: COLORS.white }}
-            >
-              Testar o bot <MessageCircle className="h-4 w-4" />
-            </a>
+          <div className="flex min-w-[150px] justify-end">
+            <PrimaryButton href={WA_LINK} target="_blank">
+              Testar no Whats <MessageCircle className="h-4 w-4" />
+            </PrimaryButton>
           </div>
         </div>
       </div>
@@ -330,44 +283,30 @@ function Hero() {
             className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
             style={{ color: COLORS.dark }}
           >
-            Ofereça provador virtual <br />
-            <span style={TEXT_GRADIENT_STYLE}>para suas clientes.</span>
+            Experimente antes <br />
+            <span style={TEXT_GRADIENT_STYLE}>de comprar.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.06 }}
-            className="mx-auto mt-7 max-w-3xl text-base leading-relaxed sm:text-lg md:text-xl"
+            className="mx-auto mt-7 max-w-2xl text-base leading-relaxed sm:text-lg md:text-xl"
             style={{ color: "rgba(28,28,28,0.72)" }}
           >
-            Transforme sua loja em um canal de experiência visual: suas clientes testam looks pelo WhatsApp antes de comprar, e você usa o provador para gerar combinações e conteúdos para o Instagram com mais facilidade.
+            Veja como qualquer look fica em você em segundos, direto no seu WhatsApp.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.12 }}
-            className="mt-10 flex flex-col justify-center gap-3 sm:flex-row sm:items-center"
+            className="mt-10"
           >
-            <a
-              href={MERCHANT_TEST_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:shadow-md"
-              style={{ background: COLORS.primary, color: COLORS.white }}
-            >
-              Testar como lojista
+            <PrimaryButton href={WA_LINK} target="_blank">
+              Testar no Whats
               <MessageCircle className="h-5 w-5" />
-            </a>
-            <a
-              href="#/criar-link"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-7 py-3.5 text-base font-semibold shadow-sm transition hover:shadow-md"
-              style={{ color: COLORS.dark }}
-            >
-              Criar link da loja
-              <ArrowRight className="h-5 w-5" />
-            </a>
+            </PrimaryButton>
           </motion.div>
         </div>
 
@@ -378,210 +317,160 @@ function Hero() {
           transition={{ delay: 0.12 }}
           className="mt-12 sm:mt-14"
         >
-          <div className="mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 items-center justify-items-center gap-10 md:grid-cols-2 lg:gap-14">
-              <div className="flex w-full justify-center">
-                <div className="w-full max-w-md">
-                  <div className="overflow-hidden rounded-[28px] border border-zinc-200 bg-white shadow-[0_18px_60px_rgba(0,0,0,0.10)]">
-                    <div className="aspect-[964/2144] bg-zinc-50">
-                      <video
-                        src="/video-demo.mp4"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="metadata"
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
+          <div className="grid grid-cols-1 items-center justify-items-center gap-10 md:grid-cols-2 lg:gap-14">
+            <div className="flex w-full justify-center">
+              <div className="w-full max-w-md">
+                <div className="overflow-hidden rounded-[28px] border border-zinc-200 bg-white shadow-[0_18px_60px_rgba(0,0,0,0.10)]">
+                  <div className="aspect-[964/2144] bg-zinc-50">
+                    <video
+                      src="/video-demo.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      className="h-full w-full object-cover"
+                    />
                   </div>
-                  <p className="mt-4 text-center text-sm" style={{ color: "rgba(28,28,28,0.65)" }}>
-                    Demonstração do Provador Virtual
-                  </p>
                 </div>
+                <p className="mt-4 text-center text-sm" style={{ color: "rgba(28,28,28,0.65)" }}>
+                  Demonstração do Provador Virtual
+                </p>
               </div>
+            </div>
 
-              <div className="flex w-full justify-center">
-                <div className="max-w-xl text-center">
-                  <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-semibold shadow-sm">
-                    <span className="h-2 w-2 rounded-full" style={{ background: COLORS.success }} />
-                    <span style={{ color: COLORS.dark }}>Fluxo simples para vender por WhatsApp e Instagram</span>
-                  </div>
+            <div className="flex w-full justify-center">
+              <div className="max-w-xl text-center">
+                <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-semibold shadow-sm">
+                  <span className="h-2 w-2 rounded-full" style={{ background: COLORS.success }} />
+                  <span style={{ color: COLORS.dark }}>Fluxo direto pelo WhatsApp</span>
+                </div>
 
-                  <h3
-                    className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl"
-                    style={{ color: COLORS.dark }}
-                  >
-                    Sua cliente visualiza o look
-                    <br />
-                    <span style={TEXT_GRADIENT_STYLE}>antes de chamar sua loja</span>
-                  </h3>
+                <h3
+                  className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl"
+                  style={{ color: COLORS.dark }}
+                >
+                  Veja o processo acontecendo
+                  <br />
+                  <span style={TEXT_GRADIENT_STYLE}>em poucos segundos</span>
+                </h3>
 
-                  <p
-                    className="mx-auto mt-5 max-w-xl text-base leading-relaxed sm:text-lg"
-                    style={{ color: "rgba(28,28,28,0.72)" }}
-                  >
-                    No vídeo ao lado você vê o fluxo do provador: a cliente envia a foto, escolhe o look e recebe uma visualização. Para a loja, isso vira uma experiência de captação, atendimento e conteúdo visual.
-                  </p>
+                <p
+                  className="mx-auto mt-5 max-w-xl text-base leading-relaxed sm:text-lg"
+                  style={{ color: "rgba(28,28,28,0.72)" }}
+                >
+                  A cliente envia a foto, escolhe o look e recebe uma simulação visual pronta, sem
+                  instalar aplicativo e sem criar conta.
+                </p>
 
-                  <div className="mx-auto mt-7 max-w-xl space-y-4">
-                    {[
-                      {
-                        icon: Store,
-                        title: "1) Teste antes de divulgar",
-                        desc: "O lojista pode testar o bot primeiro e entender a experiência antes de compartilhar com clientes.",
-                      },
-                      {
-                        icon: Shirt,
-                        title: "2) Divulgue o look da loja",
-                        desc: "Envie produtos, vestidos, conjuntos ou combinações para a cliente visualizar no próprio corpo.",
-                      },
-                      {
-                        icon: Instagram,
-                        title: "3) Gere ideias para Instagram",
-                        desc: "Use o provador para montar looks, combinações e referências visuais com mais agilidade para seus posts e stories.",
-                      },
-                    ].map((item) => (
-                      <div key={item.title} className="flex gap-4 text-left">
-                        <div
-                          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                          style={{ background: "rgba(28,28,28,0.08)" }}
-                        >
-                          <item.icon className="h-6 w-6" style={{ color: COLORS.primary }} />
+                <div className="mx-auto mt-7 max-w-xl space-y-4">
+                  {[
+                    {
+                      icon: User,
+                      title: "1) Envie sua foto",
+                      desc: "Foto de corpo inteiro, com boa iluminação e fundo simples.",
+                    },
+                    {
+                      icon: Shirt,
+                      title: "2) Envie o look",
+                      desc: "Pode ser foto do produto ou inspiração do look completo.",
+                    },
+                    {
+                      icon: Sparkles,
+                      title: "3) Receba o resultado",
+                      desc: "A IA aplica o look mantendo sua pose e o cenário original.",
+                    },
+                  ].map((item) => (
+                    <div key={item.title} className="flex gap-4 text-left">
+                      <div
+                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
+                        style={{ background: "rgba(28,28,28,0.08)" }}
+                      >
+                        <item.icon className="h-6 w-6" style={{ color: COLORS.primary }} />
+                      </div>
+                      <div>
+                        <div className="font-semibold" style={{ color: COLORS.dark }}>
+                          {item.title}
                         </div>
-                        <div>
-                          <div className="font-semibold" style={{ color: COLORS.dark }}>
-                            {item.title}
-                          </div>
-                          <div
-                            className="mt-1 text-sm leading-relaxed"
-                            style={{ color: "rgba(28,28,28,0.70)" }}
-                          >
-                            {item.desc}
-                          </div>
+                        <div className="mt-1 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.70)" }}>
+                          {item.desc}
                         </div>
                       </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
-                    <a
-                      href={MERCHANT_TEST_LINK}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:shadow-md"
-                      style={{ background: COLORS.primary, color: COLORS.white }}
-                    >
-                      Testar o bot agora
-                      <MessageCircle className="h-5 w-5" />
-                    </a>
-                    <div className="text-xs" style={{ color: "rgba(28,28,28,0.55)" }}>
-                      Sem baixar app • Experiência pelo WhatsApp
                     </div>
+                  ))}
+                </div>
+
+                <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
+                  <PrimaryButton href={WA_LINK} target="_blank">
+                    Testar no Whats
+                    <MessageCircle className="h-5 w-5" />
+                  </PrimaryButton>
+                  <div className="text-xs" style={{ color: "rgba(28,28,28,0.55)" }}>
+                    Teste gratuito • Sem baixar nada
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
-
-        <div className="mt-16 sm:mt-20" />
       </div>
     </section>
   );
 }
 
-function MerchantStrategySection() {
-  const cards = [
-    {
-      icon: Store,
-      title: "Canal de distribuição para sua loja",
-      desc: "Crie um link da loja e envie para clientes que compram pelo Instagram ou WhatsApp. A experiência ajuda a transformar curiosidade em conversa de compra.",
-    },
-    {
-      icon: MessageCircle,
-      title: "Teste o bot antes de divulgar",
-      desc: "A loja pode testar o fluxo primeiro, entender como funciona e só depois compartilhar com clientes reais.",
-    },
-    {
-      icon: Instagram,
-      title: "Apoio para looks de Instagram",
-      desc: "Além de atender clientes, o lojista pode usar o provador para gerar ideias de combinações, looks e referências visuais para posts, stories e campanhas.",
-    },
-  ];
-
+function ShopkeeperSection() {
   return (
     <section id="lojistas" style={{ background: COLORS.white }}>
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
-        <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-semibold shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-xs font-semibold shadow-sm">
               <Store className="h-4 w-4" style={{ color: COLORS.primary }} />
-              <span style={{ color: COLORS.dark }}>Para lojistas de moda</span>
+              <span style={{ color: COLORS.dark }}>Para lojistas</span>
             </div>
-            <h2
-              className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl"
-              style={{ color: COLORS.dark }}
-            >
-              Uma ferramenta para vender melhor, não apenas uma IA.
+
+            <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
+              Sua cliente visualiza o look antes de comprar.
             </h2>
-            <p
-              className="mt-6 text-base leading-relaxed sm:text-lg"
-              style={{ color: "rgba(28,28,28,0.72)" }}
-            >
-              O Meu Provador Virtual ajuda lojas que vendem moda pelo Instagram e WhatsApp a oferecer uma experiência visual para suas clientes. A proposta não é medir tamanho, mas permitir que a cliente visualize o look, reduza dúvidas e avance na decisão de compra.
+
+            <p className="mt-6 text-base leading-relaxed sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
+              Gere um link exclusivo da sua loja e envie para suas clientes. Ao abrir o link, ela
+              tem direito a testar gratuitamente o Meu Provador Virtual e chega no WhatsApp com o
+              código da sua loja na mensagem.
             </p>
+
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={MERCHANT_TEST_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:shadow-md"
-                style={{ background: COLORS.primary, color: COLORS.white }}
-              >
-                Testar como lojista
-                <MessageCircle className="h-5 w-5" />
-              </a>
-              <a
-                href="#/criar-link"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-7 py-3.5 text-base font-semibold shadow-sm transition hover:shadow-md"
-                style={{ color: COLORS.dark }}
-              >
+              <PrimaryButton href="#/criar-link">
                 Criar link da loja
                 <ArrowRight className="h-5 w-5" />
+              </PrimaryButton>
+              <a
+                href="#beneficios"
+                className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-zinc-50"
+                style={{ color: COLORS.dark }}
+              >
+                Ver vantagens
               </a>
             </div>
           </div>
 
-          <div className="grid gap-4">
-            {cards.map((card) => (
-              <div
-                key={card.title}
-                className="relative overflow-hidden rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
-              >
-                <div
-                  className="absolute left-0 top-0 h-full w-[6px]"
-                  style={{ background: COLORS.primary }}
-                  aria-hidden
-                />
-                <div className="flex gap-4">
-                  <div
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
-                    style={{ background: "rgba(28,28,28,0.08)" }}
-                  >
-                    <card.icon className="h-6 w-6" style={{ color: COLORS.primary }} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold" style={{ color: COLORS.dark }}>
-                      {card.title}
-                    </h3>
-                    <p className="mt-2 leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-                      {card.desc}
-                    </p>
-                  </div>
-                </div>
+          <div className="rounded-[32px] border border-zinc-200 bg-white p-6 shadow-[0_18px_60px_rgba(0,0,0,0.08)]">
+            <div className="rounded-[24px] border border-zinc-200 p-6" style={{ background: COLORS.light }}>
+              <div className="text-sm font-semibold" style={{ color: COLORS.gray }}>
+                Link exclusivo da loja
               </div>
-            ))}
+              <div className="mt-2 break-all text-xl font-bold" style={{ color: COLORS.dark }}>
+                {SITE_URL}/l/ana-modas
+              </div>
+              <div className="mt-5 rounded-[18px] bg-white p-5">
+                <div className="text-sm font-semibold" style={{ color: COLORS.dark }}>
+                  Mensagem enviada pelo WhatsApp:
+                </div>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
+                  Oi, vim da loja Ana Modas e quero testar um look gratuitamente. Código: ana-modas
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -591,26 +480,20 @@ function MerchantStrategySection() {
 
 function ProcessSection() {
   const steps = [
-    { id: "01", title: "Foto da cliente", img: EMBED.suaFoto, icon: User },
-    { id: "02", title: "Look da loja", img: EMBED.look, icon: Shirt },
-    { id: "03", title: "Visualização final", img: EMBED.resultado, icon: Sparkles },
+    { id: "01", title: "Sua Foto", img: EMBED.suaFoto, icon: User },
+    { id: "02", title: "O Look", img: EMBED.look, icon: Shirt },
+    { id: "03", title: "Resultado", img: EMBED.resultado, icon: Sparkles },
   ];
 
   return (
     <section id="processo" style={{ background: COLORS.white }}>
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
         <div className="text-center">
-          <h2
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
-            style={{ color: COLORS.dark }}
-          >
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
             Como funciona
           </h2>
-          <p
-            className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
-            style={{ color: "rgba(28,28,28,0.72)" }}
-          >
-            A loja divulga o provador, a cliente envia a foto, escolhe o look e recebe uma visualização para decidir com mais segurança.
+          <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
+            3 passos simples. Você envia sua foto, envia o look e recebe o resultado.
           </p>
         </div>
 
@@ -637,10 +520,12 @@ function ProcessSection() {
                 <div className="flex items-center justify-between p-5 sm:p-6">
                   <div>
                     <div className="font-mono text-xs text-zinc-500">{step.id}</div>
-                    <div className="mt-1 text-xl font-semibold text-zinc-950">{step.title}</div>
+                    <div className="mt-1 text-xl font-semibold" style={{ color: COLORS.dark }}>
+                      {step.title}
+                    </div>
                   </div>
                   <div
-                    className="flex h-10 w-10 items-center justify-center rounded-full"
+                    className="flex h-11 w-11 items-center justify-center rounded-full"
                     style={{ background: "rgba(28,28,28,0.08)" }}
                     aria-hidden
                   >
@@ -654,12 +539,12 @@ function ProcessSection() {
 
         <div className="mt-12 text-center">
           <a
-            href={MERCHANT_TEST_LINK}
+            href={WA_LINK}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-700 hover:text-zinc-950"
           >
-            Testar como lojista <ArrowRight className="h-4 w-4" />
+            Testar no Whats <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </div>
@@ -671,18 +556,33 @@ function Benefits() {
   const items = [
     {
       icon: Zap,
-      title: "Experiência rápida",
-      desc: "A cliente visualiza o look em poucos passos, sem instalar aplicativo ou criar conta.",
+      title: "Atendimento em escala",
+      desc: "A loja pode atender dezenas de clientes ao mesmo tempo pelo WhatsApp, sem fila e sem limitar a experiência ao espaço físico.",
     },
     {
       icon: CheckCircle2,
-      title: "Mais segurança na decisão",
-      desc: "A proposta é ajudar a cliente a visualizar estilo, combinação e aparência geral antes de comprar.",
+      title: "Menos dependência do provador",
+      desc: "A cliente consegue visualizar o look antes de comprar, mesmo quando está comprando pelo Instagram ou WhatsApp.",
     },
     {
-      icon: Instagram,
-      title: "Conteúdo para Instagram",
-      desc: "A loja também pode usar o provador para criar ideias de looks, combinações e campanhas visuais com mais facilidade.",
+      icon: Users,
+      title: "Teste gratuito para a cliente",
+      desc: "O link da loja leva a cliente para uma experiência gratuita, facilitando a primeira interação e reduzindo a dúvida antes da compra.",
+    },
+    {
+      icon: MessageCircle,
+      title: "Direto no WhatsApp",
+      desc: "A cliente não precisa baixar aplicativo nem criar conta. O fluxo acontece no canal onde a venda já acontece.",
+    },
+    {
+      icon: Store,
+      title: "Sem custo de estrutura física",
+      desc: "O lojista não precisa depender de provador, troca de roupa ou espaço físico para demonstrar visualmente diferentes looks.",
+    },
+    {
+      icon: Sparkles,
+      title: "Mais segurança na decisão",
+      desc: "A simulação ajuda a transformar dúvida em intenção de compra, mostrando o visual do look aplicado à cliente.",
     },
   ];
 
@@ -690,62 +590,25 @@ function Benefits() {
     <section id="beneficios" style={{ background: COLORS.light }}>
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
         <div className="text-center">
-          <h2
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
-            style={{ color: COLORS.dark }}
-          >
-            Vantagens para lojistas
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
+            Vantagens para o lojista
           </h2>
-          <div className="mt-4 flex justify-center">
-            <div
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-xs font-semibold shadow-sm"
-              style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.06)" }}
-            >
-              <span className="h-2.5 w-2.5 rounded-full" style={{ background: COLORS.success }} />
-              <span style={{ color: COLORS.dark }}>Distribuição, atendimento e conteúdo</span>
-              <span
-                className="ml-1 inline-flex items-center rounded-full px-2 py-0.5"
-                style={{
-                  background: COLORS.primary,
-                  color: "white",
-                }}
-              >
-                Destaque
-              </span>
-            </div>
-          </div>
+          <p className="mx-auto mt-5 max-w-2xl text-base sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
+            Uma forma simples de demonstrar looks, atender mais pessoas e reduzir barreiras na compra online.
+          </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-3 sm:mt-14">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 sm:mt-14">
           {items.map((item) => (
             <div
               key={item.title}
               className="relative overflow-hidden rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_8px_30px_rgba(0,0,0,0.06)] sm:p-7"
             >
-              <div
-                className="absolute left-0 top-0 h-full w-[6px]"
-                style={{
-                  background: COLORS.primary,
-                }}
-                aria-hidden
-              />
+              <div className="absolute left-0 top-0 h-full w-[6px]" style={{ background: COLORS.primary }} aria-hidden />
 
-              <div className="absolute right-5 top-5">
+              <div className="flex items-center gap-3">
                 <div
-                  className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-1 text-xs font-semibold"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(28,28,28,0.08), rgba(42,42,42,0.06))",
-                    color: COLORS.dark,
-                  }}
-                >
-                  <Sparkles className="h-4 w-4" style={{ color: COLORS.secondary }} />
-                  <span>Vantagem</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 pr-20">
-                <div
-                  className="flex h-11 w-11 items-center justify-center rounded-full"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
                   style={{ background: "rgba(28,28,28,0.08)" }}
                 >
                   <item.icon className="h-6 w-6" style={{ color: COLORS.primary }} />
@@ -757,15 +620,6 @@ function Benefits() {
               <p className="mt-4 leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
                 {item.desc}
               </p>
-
-              <div
-                className="mt-6 h-[3px] w-24 rounded-full"
-                style={{
-                  background: COLORS.primary,
-                  opacity: 0.9,
-                }}
-                aria-hidden
-              />
             </div>
           ))}
         </div>
@@ -780,42 +634,20 @@ function FinalCTA() {
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
         <div
           className="overflow-hidden rounded-[32px] border border-zinc-200 bg-white shadow-[0_18px_60px_rgba(0,0,0,0.10)]"
-          style={{
-            background: "linear-gradient(180deg, rgba(28,28,28,0.08), rgba(42,42,42,0.03))",
-          }}
+          style={{ background: "linear-gradient(180deg, rgba(28,28,28,0.08), rgba(42,42,42,0.03))" }}
         >
           <div className="px-7 py-12 text-center sm:px-10 sm:py-14">
-            <h2
-              className="text-4xl font-bold tracking-tight sm:text-5xl"
-              style={{ color: COLORS.dark }}
-            >
-              Comece pela sua loja. <br />Depois divulgue para suas clientes.
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
+              Comece pelo WhatsApp
             </h2>
-            <p
-              className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
-              style={{ color: "rgba(28,28,28,0.72)" }}
-            >
-              Teste o bot, gere o link da loja e use o provador como apoio para atendimento, campanhas e criação de looks para Instagram.
+            <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
+              Teste gratuitamente e veja como o Meu Provador Virtual ajuda a visualizar looks antes da compra.
             </p>
-            <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
-              <a
-                href={MERCHANT_TEST_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:shadow-md"
-                style={{ background: COLORS.primary, color: COLORS.white }}
-              >
-                Testar o bot
+            <div className="mt-10">
+              <PrimaryButton href={WA_LINK} target="_blank">
+                Testar no Whats
                 <MessageCircle className="h-5 w-5" />
-              </a>
-              <a
-                href="#/criar-link"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-7 py-3.5 text-base font-semibold shadow-sm transition hover:shadow-md"
-                style={{ color: COLORS.dark }}
-              >
-                Criar link da loja
-                <ArrowRight className="h-5 w-5" />
-              </a>
+              </PrimaryButton>
             </div>
           </div>
         </div>
@@ -824,39 +656,36 @@ function FinalCTA() {
   );
 }
 
-function CreateStoreLinkPage() {
-  const [storeName, setStoreName] = useState("");
-  const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "manual">("idle");
+function CreateLinkPage() {
+  const [shopName, setShopName] = useState("");
+  const [copied, setCopied] = useState(false);
 
-  const storeCode = useMemo(() => slugify(storeName), [storeName]);
-  const displayStoreName = useMemo(() => {
-    const trimmed = storeName.trim();
-    return trimmed || titleCaseFromSlug(storeCode) || "sua loja";
-  }, [storeName, storeCode]);
+  const slug = useMemo(() => slugify(shopName), [shopName]);
+  const generatedLink = slug ? `${SITE_URL}/l/${slug}` : "";
+  const message = shopName.trim() ? buildWhatsMessage(shopName, slug) : "";
 
-  const storeLandingLink = storeCode ? `${SITE_BASE_URL}/l/${storeCode}` : "";
-  const whatsappMessage = storeCode
-    ? `Oi, vim da loja ${displayStoreName} e quero testar um look. Código: ${storeCode}`
-    : "";
-  const directWhatsappLink = storeCode ? buildWhatsAppLink(whatsappMessage) : "";
-
-  async function handleCopy() {
-    if (!storeLandingLink) return;
-    const copied = await copyTextSafely(storeLandingLink);
-    setCopyStatus(copied ? "copied" : "manual");
-    window.setTimeout(() => setCopyStatus("idle"), copied ? 1800 : 4000);
+  async function copyLink() {
+    if (!generatedLink) return;
+    await navigator.clipboard.writeText(generatedLink);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1800);
   }
 
   return (
-    <section style={{ background: COLORS.light }}>
+    <section className="flex-1" style={{ background: COLORS.light }}>
       <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 sm:py-16">
-        <div className="flex items-center justify-between gap-4">
-          <h1
-            className="text-3xl font-bold tracking-tight sm:text-4xl"
-            style={{ color: COLORS.dark }}
-          >
-            Criar link da loja
-          </h1>
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: COLORS.dark }}>
+              Criar link da loja
+            </h1>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
+              Digite apenas o nome da loja para gerar um link compartilhável. Quando a cliente abrir
+              o link, ela será direcionada ao WhatsApp com o código da loja na mensagem e poderá
+              testar gratuitamente.
+            </p>
+          </div>
+
           <a
             href="#/"
             className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold transition hover:bg-zinc-50"
@@ -866,72 +695,89 @@ function CreateStoreLinkPage() {
           </a>
         </div>
 
-        <p className="mt-4 text-base leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-          Digite apenas o nome da loja para gerar um link compartilhável. Quando a cliente abrir o link, ela será direcionada para o bot com o código da loja na mensagem.
-        </p>
-
-        <div className="mt-8 overflow-hidden rounded-[28px] border border-zinc-200 bg-white p-5 shadow-[0_8px_30px_rgba(0,0,0,0.06)] sm:p-7">
-          <label htmlFor="storeName" className="text-sm font-semibold" style={{ color: COLORS.dark }}>
+        <div className="mt-9 rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_18px_60px_rgba(0,0,0,0.08)] sm:p-8">
+          <label className="text-sm font-semibold" style={{ color: COLORS.dark }}>
             Nome da loja
           </label>
+
           <input
-            id="storeName"
-            type="text"
-            value={storeName}
-            onChange={(event) => {
-              setStoreName(event.target.value);
-              setCopyStatus("idle");
-            }}
+            value={shopName}
+            onChange={(event) => setShopName(event.target.value)}
             placeholder="Ex.: Ana Modas"
-            className="mt-3 w-full rounded-full border border-zinc-200 bg-white px-5 py-3.5 text-base outline-none transition focus:border-zinc-900"
-            style={{ color: COLORS.dark, fontFamily: BRAND_FONT }}
+            className="mt-4 w-full rounded-full border border-zinc-200 bg-white px-5 py-4 text-base outline-none transition focus:border-zinc-400"
+            style={{ color: COLORS.dark }}
           />
 
-          {storeCode ? (
+          {generatedLink && (
             <div className="mt-7 rounded-[24px] border border-zinc-200 p-5" style={{ background: COLORS.light }}>
-              <p className="text-sm font-semibold" style={{ color: "rgba(28,28,28,0.62)" }}>
+              <div className="text-sm font-semibold" style={{ color: COLORS.gray }}>
                 Link gerado
-              </p>
-              <p className="mt-2 break-all text-lg font-bold" style={{ color: COLORS.dark }}>
-                {storeLandingLink}
-              </p>
+              </div>
+              <div className="mt-2 break-all text-xl font-bold" style={{ color: COLORS.dark }}>
+                {generatedLink}
+              </div>
 
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-5 flex flex-wrap gap-3">
                 <button
                   type="button"
-                  onClick={handleCopy}
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
+                  onClick={copyLink}
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
                   style={{ background: COLORS.primary, color: COLORS.white }}
                 >
-                  {copyStatus === "copied" ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                  {copyStatus === "copied" ? "Link copiado" : "Copiar link"}
+                  <Copy className="h-4 w-4" />
+                  {copied ? "Link copiado" : "Copiar link"}
                 </button>
-                <a
-                  href={directWhatsappLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold shadow-sm transition hover:shadow-md"
-                  style={{ color: COLORS.dark }}
-                >
-                  Testar no bot
-                  <ExternalLink className="h-4 w-4" />
-                </a>
               </div>
 
-              {copyStatus === "manual" ? (
-                <p className="mt-3 text-sm" style={{ color: "rgba(28,28,28,0.70)" }}>
-                  O navegador bloqueou a cópia automática. Selecione o link acima e copie manualmente.
+              <div className="mt-5 rounded-[18px] bg-white p-4">
+                <div className="text-sm font-semibold" style={{ color: COLORS.dark }}>
+                  Mensagem enviada pelo WhatsApp:
+                </div>
+                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
+                  {message}
                 </p>
-              ) : null}
-
-              <div className="mt-5 rounded-[20px] bg-white p-4 text-sm" style={{ color: "rgba(28,28,28,0.72)" }}>
-                <p className="font-semibold" style={{ color: COLORS.dark }}>
-                  Mensagem enviada ao bot:
-                </p>
-                <p className="mt-1">{whatsappMessage}</p>
               </div>
             </div>
-          ) : null}
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function StoreRedirectPage({ slug }: { slug: string }) {
+  const shopName = slug
+    .split("-")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+
+  const message = buildWhatsMessage(shopName, slug);
+  const link = buildWhatsLink(message);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      window.location.href = link;
+    }, 700);
+
+    return () => window.clearTimeout(timer);
+  }, [link]);
+
+  return (
+    <section className="flex flex-1 items-center justify-center px-5 py-16" style={{ background: COLORS.light }}>
+      <div className="max-w-xl rounded-[32px] border border-zinc-200 bg-white p-8 text-center shadow-[0_18px_60px_rgba(0,0,0,0.08)]">
+        <BrandMark />
+        <h1 className="mt-5 text-3xl font-bold tracking-tight" style={{ color: COLORS.dark }}>
+          Abrindo o WhatsApp
+        </h1>
+        <p className="mt-4 leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
+          Você será direcionada para testar gratuitamente um look pelo Meu Provador Virtual.
+        </p>
+        <div className="mt-7">
+          <PrimaryButton href={link} target="_blank">
+            Abrir WhatsApp
+            <ExternalLink className="h-5 w-5" />
+          </PrimaryButton>
         </div>
       </div>
     </section>
@@ -940,13 +786,10 @@ function CreateStoreLinkPage() {
 
 function PoliciesPage() {
   return (
-    <section style={{ background: COLORS.light }}>
+    <section className="flex-1" style={{ background: COLORS.light }}>
       <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 sm:py-16">
         <div className="flex items-center justify-between gap-4">
-          <h1
-            className="text-3xl font-bold tracking-tight sm:text-4xl"
-            style={{ color: COLORS.dark }}
-          >
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: COLORS.dark }}>
             Política de Uso e Privacidade
           </h1>
           <a
@@ -963,15 +806,12 @@ function PoliciesPage() {
         </p>
 
         <div className="mt-8 overflow-hidden rounded-[24px] border border-zinc-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
-          <div
-            className="border-b border-zinc-200 px-5 py-4 sm:px-7"
-            style={{ background: "linear-gradient(90deg, rgba(28,28,28,0.08), rgba(42,42,42,0.05))" }}
-          >
+          <div className="border-b border-zinc-200 px-5 py-4 sm:px-7" style={{ background: COLORS.light }}>
             <div className="text-sm font-semibold" style={{ color: COLORS.dark }}>
               Documento oficial
             </div>
             <div className="text-xs" style={{ color: "rgba(28,28,28,0.60)" }}>
-              Para dúvidas: meuprovadorvirtual@gmail.com
+              Para dúvidas: contato@meuprovadorvirtual.com
             </div>
           </div>
 
@@ -991,25 +831,22 @@ function PoliciesPage() {
 
 function Footer() {
   return (
-    <footer className="border-t border-zinc-200 bg-white">
+    <footer className="mt-auto border-t border-zinc-200 bg-white">
       <div className="mx-auto max-w-6xl px-5 py-10 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-3">
-            <div
-              className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full"
-              style={{
-                background: COLORS.primary,
-              }}
-            >
-              <img src={LOGO.icon} alt="Meu Provador Virtual" className="h-6 w-6 object-contain" />
-            </div>
+            <BrandMark />
             <div className="flex flex-col">
               <span className="font-semibold" style={{ color: COLORS.dark }}>
                 Meu Provador Virtual
               </span>
-              <span className="text-xs" style={{ color: "rgba(28,28,28,0.55)" }}>
+              <a
+                href="mailto:contato@meuprovadorvirtual.com"
+                className="text-xs"
+                style={{ color: "rgba(28,28,28,0.55)" }}
+              >
                 contato@meuprovadorvirtual.com
-              </span>
+              </a>
             </div>
           </div>
 
@@ -1039,12 +876,24 @@ function Footer() {
   );
 }
 
-type Route = "home" | "politicas" | "criarLink";
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <ShopkeeperSection />
+      <ProcessSection />
+      <Benefits />
+      <FinalCTA />
+    </>
+  );
+}
 
-function Site({ route }: { route: Route }) {
+export default function App() {
+  const route = useRoute();
+
   return (
     <div
-      className="min-h-screen"
+      className="flex min-h-screen flex-col"
       style={{
         background: COLORS.light,
         color: COLORS.dark,
@@ -1052,49 +901,13 @@ function Site({ route }: { route: Route }) {
       }}
     >
       <TopNav />
-      <main>
-        {route === "politicas" ? (
-          <PoliciesPage />
-        ) : route === "criarLink" ? (
-          <CreateStoreLinkPage />
-        ) : (
-          <>
-            <Hero />
-            <MerchantStrategySection />
-            <ProcessSection />
-            <Benefits />
-            <FinalCTA />
-          </>
-        )}
+      <main className="flex flex-1 flex-col">
+        {route.type === "policies" && <PoliciesPage />}
+        {route.type === "create-link" && <CreateLinkPage />}
+        {route.type === "store-link" && <StoreRedirectPage slug={route.slug} />}
+        {route.type === "home" && <HomePage />}
       </main>
       <Footer />
     </div>
   );
-}
-
-export default function App() {
-  const getRoute = (): Route => {
-    const hash = window.location.hash;
-    const pathname = window.location.pathname;
-
-    if (hash.startsWith("#/politicas")) return "politicas";
-    if (hash.startsWith("#/criar-link") || pathname.startsWith("/criar-link")) return "criarLink";
-    return "home";
-  };
-
-  const [route, setRoute] = useState<Route>(
-    typeof window === "undefined" ? "home" : getRoute(),
-  );
-
-  useEffect(() => {
-    const onRouteChange = () => setRoute(getRoute());
-    window.addEventListener("hashchange", onRouteChange);
-    window.addEventListener("popstate", onRouteChange);
-    return () => {
-      window.removeEventListener("hashchange", onRouteChange);
-      window.removeEventListener("popstate", onRouteChange);
-    };
-  }, []);
-
-  return <Site route={route} />;
 }
