@@ -422,55 +422,33 @@ function ShopkeeperSection() {
   return (
     <section id="lojistas" style={{ background: COLORS.white }}>
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
-        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-xs font-semibold shadow-sm">
-              <Store className="h-4 w-4" style={{ color: COLORS.primary }} />
-              <span style={{ color: COLORS.dark }}>Para lojistas</span>
-            </div>
-
-            <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
-              Sua cliente visualiza o look antes de comprar.
-            </h2>
-
-            <p className="mt-6 text-base leading-relaxed sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
-              Gere um link exclusivo da sua loja e envie para suas clientes. Ao abrir o link, ela
-              tem direito a testar gratuitamente o Meu Provador Virtual e chega no WhatsApp com o
-              código da sua loja na mensagem.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <PrimaryButton href="#/criar-link">
-                Criar link da loja
-                <ArrowRight className="h-5 w-5" />
-              </PrimaryButton>
-              <a
-                href="#beneficios"
-                className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-zinc-50"
-                style={{ color: COLORS.dark }}
-              >
-                Ver vantagens
-              </a>
-            </div>
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-xs font-semibold shadow-sm">
+            <Store className="h-4 w-4" style={{ color: COLORS.primary }} />
+            <span style={{ color: COLORS.dark }}>Para lojistas</span>
           </div>
 
-          <div className="rounded-[32px] border border-zinc-200 bg-white p-6 shadow-[0_18px_60px_rgba(0,0,0,0.08)]">
-            <div className="rounded-[24px] border border-zinc-200 p-6" style={{ background: COLORS.light }}>
-              <div className="text-sm font-semibold" style={{ color: COLORS.gray }}>
-                Link exclusivo da loja
-              </div>
-              <div className="mt-2 break-all text-xl font-bold" style={{ color: COLORS.dark }}>
-                {SITE_URL}/l/ana-modas
-              </div>
-              <div className="mt-5 rounded-[18px] bg-white p-5">
-                <div className="text-sm font-semibold" style={{ color: COLORS.dark }}>
-                  Mensagem enviada pelo WhatsApp:
-                </div>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-                  Oi, vim da loja Ana Modas e quero testar um look gratuitamente. Código: ana-modas
-                </p>
-              </div>
-            </div>
+          <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
+            Sua cliente visualiza o look antes de comprar.
+          </h2>
+
+          <p className="mt-6 text-base leading-relaxed sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
+            Gere um link exclusivo da sua loja e envie para suas clientes. Ao abrir o link, ela
+            poderá testar gratuitamente o Meu Provador Virtual pelo WhatsApp.
+          </p>
+
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <PrimaryButton href="#/criar-link">
+              Criar link da loja
+              <ArrowRight className="h-5 w-5" />
+            </PrimaryButton>
+            <a
+              href="#beneficios"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-zinc-50"
+              style={{ color: COLORS.dark }}
+            >
+              Ver vantagens
+            </a>
           </div>
         </div>
       </div>
@@ -662,8 +640,6 @@ function CreateLinkPage() {
 
   const slug = useMemo(() => slugify(shopName), [shopName]);
   const generatedLink = slug ? `${SITE_URL}/l/${slug}` : "";
-  const message = shopName.trim() ? buildWhatsMessage(shopName, slug) : "";
-
   async function copyLink() {
     if (!generatedLink) return;
     await navigator.clipboard.writeText(generatedLink);
@@ -727,15 +703,6 @@ function CreateLinkPage() {
                   <Copy className="h-4 w-4" />
                   {copied ? "Link copiado" : "Copiar link"}
                 </button>
-              </div>
-
-              <div className="mt-5 rounded-[18px] bg-white p-4">
-                <div className="text-sm font-semibold" style={{ color: COLORS.dark }}>
-                  Mensagem enviada pelo WhatsApp:
-                </div>
-                <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-                  {message}
-                </p>
               </div>
             </div>
           )}
