@@ -305,7 +305,7 @@ function Hero() {
           >
             <PrimaryButton href={WA_LINK} target="_blank">
               Testar no Whats
-              <MessageCircle className="h-5 w-5" />
+              <MessageCircle className="h-5 w-5" style={{ color: "#25D366" }} />
             </PrimaryButton>
           </motion.div>
         </div>
@@ -350,9 +350,9 @@ function Hero() {
                   className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl"
                   style={{ color: COLORS.dark }}
                 >
-                  Veja o processo acontecendo
+                  A cliente escolhe com mais segurança
                   <br />
-                  <span style={TEXT_GRADIENT_STYLE}>em poucos segundos</span>
+                  <span style={TEXT_GRADIENT_STYLE}>antes de comprar</span>
                 </h3>
 
                 <p
@@ -403,7 +403,7 @@ function Hero() {
                 <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
                   <PrimaryButton href={WA_LINK} target="_blank">
                     Testar no Whats
-                    <MessageCircle className="h-5 w-5" />
+                    <MessageCircle className="h-5 w-5" style={{ color: "#25D366" }} />
                   </PrimaryButton>
                   <div className="text-xs" style={{ color: "rgba(28,28,28,0.55)" }}>
                     Teste gratuito • Sem baixar nada
@@ -429,12 +429,12 @@ function ShopkeeperSection() {
           </div>
 
           <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
-            Sua cliente visualiza o look antes de comprar.
+            Venda mais e reduza devoluções.
           </h2>
 
           <p className="mt-6 text-base leading-relaxed sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
-            Gere um link exclusivo da sua loja e envie para suas clientes. Ao abrir o link, ela
-            poderá testar gratuitamente o Meu Provador Virtual pelo WhatsApp.
+            Compartilhe o link da sua loja no WhatsApp e no Instagram e deixe suas clientes
+            testarem seus produtos gratuitamente no Meu Provador Virtual!
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -624,7 +624,7 @@ function FinalCTA() {
             <div className="mt-10">
               <PrimaryButton href={WA_LINK} target="_blank">
                 Testar no Whats
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-5 w-5" style={{ color: "#25D366" }} />
               </PrimaryButton>
             </div>
           </div>
