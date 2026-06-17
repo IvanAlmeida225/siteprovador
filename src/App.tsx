@@ -640,6 +640,7 @@ function CreateLinkPage() {
 
   const slug = useMemo(() => slugify(shopName), [shopName]);
   const generatedLink = slug ? `${SITE_URL}/l/${slug}` : "";
+
   async function copyLink() {
     if (!generatedLink) return;
     await navigator.clipboard.writeText(generatedLink);
@@ -655,11 +656,23 @@ function CreateLinkPage() {
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: COLORS.dark }}>
               Criar link da loja
             </h1>
+
             <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
               Digite apenas o nome da loja para gerar um link compartilhável. Quando a cliente abrir
               o link, ela será direcionada ao WhatsApp com o código da loja na mensagem e poderá
               testar gratuitamente.
             </p>
+
+            <div className="mt-5 rounded-[20px] border border-zinc-200 bg-white p-5 shadow-sm">
+              <p className="text-sm font-semibold" style={{ color: COLORS.dark }}>
+                Como compartilhar:
+              </p>
+              <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
+                Depois de gerar o link, copie e envie para suas clientes pelo WhatsApp, coloque na bio
+                do Instagram ou envie no Direct. Assim, elas podem testar seus produtos gratuitamente
+                no Meu Provador Virtual.
+              </p>
+            </div>
           </div>
 
           <a
@@ -689,6 +702,7 @@ function CreateLinkPage() {
               <div className="text-sm font-semibold" style={{ color: COLORS.gray }}>
                 Link gerado
               </div>
+
               <div className="mt-2 break-all text-xl font-bold" style={{ color: COLORS.dark }}>
                 {generatedLink}
               </div>
@@ -706,6 +720,28 @@ function CreateLinkPage() {
               </div>
             </div>
           )}
+
+          <div className="mt-8 rounded-[24px] border border-zinc-200 bg-white p-5">
+            <div>
+              <h2 className="text-xl font-bold tracking-tight" style={{ color: COLORS.dark }}>
+                Como divulgar no Instagram
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
+                Use o passo a passo abaixo para adicionar o link nos Stories e direcionar suas clientes
+                para testar gratuitamente.
+              </p>
+            </div>
+
+            <div className="mt-5 overflow-hidden rounded-[20px] border border-zinc-200 bg-white">
+              <img
+                src="/tutorial-instagram-link.png"
+                alt="Passo a passo para divulgar o link da loja no Instagram"
+                className="h-auto w-full object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
