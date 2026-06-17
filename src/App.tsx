@@ -684,18 +684,38 @@ function CreateLinkPage() {
           </a>
         </div>
 
-        <div className="mt-9 rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_18px_60px_rgba(0,0,0,0.08)] sm:p-8">
-          <label className="text-sm font-semibold" style={{ color: COLORS.dark }}>
-            Nome da loja
-          </label>
+        <div className="mt-9 rounded-[32px] border border-zinc-200 bg-white p-6 shadow-[0_22px_70px_rgba(0,0,0,0.10)] sm:p-8">
+          <div
+            className="rounded-[28px] border border-zinc-200 p-5 sm:p-6"
+            style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F5F5F4 100%)" }}
+          >
+            <div className="flex items-start gap-4">
+              <div
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+                style={{ background: COLORS.primary }}
+              >
+                1
+              </div>
 
-          <input
-            value={shopName}
-            onChange={(event) => setShopName(event.target.value)}
-            placeholder="Ex.: Ana Modas"
-            className="mt-4 w-full rounded-full border border-zinc-200 bg-white px-5 py-4 text-base outline-none transition focus:border-zinc-400"
-            style={{ color: COLORS.dark }}
-          />
+              <div className="w-full">
+                <label className="text-base font-bold" style={{ color: COLORS.dark }}>
+                  Insira o nome da sua loja
+                </label>
+
+                <p className="mt-1 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.65)" }}>
+                  Esse nome será usado para criar o link exclusivo e identificar a origem da cliente.
+                </p>
+
+                <input
+                  value={shopName}
+                  onChange={(event) => setShopName(event.target.value)}
+                  placeholder="Ex.: Ana Modas"
+                  className="mt-5 w-full rounded-full border-2 border-zinc-300 bg-white px-6 py-5 text-lg font-semibold outline-none transition focus:border-zinc-900 focus:shadow-[0_0_0_4px_rgba(28,28,28,0.08)]"
+                  style={{ color: COLORS.dark }}
+                />
+              </div>
+            </div>
+          </div>
 
           {generatedLink && (
             <div className="mt-7 rounded-[24px] border border-zinc-200 p-5" style={{ background: COLORS.light }}>
