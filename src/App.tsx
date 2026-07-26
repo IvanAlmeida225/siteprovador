@@ -166,19 +166,59 @@ function slugify(value: string) {
 }
 
 function useRoute() {
-  const [route, setRoute] = useState(() => window.location.hash || "#/");
+  const getPathname = () => {
+    const legacyHash = window.location.hash;
+
+    if (
+      legacyHash === "#/" ||
+      legacyHash === "#/criar-link" ||
+      legacyHash === "#/politicas"
+    ) {
+      return legacyHash.slice(1);
+    }
+
+    return window.location.pathname || "/";
+  };
+
+  const [pathname, setPathname] = useState(getPathname);
 
   useEffect(() => {
-    const onHashChange = () => setRoute(window.location.hash || "#/");
-    window.addEventListener("hashchange", onHashChange);
-    return () => window.removeEventListener("hashchange", onHashChange);
+    const legacyHash = window.location.hash;
+
+    if (
+      legacyHash === "#/" ||
+      legacyHash === "#/criar-link" ||
+      legacyHash === "#/politicas"
+    ) {
+      const cleanPath = legacyHash.slice(1);
+      window.history.replaceState({}, "", cleanPath);
+      setPathname(cleanPath);
+    }
+
+    const onPopState = () =>
+      setPathname(window.location.pathname || "/");
+
+    window.addEventListener("popstate", onPopState);
+
+    return () =>
+      window.removeEventListener("popstate", onPopState);
   }, []);
 
-  const pathname = window.location.pathname || "/";
+  if (pathname.startsWith("/l/")) {
+    return {
+      type: "store-link" as const,
+      slug: pathname.replace("/l/", ""),
+    };
+  }
 
-  if (pathname.startsWith("/l/")) return { type: "store-link" as const, slug: pathname.replace("/l/", "") };
-  if (route === "#/criar-link") return { type: "create-link" as const };
-  if (route === "#/politicas") return { type: "policies" as const };
+  if (pathname === "/criar-link") {
+    return { type: "create-link" as const };
+  }
+
+  if (pathname === "/politicas") {
+    return { type: "policies" as const };
+  }
+
   return { type: "home" as const };
 }
 
@@ -239,7 +279,7 @@ function TopNav() {
     <div className="sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-zinc-200">
       <div className="mx-auto max-w-6xl px-5 py-3 sm:px-6">
         <div className="flex items-center justify-between gap-4">
-          <a href="#/" className="flex min-w-[190px] items-center gap-3">
+          <a href="/" className="flex min-w-[190px] items-center gap-3">
             <BrandMark />
             <span className="font-semibold" style={{ color: COLORS.dark }}>
               Meu Provador Virtual
@@ -247,16 +287,16 @@ function TopNav() {
           </a>
 
           <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-700 md:flex">
-            <a href="#lojistas" className="hover:text-zinc-950">
+            <a href="/" onClick={(event) => { event.preventDefault(); document.getElementById("lojistas")?.scrollIntoView({ behavior: "smooth", block: "start" }); }} className="hover:text-zinc-950">
               Para lojistas
             </a>
-            <a href="#processo" className="hover:text-zinc-950">
+            <a href="/" onClick={(event) => { event.preventDefault(); document.getElementById("processo")?.scrollIntoView({ behavior: "smooth", block: "start" }); }} className="hover:text-zinc-950">
               Processo
             </a>
-            <a href="#beneficios" className="hover:text-zinc-950">
+            <a href="/" onClick={(event) => { event.preventDefault(); document.getElementById("beneficios")?.scrollIntoView({ behavior: "smooth", block: "start" }); }} className="hover:text-zinc-950">
               Vantagens
             </a>
-            <a href="#/criar-link" className="hover:text-zinc-950">
+            <a href="/criar-link" className="hover:text-zinc-950">
               Criar link
             </a>
           </nav>
@@ -438,12 +478,12 @@ function ShopkeeperSection() {
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <PrimaryButton href="#/criar-link">
+            <PrimaryButton href="/criar-link">
               Criar link da loja
               <ArrowRight className="h-5 w-5" />
             </PrimaryButton>
             <a
-              href="#beneficios"
+              href="/" onClick={(event) => { event.preventDefault(); document.getElementById("beneficios")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-zinc-50"
               style={{ color: COLORS.dark }}
             >
@@ -676,7 +716,7 @@ function CreateLinkPage() {
           </div>
 
           <a
-            href="#/"
+            href="/"
             className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold transition hover:bg-zinc-50"
             style={{ color: COLORS.dark }}
           >
@@ -816,7 +856,7 @@ function PoliciesPage() {
             Política de Uso e Privacidade
           </h1>
           <a
-            href="#/"
+            href="/"
             className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold transition hover:bg-zinc-50"
             style={{ color: COLORS.dark }}
           >
@@ -875,14 +915,14 @@ function Footer() {
 
           <div className="flex flex-wrap justify-center gap-3 text-sm sm:gap-4">
             <a
-              href="#/criar-link"
+              href="/criar-link"
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 font-semibold transition hover:bg-zinc-50"
               style={{ color: COLORS.dark }}
             >
               Criar link da loja
             </a>
             <a
-              href="#/politicas"
+              href="/politicas"
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 font-semibold transition hover:bg-zinc-50"
               style={{ color: COLORS.dark }}
             >
