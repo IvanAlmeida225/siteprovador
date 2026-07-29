@@ -393,7 +393,7 @@ function TopNav() {
 
           <div className="flex min-w-[150px] justify-end">
             <PrimaryButton href="/criar-link">
-              Criar link <ArrowRight className="h-4 w-4" />
+              Criar link grátis <ArrowRight className="h-4 w-4" />
             </PrimaryButton>
           </div>
         </div>
@@ -795,13 +795,15 @@ function MarketingHero() {
             style={{ color: "rgba(28,28,28,0.72)" }}
           >
             Mais oportunidades para experimentar. Mais confiança para comprar.
-            Compartilhe um link e permita que cada cliente visualize os looks da
-            sua loja no próprio corpo, onde estiver e sem instalar aplicativo.
+            Crie e compartilhe gratuitamente o link da sua loja. Sua loja não
+            paga nada, e cada cliente recebe um primeiro teste grátis para
+            visualizar os looks no próprio corpo, onde estiver e sem instalar
+            aplicativo.
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <PrimaryButton href="/criar-link">
-              Criar link da minha loja
+              Criar link grátis da minha loja
               <ArrowRight className="h-5 w-5" />
             </PrimaryButton>
             <a
@@ -821,13 +823,13 @@ function MarketingHero() {
             style={{ color: "rgba(28,28,28,0.58)" }}
           >
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="h-4 w-4" /> Teste gratuito para a cliente
+              <CheckCircle2 className="h-4 w-4" /> Link grátis para a loja
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <CheckCircle2 className="h-4 w-4" /> Primeiro teste grátis para a cliente
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CheckCircle2 className="h-4 w-4" /> Sem instalar aplicativo
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="h-4 w-4" /> Experiência pelo WhatsApp
             </span>
           </div>
         </motion.div>
@@ -1079,8 +1081,8 @@ function MarketingBenefits() {
     },
     {
       icon: Sparkles,
-      title: "Uma experiência memorável",
-      desc: "Sua loja oferece uma jornada diferente, prática e compartilhável para apresentar os produtos.",
+      title: "Custo zero para a loja",
+      desc: "Criar, divulgar e manter o link da loja é grátis. A cliente também recebe o primeiro teste sem custo.",
     },
   ];
 
@@ -1143,9 +1145,14 @@ function FAQ() {
         "Não. Ela abre o link da loja e realiza todo o processo pelo WhatsApp.",
     },
     {
+      question: "A loja paga para criar ou compartilhar o link?",
+      answer:
+        "Não. Criar e compartilhar o link é totalmente gratuito para a loja. Não há mensalidade nem cobrança para oferecer o link às clientes. O primeiro teste da cliente também é grátis; se ela quiser continuar depois, poderá comprar novos créditos diretamente.",
+    },
+    {
       question: "A cliente paga para fazer o primeiro teste?",
       answer:
-        "Não. O primeiro teste é gratuito para que ela conheça a experiência antes de comprar novos créditos.",
+        "Não. Cada cliente recebe um primeiro teste grátis para conhecer a experiência. Depois, se quiser gerar novos looks, ela poderá comprar créditos diretamente, sem custo para a loja.",
     },
     {
       question: "Quantas clientes podem usar o link?",
@@ -1161,6 +1168,21 @@ function FAQ() {
       question: "A simulação substitui o provador físico?",
       answer:
         "Não. Ela amplia a experiência da loja e ajuda na visualização de estilo e combinação. O resultado não é uma prova técnica de tamanho, medidas ou caimento exato.",
+    },
+    {
+      question: "Como as fotos e os dados pessoais são utilizados?",
+      answer:
+        "As fotos são usadas para processar e gerar a simulação solicitada. Também podem ser tratados dados necessários ao funcionamento e à segurança do serviço, como número de telefone, mensagens, histórico de uso e registros técnicos. O Meu Provador Virtual não reivindica propriedade sobre as imagens e não as utiliza para treinar modelos de inteligência artificial.",
+    },
+    {
+      question: "As fotos e os dados ficam armazenados por quanto tempo?",
+      answer:
+        "Os dados são mantidos apenas pelo período necessário para executar o serviço, melhorar a plataforma, prevenir fraudes ou cumprir obrigações legais. Com autorização da cliente, a foto base poderá ser armazenada para facilitar novas simulações. Ela pode solicitar a exclusão dessa foto ou revogar o consentimento a qualquer momento.",
+    },
+    {
+      question: "Os dados são compartilhados? Como solicitar acesso ou exclusão?",
+      answer:
+        "Os dados podem ser processados somente pelos serviços tecnológicos necessários à operação, como infraestrutura em nuvem, inteligência artificial e comunicação. Para pedir acesso, correção, anonimização, exclusão ou revogar o consentimento, envie uma solicitação para meuprovadorvirtual@gmail.com. Consulte os Termos e a Política de Privacidade para mais detalhes.",
     },
   ];
 
@@ -1218,12 +1240,13 @@ function MarketingCTA() {
               className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
               style={{ color: "rgba(28,28,28,0.72)" }}
             >
-              Crie seu link, compartilhe com suas clientes e leve a experiência
-              de visualizar looks para o WhatsApp e o Instagram.
+              A loja não paga nada: crie e compartilhe seu link gratuitamente.
+              Cada cliente recebe um primeiro teste grátis para visualizar looks
+              pelo WhatsApp.
             </p>
             <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
               <PrimaryButton href="/criar-link">
-                Criar link da minha loja
+                Criar link grátis da minha loja
                 <ArrowRight className="h-5 w-5" />
               </PrimaryButton>
               <a
@@ -1267,13 +1290,13 @@ function CreateLinkPage() {
         <div className="flex items-start justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: COLORS.dark }}>
-              Criar link da loja
+              Criar link grátis da loja
             </h1>
 
             <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-              Digite apenas o nome da loja para gerar um link compartilhável. Quando a cliente abrir
-              o link, ela será direcionada ao WhatsApp com o código da loja na mensagem e poderá
-              testar gratuitamente.
+              Digite apenas o nome da loja para gerar um link compartilhável, sem mensalidade e sem
+              nenhum custo para a loja. Quando a cliente abrir o link, será direcionada ao WhatsApp
+              com o código da loja na mensagem e receberá um primeiro teste grátis.
             </p>
 
             <div className="mt-5 rounded-[20px] border border-zinc-200 bg-white p-5 shadow-sm">
@@ -1282,8 +1305,8 @@ function CreateLinkPage() {
               </p>
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
                 Depois de gerar o link, copie e envie para suas clientes pelo WhatsApp, coloque na bio
-                do Instagram ou envie no Direct. Assim, elas podem testar seus produtos gratuitamente
-                no Meu Provador Virtual.
+                do Instagram ou envie no Direct. Criar e divulgar esse link é grátis para a loja, e
+                cada cliente pode conhecer o Meu Provador Virtual com um primeiro teste gratuito.
               </p>
             </div>
           </div>
@@ -1492,7 +1515,7 @@ function Footer() {
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 font-semibold transition hover:bg-zinc-50"
               style={{ color: COLORS.dark }}
             >
-              Criar link da loja
+              Criar link grátis da loja
             </a>
             <a
               href="/politicas"
