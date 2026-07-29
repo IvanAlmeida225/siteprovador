@@ -1,11 +1,19 @@
 import React, { useEffect, useMemo, useState } from "react";
 import {
   ArrowRight,
+  BarChart3,
+  BriefcaseBusiness,
   CheckCircle2,
+  Clock3,
+  Coffee,
   Copy,
   ExternalLink,
+  Home,
   MessageCircle,
+  MousePointerClick,
+  ShoppingBag,
   Shirt,
+  Smartphone,
   Sparkles,
   Store,
   User,
@@ -55,10 +63,12 @@ O presente Termo de Uso regula o acesso e utilização do serviço denominado Me
 
 O serviço consiste em uma ferramenta baseada em inteligência artificial que permite ao usuário visualizar virtualmente roupas, acessórios ou produtos aplicados sobre sua própria imagem.
 
-Ao utilizar o serviço, o usuário declara que leu, compreendeu e concorda integralmente com estes Termos de Uso. Caso não concorde com qualquer disposição aqui prevista, o usuário não deverá utilizar o serviço.
+Ao utilizar o serviço, o usuário declara que leu, compreendeu e concorda integralmente com estes Termos de Uso.
+
+Caso não concorde com qualquer disposição aqui prevista, o usuário não deverá utilizar o serviço.
 
 2. IDENTIFICAÇÃO DO SERVIÇO
-O Meu Provador Virtual é uma solução digital que permite: envio de fotografia do usuário, envio de imagem de roupa ou produto, geração de imagem simulada com aplicação virtual do produto e entrega do resultado ao usuário.
+O Meu Provador Virtual é uma solução digital que permite envio de fotografia do usuário, envio de imagem de roupa ou produto, geração de imagem simulada com aplicação virtual do produto e entrega do resultado ao usuário.
 
 O serviço possui caráter meramente ilustrativo e experimental, não representando garantia exata de caimento, tamanho, textura ou aparência real do produto.
 
@@ -68,24 +78,24 @@ Para utilizar o serviço, o usuário declara possuir capacidade civil para aceit
 O usuário concorda em fornecer apenas imagens verdadeiras e de sua própria autoria ou com autorização.
 
 4. REGRAS DE UTILIZAÇÃO
-É proibido utilizar o serviço para gerar conteúdo de natureza sexual ou pornográfica, gerar provador de roupas íntimas, gerar conteúdo envolvendo crianças ou menores de idade, produzir conteúdo ofensivo, discriminatório ou ilegal, manipular imagens de terceiros sem autorização ou utilizar o sistema para fins de fraude ou falsificação.
+É proibido utilizar o serviço para gerar conteúdo sexual ou pornográfico, gerar provador de roupas íntimas, gerar conteúdo envolvendo crianças ou menores de idade, produzir conteúdo ofensivo, discriminatório ou ilegal, manipular imagens de terceiros sem autorização ou utilizar o sistema para fins de fraude ou falsificação.
 
 Caso seja identificado uso indevido, o acesso poderá ser suspenso ou bloqueado imediatamente, sem aviso prévio.
 
 5. USO DE IMAGEM
-Ao enviar uma fotografia, o usuário declara que possui autorização para uso da imagem, autoriza o processamento da imagem pelo sistema e compreende que a imagem será utilizada exclusivamente para geração do resultado solicitado.
+Ao enviar uma fotografia, o usuário declara possuir autorização para uso da imagem, autoriza o processamento da imagem pelo sistema e compreende que a imagem será utilizada exclusivamente para geração do resultado solicitado.
 
-O Meu Provador Virtual não reivindica propriedade sobre a imagem do usuário.
+O Meu Provador Virtual não reivindica propriedade sobre a imagem do usuário. As imagens são utilizadas apenas para execução do serviço.
 
 6. LIMITAÇÕES TECNOLÓGICAS
 O Meu Provador Virtual utiliza sistemas de inteligência artificial que podem gerar resultados que não representem perfeitamente a realidade, apresentem pequenas alterações visuais ou variem conforme iluminação, pose ou qualidade da foto enviada.
 
-O serviço possui caráter demonstrativo e experimental.
+O serviço possui caráter demonstrativo e experimental, não sendo garantida fidelidade absoluta entre a simulação e o produto real.
 
 7. RESPONSABILIDADE DO USUÁRIO
-O usuário é responsável por garantir que possui direitos sobre as imagens enviadas, não violar direitos de terceiros e não utilizar o sistema para atividades ilegais.
+O usuário é responsável por garantir que possui direitos sobre as imagens enviadas, não violar direitos de terceiros, não utilizar o sistema para atividades ilegais e respeitar as condições de uso da plataforma.
 
-O usuário assume total responsabilidade pelos conteúdos enviados ao sistema.
+O usuário assume total responsabilidade por conteúdos enviados ao sistema.
 
 8. PROPRIEDADE INTELECTUAL
 Todos os elementos do sistema, incluindo tecnologia, interface, software, fluxos de processamento, design da plataforma e identidade visual são protegidos por legislação de propriedade intelectual e direitos autorais.
@@ -93,66 +103,119 @@ Todos os elementos do sistema, incluindo tecnologia, interface, software, fluxos
 É proibida a reprodução, cópia ou exploração comercial sem autorização prévia.
 
 9. DISPONIBILIDADE DO SERVIÇO
-O Meu Provador Virtual poderá sofrer interrupções, passar por manutenção, ser atualizado ou modificado sem aviso prévio.
+O Meu Provador Virtual poderá sofrer interrupções, passar por manutenção ou ser atualizado ou modificado sem aviso prévio.
 
 Não há garantia de disponibilidade contínua do serviço.
 
 10. LIMITAÇÃO DE RESPONSABILIDADE
-O Meu Provador Virtual não se responsabiliza por decisões de compra baseadas na simulação gerada, diferenças entre imagem simulada e produto real ou uso indevido do serviço por terceiros.
+O Meu Provador Virtual não se responsabiliza por decisões de compra baseadas na simulação gerada, diferenças entre imagem simulada e produto real, uso indevido do serviço por terceiros ou conteúdos enviados pelos usuários.
 
-11. PROTEÇÃO DE DADOS PESSOAIS
+O sistema funciona como ferramenta tecnológica de visualização simulada.
+
+11. PROTEÇÃO DE DADOS PESSOAIS (LGPD)
 O tratamento de dados pessoais segue os princípios da Lei Geral de Proteção de Dados – LGPD (Lei nº 13.709/2018).
 
-Os dados tratados podem incluir número de telefone, imagens enviadas e registros de uso do serviço.
+Os dados tratados podem incluir número de telefone, imagens enviadas, registros de uso do serviço e histórico de interações com a plataforma.
 
-12. COMUNICAÇÕES
-O usuário poderá receber comunicações relacionadas ao funcionamento da plataforma, atualizações do serviço, novidades ou conteúdos informativos relacionados ao aplicativo.
+Esses dados são utilizados exclusivamente para funcionamento do serviço, geração das imagens solicitadas, melhoria da experiência do usuário, segurança da plataforma e controle de uso da ferramenta.
 
-O usuário poderá solicitar a interrupção dessas comunicações a qualquer momento.
+12. COMUNICAÇÕES E INFORMATIVOS
+Ao utilizar o serviço e interagir com o Meu Provador Virtual por meio do WhatsApp ou outros canais digitais, o usuário autoriza o envio de comunicações relacionadas ao funcionamento da plataforma.
 
-13. ALTERAÇÃO DOS TERMOS
-Estes Termos de Uso poderão ser atualizados a qualquer momento. A versão vigente será sempre a publicada oficialmente pela plataforma.
+Essas comunicações poderão incluir avisos sobre atualizações do serviço, informações sobre novos recursos da plataforma, conteúdos educativos, comunicações institucionais e conteúdos promocionais ou informativos relacionados ao aplicativo.
 
-14. LEGISLAÇÃO APLICÁVEL
-Estes Termos são regidos pelas leis da República Federativa do Brasil, incluindo a LGPD, Marco Civil da Internet, Código de Defesa do Consumidor e Lei de Direitos Autorais.
+O envio dessas comunicações respeitará os princípios da Lei Geral de Proteção de Dados e demais normas aplicáveis.
 
-15. CONTATO
-E-mail de contato: contato@meuprovadorvirtual.com
+O usuário poderá solicitar a interrupção do recebimento de comunicações de caráter promocional a qualquer momento por meio dos canais de contato disponibilizados pela plataforma.
+
+13. CANCELAMENTO OU BLOQUEIO
+O acesso ao serviço poderá ser suspenso ou bloqueado em caso de violação destes Termos de Uso, uso fraudulento da plataforma, uso para fins ilegais ou tentativa de exploração indevida do sistema.
+
+14. ALTERAÇÃO DOS TERMOS
+Estes Termos de Uso poderão ser atualizados a qualquer momento. A versão vigente será sempre a publicada no endereço oficial do serviço.
+
+A continuidade de uso da plataforma após atualizações será considerada como concordância com a nova versão.
+
+15. LEGISLAÇÃO APLICÁVEL
+Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil, especialmente:
+
+Lei nº 13.709/2018 – Lei Geral de Proteção de Dados (LGPD)
+Lei nº 12.965/2014 – Marco Civil da Internet
+Lei nº 8.078/1990 – Código de Defesa do Consumidor
+Lei nº 9.610/1998 – Lei de Direitos Autorais
+
+16. CONTATO
+E-mail de contato: meuprovadorvirtual@gmail.com
+
+Ao continuar utilizando o Meu Provador Virtual, o usuário declara estar ciente e de acordo com estes Termos de Uso.
 
 
 POLÍTICA DE PRIVACIDADE – MEU PROVADOR VIRTUAL
 Última atualização: Março de 2026
 
 1. INTRODUÇÃO
-Esta Política de Privacidade descreve como o Meu Provador Virtual coleta, utiliza, armazena e protege os dados pessoais dos usuários em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+A presente Política de Privacidade descreve como o Meu Provador Virtual coleta, utiliza, armazena e protege os dados pessoais dos usuários que utilizam a plataforma.
+
+Nos comprometemos a tratar os dados pessoais com responsabilidade, transparência e segurança, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD) e demais legislações aplicáveis no Brasil.
+
+Ao utilizar o serviço, o usuário declara estar ciente das práticas descritas nesta Política de Privacidade.
 
 2. DADOS COLETADOS
-Podemos coletar número de telefone, fotografias enviadas pelos usuários, imagens de produtos enviadas para simulação, registros de interação com o sistema e dados técnicos como horário de acesso e registros de uso.
+Durante a utilização do serviço, podemos coletar dados fornecidos pelo usuário como número de telefone, fotografias enviadas, imagens de produtos ou roupas para simulação e mensagens enviadas ao sistema.
 
-3. FINALIDADE DO TRATAMENTO
-Os dados são utilizados para permitir o funcionamento do provador virtual, gerar imagens simuladas, melhorar o desempenho do sistema, garantir segurança e fornecer suporte ao usuário.
+Também podem ser coletados dados gerados durante o uso do serviço, como imagens geradas pela inteligência artificial, histórico de utilização da ferramenta e registros técnicos do sistema.
 
-4. PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
-O serviço utiliza tecnologias de inteligência artificial para processar imagens e gerar simulações visuais de roupas ou produtos aplicados sobre a fotografia do usuário.
+Informações técnicas como endereço IP, registros de acesso, data e horário das interações podem ser coletadas para garantir segurança e funcionamento da plataforma.
 
-5. NÃO UTILIZAÇÃO PARA TREINAMENTO DE IA
-As imagens enviadas pelos usuários não são utilizadas para treinamento de modelos de inteligência artificial ou construção de bases de dados comerciais.
+3. FINALIDADE DO USO DOS DADOS
+Os dados coletados podem ser utilizados para executar o funcionamento do Meu Provador Virtual, processar imagens enviadas, gerar simulações de roupas ou produtos, melhorar o desempenho da ferramenta, manter a segurança da plataforma, prevenir fraudes, prestar suporte ao usuário e enviar comunicações informativas relacionadas ao serviço.
 
-6. COMPARTILHAMENTO DE DADOS
-Os dados podem ser processados por serviços tecnológicos necessários para o funcionamento da plataforma, incluindo provedores de infraestrutura, serviços de inteligência artificial e plataformas de comunicação.
+4. BASE LEGAL PARA TRATAMENTO DE DADOS
+O tratamento de dados pessoais ocorre com base nas hipóteses legais previstas na LGPD, incluindo execução do serviço solicitado pelo usuário, consentimento do usuário, legítimo interesse da plataforma e cumprimento de obrigações legais.
 
-7. SEGURANÇA DAS INFORMAÇÕES
-A plataforma adota medidas técnicas e administrativas para proteger os dados contra acesso não autorizado, perda, destruição ou uso indevido.
+5. USO DE IMAGENS
+As imagens enviadas pelos usuários são utilizadas exclusivamente para processamento da simulação de roupas ou produtos e geração da imagem final solicitada.
 
-8. RETENÇÃO DOS DADOS
-Os dados são armazenados apenas pelo período necessário para cumprimento das finalidades do serviço ou conforme exigido por obrigações legais.
+O Meu Provador Virtual não reivindica propriedade sobre as imagens enviadas pelos usuários.
 
-9. DIREITOS DOS TITULARES
-Nos termos da LGPD, o usuário poderá solicitar confirmação de tratamento de dados, acesso aos dados, correção de informações, anonimização ou exclusão dos dados pessoais.
+6. PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
+O serviço utiliza tecnologias de inteligência artificial e processamento automatizado de imagens para gerar simulações visuais de roupas ou produtos aplicados sobre a fotografia enviada pelo usuário.
 
-10. CONTATO
-Para solicitações relacionadas a dados pessoais ou privacidade, entre em contato pelo e-mail:
-contato@meuprovadorvirtual.com
+Esse processamento ocorre de forma automatizada e pode envolver o uso de serviços de inteligência artificial de terceiros.
+
+7. NÃO UTILIZAÇÃO DAS IMAGENS PARA TREINAMENTO DE IA
+As imagens enviadas pelos usuários não são utilizadas para treinamento de modelos de inteligência artificial ou criação de datasets, sendo utilizadas apenas para geração da simulação solicitada.
+
+8. LIMITAÇÕES DA INTELIGÊNCIA ARTIFICIAL
+Os resultados gerados pela inteligência artificial podem apresentar variações ou imperfeições visuais, podendo não representar exatamente o caimento real da roupa, proporções físicas ou cores do produto.
+
+As imagens geradas possuem caráter meramente ilustrativo.
+
+9. COMPARTILHAMENTO DE DADOS
+Os dados poderão ser compartilhados apenas quando necessário para a operação do serviço, incluindo provedores de infraestrutura em nuvem, serviços de inteligência artificial e plataformas de comunicação utilizadas para interação com o usuário.
+
+10. SEGURANÇA DAS INFORMAÇÕES
+Adotamos medidas técnicas e administrativas para proteger os dados contra acessos não autorizados, vazamentos, perda de informações ou alterações indevidas.
+
+11. RETENÇÃO DOS DADOS
+Os dados pessoais serão armazenados apenas pelo tempo necessário para execução do serviço, melhoria da plataforma, prevenção de fraudes ou cumprimento de obrigações legais.
+
+12. DIREITOS DOS TITULARES DE DADOS
+Nos termos da LGPD, o usuário possui direito de solicitar confirmação da existência de tratamento de dados, acesso aos dados pessoais, correção de informações, anonimização ou exclusão de dados, portabilidade e revogação do consentimento.
+
+13. PROIBIÇÃO DE USO INDEVIDO DA PLATAFORMA
+É proibido utilizar o Meu Provador Virtual para manipular imagens de terceiros sem autorização, criar conteúdo enganoso ou fraudulento, gerar conteúdo sexual ou pornográfico, produzir conteúdo envolvendo menores de idade ou qualquer conteúdo ilegal.
+
+14. ALTERAÇÕES NA POLÍTICA DE PRIVACIDADE
+Esta Política de Privacidade poderá ser atualizada periodicamente e a versão mais recente estará sempre disponível no canal oficial da plataforma.
+
+15. LEGISLAÇÃO APLICÁVEL
+Esta Política de Privacidade é regida pela legislação brasileira, especialmente a Lei nº 13.709/2018 – LGPD, o Marco Civil da Internet (Lei nº 12.965/2014) e o Código de Defesa do Consumidor (Lei nº 8.078/1990).
+
+16. CONTATO
+E-mail de contato: meuprovadorvirtual@gmail.com
+
+Ao utilizar o Meu Provador Virtual, o usuário declara estar ciente e de acordo com esta Política de Privacidade.
 `;
 
 function slugify(value: string) {
@@ -287,23 +350,50 @@ function TopNav() {
           </a>
 
           <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-700 md:flex">
-            <a href="/" onClick={(event) => { event.preventDefault(); document.getElementById("lojistas")?.scrollIntoView({ behavior: "smooth", block: "start" }); }} className="hover:text-zinc-950">
-              Para lojistas
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                document
+                  .getElementById("oportunidade")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="hover:text-zinc-950"
+            >
+              Por que funciona
             </a>
-            <a href="/" onClick={(event) => { event.preventDefault(); document.getElementById("processo")?.scrollIntoView({ behavior: "smooth", block: "start" }); }} className="hover:text-zinc-950">
-              Processo
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                document
+                  .getElementById("rotina")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="hover:text-zinc-950"
+            >
+              Na rotina
             </a>
-            <a href="/" onClick={(event) => { event.preventDefault(); document.getElementById("beneficios")?.scrollIntoView({ behavior: "smooth", block: "start" }); }} className="hover:text-zinc-950">
-              Vantagens
+            <a
+              href="/"
+              onClick={(event) => {
+                event.preventDefault();
+                document
+                  .getElementById("processo")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="hover:text-zinc-950"
+            >
+              Como funciona
             </a>
             <a href="/criar-link" className="hover:text-zinc-950">
-              Criar link
+              Para lojistas
             </a>
           </nav>
 
           <div className="flex min-w-[150px] justify-end">
-            <PrimaryButton href={WA_LINK} target="_blank">
-              Testar no Whats <MessageCircle className="h-4 w-4" />
+            <PrimaryButton href="/criar-link">
+              Criar link <ArrowRight className="h-4 w-4" />
             </PrimaryButton>
           </div>
         </div>
@@ -323,8 +413,8 @@ function Hero() {
             className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
             style={{ color: COLORS.dark }}
           >
-            Experimente antes <br />
-            <span style={TEXT_GRADIENT_STYLE}>de comprar.</span>
+            Visualize seus looks <br />
+            <span style={TEXT_GRADIENT_STYLE}>antes de comprar.</span>
           </motion.h1>
 
           <motion.p
@@ -334,7 +424,7 @@ function Hero() {
             className="mx-auto mt-7 max-w-2xl text-base leading-relaxed sm:text-lg md:text-xl"
             style={{ color: "rgba(28,28,28,0.72)" }}
           >
-            Veja como qualquer look fica em você em segundos, direto no seu WhatsApp.
+            Veja como diferentes looks ficam em você, direto no seu WhatsApp.
           </motion.p>
 
           <motion.div
@@ -469,7 +559,7 @@ function ShopkeeperSection() {
           </div>
 
           <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
-            Venda mais e reduza devoluções.
+            Amplie a experiência da sua loja.
           </h2>
 
           <p className="mt-6 text-base leading-relaxed sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
@@ -507,11 +597,16 @@ function ProcessSection() {
     <section id="processo" style={{ background: COLORS.white }}>
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
         <div className="text-center">
+          <div className="mb-4 inline-flex items-center gap-2 text-sm font-semibold">
+            <MousePointerClick className="h-5 w-5" />
+            Simples para a cliente
+          </div>
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
-            Como funciona
+            Do link ao resultado em 3 passos
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
-            3 passos simples. Você envia sua foto, envia o look e recebe o resultado.
+            Sem cadastro e sem instalar nada: a experiência acontece na conversa
+            que sua cliente já sabe usar.
           </p>
         </div>
 
@@ -575,7 +670,7 @@ function Benefits() {
     {
       icon: Zap,
       title: "Atendimento em escala",
-      desc: "A loja pode atender dezenas de clientes ao mesmo tempo pelo WhatsApp, sem fila e sem limitar a experiência ao espaço físico.",
+      desc: "O link permite levar a experiência a diferentes clientes pelo WhatsApp, sem limitar a descoberta ao espaço físico.",
     },
     {
       icon: CheckCircle2,
@@ -667,6 +762,484 @@ function FinalCTA() {
                 <MessageCircle className="h-5 w-5" style={{ color: "#25D366" }} />
               </PrimaryButton>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MarketingHero() {
+  return (
+    <section className="overflow-hidden" style={{ background: COLORS.light }}>
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-20 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center lg:text-left"
+        >
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-xs font-semibold shadow-sm">
+            <Smartphone className="h-4 w-4" style={{ color: COLORS.primary }} />
+            <span>O provador da sua loja, agora também no WhatsApp</span>
+          </div>
+
+          <h1
+            className="mt-7 text-4xl font-bold leading-[1.04] tracking-[-0.04em] sm:text-5xl md:text-6xl"
+            style={{ color: COLORS.dark }}
+          >
+            Transforme o WhatsApp das suas clientes em novos provadores da sua loja.
+          </h1>
+
+          <p
+            className="mx-auto mt-7 max-w-2xl text-base leading-relaxed sm:text-lg md:text-xl lg:mx-0"
+            style={{ color: "rgba(28,28,28,0.72)" }}
+          >
+            Mais oportunidades para experimentar. Mais confiança para comprar.
+            Compartilhe um link e permita que cada cliente visualize os looks da
+            sua loja no próprio corpo, onde estiver e sem instalar aplicativo.
+          </p>
+
+          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+            <PrimaryButton href="/criar-link">
+              Criar link da minha loja
+              <ArrowRight className="h-5 w-5" />
+            </PrimaryButton>
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold transition hover:border-zinc-400 hover:bg-zinc-50"
+              style={{ color: COLORS.dark }}
+            >
+              Testar a experiência
+              <MessageCircle className="h-5 w-5" style={{ color: "#25D366" }} />
+            </a>
+          </div>
+
+          <div
+            className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs lg:justify-start"
+            style={{ color: "rgba(28,28,28,0.58)" }}
+          >
+            <span className="inline-flex items-center gap-1.5">
+              <CheckCircle2 className="h-4 w-4" /> Teste gratuito para a cliente
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <CheckCircle2 className="h-4 w-4" /> Sem instalar aplicativo
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <CheckCircle2 className="h-4 w-4" /> Experiência pelo WhatsApp
+            </span>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.08 }}
+          className="relative mx-auto w-full max-w-[360px]"
+        >
+          <div
+            className="absolute -left-8 top-16 z-10 hidden rounded-[22px] border border-zinc-200 bg-white p-4 shadow-xl sm:block"
+            style={{ transform: "rotate(-3deg)" }}
+          >
+            <div className="flex items-center gap-3">
+              <div
+                className="flex h-10 w-10 items-center justify-center rounded-full"
+                style={{ background: "rgba(28,28,28,0.08)" }}
+              >
+                <Users className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-xs text-zinc-500">Mais oportunidades</div>
+                <div className="text-sm font-semibold">de experimentar</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-[36px] border border-zinc-200 bg-white p-3 shadow-[0_26px_80px_rgba(0,0,0,0.15)]">
+            <div className="overflow-hidden rounded-[28px] bg-zinc-50">
+              <div className="aspect-[964/2144]">
+                <video
+                  src="/video-demo.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="absolute -bottom-5 -right-2 z-10 rounded-[22px] border border-zinc-200 bg-white p-4 shadow-xl sm:-right-10"
+            style={{ transform: "rotate(2deg)" }}
+          >
+            <div className="flex items-center gap-3">
+              <div
+                className="flex h-10 w-10 items-center justify-center rounded-full"
+                style={{ background: "rgba(28,28,28,0.08)" }}
+              >
+                <Clock3 className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-xs text-zinc-500">Quando ela puder</div>
+                <div className="text-sm font-semibold">onde ela estiver</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function MarketOpportunity() {
+  const stats = [
+    {
+      value: "67%",
+      title: "de conversão no provador físico",
+      text: "Em uma análise de varejo, clientes que foram ao provador compraram em 67% dos casos, contra 10% entre quem apenas circulou pela loja.",
+      source: "Alert Tech",
+      href: "https://alerttech.net/retail-conversion/",
+    },
+    {
+      value: "Quase 7x",
+      title: "mais propensão à compra",
+      text: "Outro benchmark do setor relaciona o uso do provador físico a uma probabilidade de compra quase sete vezes maior.",
+      source: "Alert Tech",
+      href: "https://alerttech.net/retail-industry-benchmarks-for-fitting-rooms/",
+    },
+    {
+      value: "+50%",
+      title: "de conversão com try-on virtual",
+      text: "Em um relatório de 2026, usuários de provador virtual converteram 50% mais, tiveram quase 3x mais adições ao carrinho e visualizaram 7x mais produtos.",
+      source: "DRESSX",
+      href: "https://dressx.com/b2b/vto-report",
+    },
+  ];
+
+  return (
+    <section id="oportunidade" style={{ background: COLORS.white }}>
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
+        <div className="grid items-end gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <div className="inline-flex items-center gap-2 text-sm font-semibold">
+              <Store className="h-5 w-5" />
+              Para lojas de moda
+            </div>
+            <h2
+              className="mt-5 max-w-3xl text-4xl font-bold leading-tight tracking-[-0.035em] sm:text-5xl"
+              style={{ color: COLORS.dark }}
+            >
+              Um provador físico atende uma cliente por vez. O virtual acompanha
+              cada link compartilhado.
+            </h2>
+          </div>
+          <p
+            className="text-base leading-relaxed sm:text-lg"
+            style={{ color: "rgba(28,28,28,0.70)" }}
+          >
+            Em vez de limitar a experimentação ao espaço e ao horário da loja,
+            você leva seus produtos para o celular da cliente. Ela visualiza
+            diferentes looks com calma e volta para a conversa mais segura para
+            decidir.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {stats.map((item) => (
+            <div
+              key={item.value}
+              className="rounded-[28px] border border-zinc-200 p-6 sm:p-7"
+              style={{ background: COLORS.light }}
+            >
+              <div className="text-5xl font-bold tracking-tight">{item.value}</div>
+              <h3 className="mt-3 text-lg font-semibold">{item.title}</h3>
+              <p
+                className="mt-3 text-sm leading-relaxed"
+                style={{ color: "rgba(28,28,28,0.68)" }}
+              >
+                {item.text}
+              </p>
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-600 hover:text-zinc-950"
+              >
+                Fonte: {item.source} <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-5 text-xs leading-relaxed text-zinc-500">
+          Dados de estudos e casos específicos do setor. Eles ajudam a explicar
+          o papel da experimentação na decisão, mas não garantem o mesmo
+          desempenho para todas as lojas.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function LifestyleSection() {
+  const moments = [
+    {
+      icon: BriefcaseBusiness,
+      title: "No intervalo do trabalho",
+      desc: "A cliente pode conhecer e visualizar um look sem precisar reorganizar o dia para ir até a loja.",
+    },
+    {
+      icon: Coffee,
+      title: "Durante um café",
+      desc: "Basta abrir o link, enviar as imagens e continuar a experiência pelo próprio WhatsApp.",
+    },
+    {
+      icon: Home,
+      title: "Com calma, em casa",
+      desc: "Ela compara opções no momento mais conveniente e decide com menos pressa.",
+    },
+  ];
+
+  return (
+    <section id="rotina" style={{ background: COLORS.dark, color: COLORS.white }}>
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div>
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-300">
+              <Clock3 className="h-5 w-5" />
+              Moda na rotina real
+            </div>
+            <h2 className="mt-5 text-4xl font-bold leading-tight tracking-[-0.035em] sm:text-5xl">
+              Nem toda cliente tem tempo de ir até o provador. O look pode ir até ela.
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-zinc-300 sm:text-lg">
+              O Meu Provador Virtual transforma pequenos momentos do dia em
+              oportunidades para a cliente se imaginar usando seus produtos.
+            </p>
+          </div>
+
+          <div className="grid gap-4">
+            {moments.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: 12 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.07 }}
+                className="flex gap-4 rounded-[24px] border border-white/10 bg-white/[0.06] p-5 sm:p-6"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-zinc-900">
+                  <item.icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-300">
+                    {item.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MarketingBenefits() {
+  const items = [
+    {
+      icon: Zap,
+      title: "Mais oportunidades de experimentar",
+      desc: "O mesmo link pode ser divulgado no WhatsApp e no Instagram, levando a experiência para além da loja física.",
+    },
+    {
+      icon: ShoppingBag,
+      title: "Aproxima a cliente da compra",
+      desc: "Visualizar o produto no próprio corpo ajuda a transformar uma foto da roupa em uma escolha mais concreta.",
+    },
+    {
+      icon: BarChart3,
+      title: "Ajuda a reduzir dúvidas",
+      desc: "A simulação oferece uma referência visual adicional para a cliente comparar opções e conversar com a loja.",
+    },
+    {
+      icon: MessageCircle,
+      title: "No canal da venda",
+      desc: "A cliente não precisa mudar de plataforma: o fluxo acontece direto pelo WhatsApp, sem criar conta.",
+    },
+    {
+      icon: Store,
+      title: "Sem ampliar a estrutura física",
+      desc: "Você cria novos pontos de experimentação digital sem construir cabines ou ocupar mais espaço na loja.",
+    },
+    {
+      icon: Sparkles,
+      title: "Uma experiência memorável",
+      desc: "Sua loja oferece uma jornada diferente, prática e compartilhável para apresentar os produtos.",
+    },
+  ];
+
+  return (
+    <section id="beneficios" style={{ background: COLORS.light }}>
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24">
+        <div className="text-center">
+          <h2
+            className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl"
+            style={{ color: COLORS.dark }}
+          >
+            Mais que mostrar uma roupa. Ajude a cliente a se imaginar com ela.
+          </h2>
+          <p
+            className="mx-auto mt-5 max-w-2xl text-base sm:text-lg"
+            style={{ color: "rgba(28,28,28,0.72)" }}
+          >
+            Uma forma simples de ampliar a experiência da loja e diminuir a
+            distância entre descobrir um produto e tomar uma decisão.
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {items.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_8px_30px_rgba(0,0,0,0.05)] sm:p-7"
+            >
+              <div
+                className="flex h-11 w-11 items-center justify-center rounded-full"
+                style={{ background: "rgba(28,28,28,0.08)" }}
+              >
+                <item.icon className="h-6 w-6" />
+              </div>
+              <h3 className="mt-5 text-xl font-semibold">{item.title}</h3>
+              <p className="mt-3 leading-relaxed text-zinc-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FAQ() {
+  const items = [
+    {
+      question: "Como a loja cria seu link?",
+      answer:
+        "Acesse “Criar link”, informe o nome da loja e copie o endereço gerado. Ele identifica a origem da cliente e abre a conversa do Meu Provador Virtual no WhatsApp.",
+    },
+    {
+      question: "Onde posso compartilhar o link?",
+      answer:
+        "No WhatsApp, na bio do Instagram, nos Stories, no Direct, em posts, no atendimento e em outros canais digitais da loja.",
+    },
+    {
+      question: "A cliente precisa instalar algum aplicativo?",
+      answer:
+        "Não. Ela abre o link da loja e realiza todo o processo pelo WhatsApp.",
+    },
+    {
+      question: "A cliente paga para fazer o primeiro teste?",
+      answer:
+        "Não. O primeiro teste é gratuito para que ela conheça a experiência antes de comprar novos créditos.",
+    },
+    {
+      question: "Quantas clientes podem usar o link?",
+      answer:
+        "O mesmo link pode ser compartilhado com diferentes clientes, permitindo que a loja ofereça várias experiências digitais sem depender do número de cabines físicas.",
+    },
+    {
+      question: "O Meu Provador Virtual informa o tamanho correto?",
+      answer:
+        "Não. A ferramenta cria uma simulação visual e ilustrativa do look. Ela não mede o corpo e não substitui a tabela de medidas da loja.",
+    },
+    {
+      question: "A simulação substitui o provador físico?",
+      answer:
+        "Não. Ela amplia a experiência da loja e ajuda na visualização de estilo e combinação. O resultado não é uma prova técnica de tamanho, medidas ou caimento exato.",
+    },
+  ];
+
+  return (
+    <section style={{ background: COLORS.white }}>
+      <div className="mx-auto max-w-4xl px-5 py-16 sm:px-6 sm:py-24">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            Dúvidas frequentes
+          </h2>
+          <p className="mt-5 text-base text-zinc-600 sm:text-lg">
+            O que sua loja e suas clientes precisam saber antes de começar.
+          </p>
+        </div>
+
+        <div className="mt-10 divide-y divide-zinc-200 rounded-[28px] border border-zinc-200 bg-white px-6 sm:px-8">
+          {items.map((item) => (
+            <details key={item.question} className="group py-6">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
+                <span>{item.question}</span>
+                <span className="text-xl text-zinc-400 transition group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-600 sm:text-base">
+                {item.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MarketingCTA() {
+  return (
+    <section style={{ background: COLORS.light }}>
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
+        <div
+          className="overflow-hidden rounded-[32px] border border-zinc-200 bg-white shadow-[0_18px_60px_rgba(0,0,0,0.10)]"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(28,28,28,0.08), rgba(42,42,42,0.03))",
+          }}
+        >
+          <div className="px-7 py-12 text-center sm:px-10 sm:py-16">
+            <h2
+              className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl"
+              style={{ color: COLORS.dark }}
+            >
+              Transforme o link da sua loja em novos provadores.
+            </h2>
+            <p
+              className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
+              style={{ color: "rgba(28,28,28,0.72)" }}
+            >
+              Crie seu link, compartilhe com suas clientes e leve a experiência
+              de visualizar looks para o WhatsApp e o Instagram.
+            </p>
+            <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+              <PrimaryButton href="/criar-link">
+                Criar link da minha loja
+                <ArrowRight className="h-5 w-5" />
+              </PrimaryButton>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-zinc-50"
+              >
+                Testar como cliente
+                <MessageCircle className="h-5 w-5" style={{ color: "#25D366" }} />
+              </a>
+            </div>
+            <p className="mt-5 text-xs text-zinc-500">
+              A imagem gerada é uma simulação ilustrativa e não representa prova
+              técnica de tamanho ou medidas.
+            </p>
           </div>
         </div>
       </div>
@@ -853,7 +1426,7 @@ function PoliciesPage() {
       <div className="mx-auto max-w-4xl px-5 py-14 sm:px-6 sm:py-16">
         <div className="flex items-center justify-between gap-4">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: COLORS.dark }}>
-            Política de Uso e Privacidade
+            Termos de Uso e Política de Privacidade
           </h1>
           <a
             href="/"
@@ -865,7 +1438,7 @@ function PoliciesPage() {
         </div>
 
         <p className="mt-4 text-sm" style={{ color: "rgba(28,28,28,0.65)" }}>
-          Abaixo está o texto completo do documento.
+          Textos integrais vigentes, atualizados em março de 2026.
         </p>
 
         <div className="mt-8 overflow-hidden rounded-[24px] border border-zinc-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
@@ -874,7 +1447,7 @@ function PoliciesPage() {
               Documento oficial
             </div>
             <div className="text-xs" style={{ color: "rgba(28,28,28,0.60)" }}>
-              Para dúvidas: contato@meuprovadorvirtual.com
+              Para dúvidas: meuprovadorvirtual@gmail.com
             </div>
           </div>
 
@@ -904,11 +1477,11 @@ function Footer() {
                 Meu Provador Virtual
               </span>
               <a
-                href="mailto:contato@meuprovadorvirtual.com"
+                href="mailto:meuprovadorvirtual@gmail.com"
                 className="text-xs"
                 style={{ color: "rgba(28,28,28,0.55)" }}
               >
-                contato@meuprovadorvirtual.com
+                meuprovadorvirtual@gmail.com
               </a>
             </div>
           </div>
@@ -926,7 +1499,7 @@ function Footer() {
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 font-semibold transition hover:bg-zinc-50"
               style={{ color: COLORS.dark }}
             >
-              Política de Uso e Privacidade
+              Termos e Privacidade
             </a>
           </div>
 
@@ -942,11 +1515,13 @@ function Footer() {
 function HomePage() {
   return (
     <>
-      <Hero />
-      <ShopkeeperSection />
+      <MarketingHero />
+      <MarketOpportunity />
+      <LifestyleSection />
       <ProcessSection />
-      <Benefits />
-      <FinalCTA />
+      <MarketingBenefits />
+      <FAQ />
+      <MarketingCTA />
     </>
   );
 }
