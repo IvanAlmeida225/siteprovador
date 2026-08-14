@@ -27,7 +27,7 @@ const SITE_URL = "https://meuprovadorvirtual.com";
 const WA_LINK = `https://wa.me/${WA_NUMBER}`;
 
 const EMBED = {
-  suaFoto: "/imagem-1.png",
+  suaFoto: "/modelo.png",
   look: "/imagem-2.jpg",
   resultado: "/imagem-3.jpg",
 };
