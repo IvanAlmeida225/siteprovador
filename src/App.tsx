@@ -800,9 +800,9 @@ function MarketingHero() {
           >
             Mais oportunidades para experimentar. Mais confiança para comprar.
             Crie e compartilhe gratuitamente o link da sua loja. Sua loja não
-            paga nada, e cada cliente recebe um primeiro teste grátis para
-            visualizar os looks no próprio corpo, onde estiver e sem instalar
-            aplicativo.
+            paga nada, e cada cliente pode receber um primeiro teste grátis,
+            sujeito à disponibilidade mensal, para visualizar os looks no próprio
+            corpo, onde estiver e sem instalar aplicativo.
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
@@ -1156,7 +1156,7 @@ function FAQ() {
     {
       question: "A cliente paga para fazer o primeiro teste?",
       answer:
-        "Não. Cada cliente recebe um primeiro teste grátis para conhecer a experiência. Depois, se quiser gerar novos looks, ela poderá comprar créditos diretamente, sem custo para a loja.",
+        "O primeiro teste pode ser oferecido gratuitamente, sujeito à disponibilidade técnica e ao limite mensal da campanha. Depois, a cliente poderá comprar créditos diretamente, sem custo para a loja.",
     },
     {
       question: "Quantas clientes podem usar o link?",
@@ -1245,8 +1245,8 @@ function MarketingCTA() {
               style={{ color: "rgba(28,28,28,0.72)" }}
             >
               A loja não paga nada: crie e compartilhe seu link gratuitamente.
-              Cada cliente recebe um primeiro teste grátis para visualizar looks
-              pelo WhatsApp.
+              O primeiro teste da cliente pode ser grátis, sujeito à disponibilidade
+              mensal da campanha.
             </p>
             <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
               <PrimaryButton href="/criar-link">
@@ -1300,7 +1300,8 @@ function CreateLinkPage() {
             <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
               Digite apenas o nome da loja para gerar um link compartilhável, sem mensalidade e sem
               nenhum custo para a loja. Quando a cliente abrir o link, será direcionada ao WhatsApp
-              com o código da loja na mensagem e receberá um primeiro teste grátis.
+              com o código da loja na mensagem e poderá solicitar um primeiro teste grátis,
+              sujeito à disponibilidade mensal da campanha.
             </p>
 
             <div className="mt-5 rounded-[20px] border border-zinc-200 bg-white p-5 shadow-sm">
@@ -1310,7 +1311,8 @@ function CreateLinkPage() {
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
                 Depois de gerar o link, copie e envie para suas clientes pelo WhatsApp, coloque na bio
                 do Instagram ou envie no Direct. Criar e divulgar esse link é grátis para a loja, e
-                cada cliente pode conhecer o Meu Provador Virtual com um primeiro teste gratuito.
+                cada cliente pode conhecer o Meu Provador Virtual com um primeiro teste gratuito,
+                sujeito à disponibilidade mensal da campanha.
               </p>
             </div>
           </div>
@@ -1388,7 +1390,7 @@ function CreateLinkPage() {
               </h2>
               <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
                 Use o passo a passo abaixo para adicionar o link nos Stories e direcionar suas clientes
-                para testar gratuitamente.
+                para solicitar um teste gratuito, sujeito à disponibilidade mensal.
               </p>
             </div>
 
@@ -1434,7 +1436,7 @@ function StoreRedirectPage({ slug }: { slug: string }) {
           Abrindo o WhatsApp
         </h1>
         <p className="mt-4 leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-          Você será direcionada para testar gratuitamente um look pelo Meu Provador Virtual.
+          Você será direcionada para solicitar um teste gratuito pelo Meu Provador Virtual, sujeito à disponibilidade mensal.
         </p>
         <div className="mt-7">
           <PrimaryButton href={link} target="_blank">
