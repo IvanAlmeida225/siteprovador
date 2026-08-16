@@ -164,18 +164,17 @@ A foto-base permanece salva até ser substituída, excluída pelo usuário ou at
 Esse comando exclui a cópia criptografada e a referência mantidas pelo Meu Provador Virtual. Não remove automaticamente imagens que já estejam na conversa do WhatsApp, no aparelho do usuário, em backups externos ou em ambientes de operadores sujeitos a prazos próprios.
 
 5. PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
-Para criar a simulação, a foto-base e a imagem do produto são processadas por serviços do Google Gemini. O Meu Provador Virtual não utiliza deliberadamente as imagens para treinar modelos próprios nem cria banco comercial de fotografias de usuários.
+Para criar a simulação, a foto-base e a imagem do produto são processadas por tecnologia de inteligência artificial e por fornecedores tecnológicos contratados. O Meu Provador Virtual não utiliza deliberadamente as imagens para treinar modelos próprios nem cria banco comercial de fotografias de usuários.
 
-O tratamento realizado pelo Google depende da modalidade, configuração e termos vigentes do serviço contratado. Nos termos publicados pelo Google, serviços pagos e não pagos podem possuir regras diferentes sobre uso, retenção e revisão de conteúdo. Por isso, não prometemos que nenhum operador tecnológico realizará tratamento além da geração; aplicam-se também os termos e políticas do respectivo provedor.
+Os fornecedores recebem somente os dados necessários à finalidade contratada e realizam o tratamento conforme seus contratos, termos e políticas aplicáveis. Poderão existir registros técnicos temporários para segurança, prevenção de abuso, cumprimento legal e funcionamento do serviço. Informações sobre as entidades envolvidas poderão ser solicitadas pelo titular no canal de privacidade, observados os limites legais e a proteção de segredos comercial e industrial.
 
 6. COMPARTILHAMENTO E OPERADORES
 Compartilhamos somente o necessário para operar o serviço com:
-a) Meta/WhatsApp — recebimento e envio de mensagens e imagens;
-b) Google Gemini — análise e geração de imagens;
-c) Upstash — armazenamento de sessão e dados operacionais em Redis;
-d) Contabo — hospedagem da aplicação e da foto-base criptografada;
-e) InfinitePay — checkout, pagamento e confirmação da compra;
-f) prestadores de segurança, suporte técnico, contabilidade ou assessoria, quando necessários e sujeitos a deveres de confidencialidade.
+a) provedores de comunicação — recebimento e envio de mensagens e imagens;
+b) provedores de inteligência artificial — análise e geração das simulações;
+c) provedores de armazenamento e hospedagem — sessão, dados operacionais e guarda da foto-base criptografada;
+d) provedores de pagamento — checkout, processamento e confirmação da compra;
+e) prestadores de segurança, suporte técnico, contabilidade ou assessoria, quando necessários e sujeitos a deveres de confidencialidade.
 
 Também poderemos compartilhar dados por obrigação legal, ordem de autoridade competente, prevenção a fraude, proteção de direitos ou em operação societária legítima, com as salvaguardas cabíveis.
 
@@ -1176,7 +1175,7 @@ function FAQ() {
     {
       question: "Como as fotos e os dados pessoais são utilizados?",
       answer:
-        "As fotos são usadas para gerar a simulação solicitada. A foto-base fica salva de forma criptografada até você substituí-la ou enviar EXCLUIR MINHA FOTO. Não usamos as imagens para treinar modelos próprios; o processamento necessário por terceiros, como Meta/WhatsApp e Google Gemini, segue os termos, configurações e prazos desses fornecedores.",
+        "As fotos são usadas para gerar a simulação solicitada. A foto-base fica salva de forma criptografada até você substituí-la ou enviar EXCLUIR MINHA FOTO. Não usamos as imagens para treinar modelos próprios; o processamento necessário é realizado somente pelos fornecedores tecnológicos contratados e segue os respectivos termos e prazos.",
     },
     {
       question: "As fotos e os dados ficam armazenados por quanto tempo?",
@@ -1186,7 +1185,7 @@ function FAQ() {
     {
       question: "Os dados são compartilhados? Como solicitar acesso ou exclusão?",
       answer:
-        "Usamos Meta/WhatsApp, Google Gemini, Upstash, Contabo e InfinitePay para comunicação, inteligência artificial, sessão, hospedagem e pagamento. Para pedir acesso, correção, exclusão, oposição ou revisão, escreva para meuprovadorvirtual@gmail.com. Consulte a página de políticas para os prazos e detalhes.",
+        "Seus dados podem ser processados por fornecedores necessários à comunicação, geração de imagens, armazenamento, hospedagem e pagamento. Compartilhamos somente as informações necessárias para cada finalidade. Para solicitar acesso, correção, exclusão, oposição ou revisão, escreva para meuprovadorvirtual@gmail.com.",
     },
   ];
 
