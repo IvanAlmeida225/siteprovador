@@ -56,166 +56,170 @@ const TEXT_GRADIENT_STYLE: React.CSSProperties = {
 };
 
 const POLICIES_TEXT = `TERMOS DE USO – MEU PROVADOR VIRTUAL
-Última atualização: Março de 2026
+Última atualização: 16 de agosto de 2026
 
-1. APRESENTAÇÃO
-O presente Termo de Uso regula o acesso e utilização do serviço denominado Meu Provador Virtual, disponibilizado por meio de aplicativos de mensagens, incluindo o WhatsApp, bem como por páginas web ou outras interfaces digitais associadas.
+1. IDENTIFICAÇÃO E ACEITAÇÃO
+Estes Termos regulam o uso do Meu Provador Virtual, serviço digital operado sob a marca Meu Provador Virtual, inscrito no CNPJ 66.535.748/0001-05. O atendimento e as solicitações relacionadas ao serviço podem ser feitos pelo e-mail meuprovadorvirtual@gmail.com.
 
-O serviço consiste em uma ferramenta baseada em inteligência artificial que permite ao usuário visualizar virtualmente roupas, acessórios ou produtos aplicados sobre sua própria imagem.
+Ao iniciar ou continuar o uso pelo WhatsApp ou pelo site, o usuário declara ter lido e aceitado estes Termos e a Política de Privacidade. Se não concordar, não deverá utilizar o serviço.
 
-Ao utilizar o serviço, o usuário declara que leu, compreendeu e concorda integralmente com estes Termos de Uso.
+2. COMO O SERVIÇO FUNCIONA
+O usuário envia uma foto-base de corpo inteiro e uma foto da roupa, produto ou look. Tecnologias de inteligência artificial geram uma simulação visual do produto sobre a imagem enviada. O resultado é ilustrativo e experimental: não mede o corpo e não garante tamanho, caimento, textura, cor, proporção ou aparência idêntica ao produto real.
 
-Caso não concorde com qualquer disposição aqui prevista, o usuário não deverá utilizar o serviço.
+3. REQUISITOS PARA USO
+O serviço é destinado exclusivamente a pessoas com 18 anos ou mais. O usuário declara possuir os direitos ou autorização válida sobre todas as imagens enviadas e capacidade civil para aceitar estes Termos.
 
-2. IDENTIFICAÇÃO DO SERVIÇO
-O Meu Provador Virtual é uma solução digital que permite envio de fotografia do usuário, envio de imagem de roupa ou produto, geração de imagem simulada com aplicação virtual do produto e entrega do resultado ao usuário.
+4. TESTE GRATUITO, CRÉDITOS E PAGAMENTOS
+O primeiro teste gratuito é promocional, sujeito à disponibilidade técnica e ao limite mensal de orçamento da campanha, podendo ser suspenso ou encerrado sem aviso prévio.
 
-O serviço possui caráter meramente ilustrativo e experimental, não representando garantia exata de caimento, tamanho, textura ou aparência real do produto.
+Os pacotes pagos, sua quantidade de créditos, preço e eventual prazo de validade são informados antes da compra. Cada geração concluída poderá consumir um crédito. Tentativas que falhem antes da entrega do resultado não devem consumir crédito; divergências podem ser comunicadas ao suporte.
 
-3. CONDIÇÕES DE USO
-Para utilizar o serviço, o usuário declara possuir capacidade civil para aceitar estes termos, possuir direitos sobre a imagem enviada ou autorização para utilizá-la e não utilizar o serviço para finalidades ilegais.
+O checkout é processado pela InfinitePay. Para preencher o pagamento, podemos encaminhar nome, e-mail, telefone e o pacote escolhido. Informações adicionais solicitadas diretamente no checkout, inclusive dados de pagamento, são tratadas pela InfinitePay segundo seus próprios termos e política de privacidade. O Meu Provador Virtual não armazena o número completo do cartão.
 
-O usuário concorda em fornecer apenas imagens verdadeiras e de sua própria autoria ou com autorização.
+Dados operacionais da sessão do bot, inclusive o saldo apresentado, podem expirar após 30 dias de inatividade. Se um saldo pago deixar de aparecer, o usuário deverá contatar o suporte com o comprovante para análise.
 
-4. REGRAS DE UTILIZAÇÃO
-É proibido utilizar o serviço para gerar conteúdo sexual ou pornográfico, gerar provador de roupas íntimas, gerar conteúdo envolvendo crianças ou menores de idade, produzir conteúdo ofensivo, discriminatório ou ilegal, manipular imagens de terceiros sem autorização ou utilizar o sistema para fins de fraude ou falsificação.
+5. CANCELAMENTO E REEMBOLSO
+Pedidos de cancelamento ou reembolso serão analisados conforme o Código de Defesa do Consumidor e as características do serviço digital já utilizado. O direito de arrependimento aplicável às contratações a distância será respeitado nos termos da legislação. Créditos já consumidos e serviços já executados poderão ser considerados na análise, sem prejuízo dos direitos obrigatórios do consumidor.
 
-Caso seja identificado uso indevido, o acesso poderá ser suspenso ou bloqueado imediatamente, sem aviso prévio.
+6. FOTO-BASE SALVA
+A foto-base é salva para permitir novas simulações sem novo envio. Ela permanece armazenada até que o usuário a substitua, solicite sua exclusão ou até o encerramento definitivo do serviço, ressalvadas obrigações legais e cópias temporárias de segurança quando existentes.
 
-5. USO DE IMAGEM
-Ao enviar uma fotografia, o usuário declara possuir autorização para uso da imagem, autoriza o processamento da imagem pelo sistema e compreende que a imagem será utilizada exclusivamente para geração do resultado solicitado.
+Para apagar a foto-base armazenada pelo Meu Provador Virtual, o usuário deve enviar no WhatsApp: EXCLUIR MINHA FOTO. A exclusão remove a cópia criptografada mantida em nosso servidor e sua referência operacional. Ela não apaga cópias já existentes no aparelho, na conversa do WhatsApp ou em serviços de terceiros sujeitos às respectivas regras de retenção.
 
-O Meu Provador Virtual não reivindica propriedade sobre a imagem do usuário. As imagens são utilizadas apenas para execução do serviço.
+7. REGRAS DE USO
+É proibido:
+a) enviar imagens de terceiros sem autorização;
+b) usar imagens de menores de 18 anos;
+c) gerar conteúdo sexual, pornográfico ou envolvendo roupas íntimas;
+d) produzir conteúdo ilegal, discriminatório, ofensivo, fraudulento ou destinado a enganar;
+e) tentar contornar filtros de segurança, explorar falhas, sobrecarregar ou interferir no serviço;
+f) violar direitos de imagem, autorais, marcas ou outros direitos de terceiros.
 
-6. LIMITAÇÕES TECNOLÓGICAS
-O Meu Provador Virtual utiliza sistemas de inteligência artificial que podem gerar resultados que não representem perfeitamente a realidade, apresentem pequenas alterações visuais ou variem conforme iluminação, pose ou qualidade da foto enviada.
+O acesso poderá ser suspenso ou bloqueado quando houver indícios de violação, fraude, risco a terceiros ou obrigação legal.
 
-O serviço possui caráter demonstrativo e experimental, não sendo garantida fidelidade absoluta entre a simulação e o produto real.
+8. INTELIGÊNCIA ARTIFICIAL E RESULTADOS
+A inteligência artificial pode alterar detalhes do rosto, corpo, roupa, fundo, acessórios, cores ou proporções e pode gerar resultados incorretos ou inadequados. O usuário deve conferir o produto real, sua descrição e a tabela de medidas antes de comprar. O serviço não substitui aconselhamento profissional nem avaliação presencial.
 
-7. RESPONSABILIDADE DO USUÁRIO
-O usuário é responsável por garantir que possui direitos sobre as imagens enviadas, não violar direitos de terceiros, não utilizar o sistema para atividades ilegais e respeitar as condições de uso da plataforma.
+9. DIREITOS SOBRE IMAGENS E RESULTADOS
+O Meu Provador Virtual não reivindica propriedade sobre a fotografia original enviada pelo usuário. O usuário concede autorização limitada para processá-la e entregá-la aos operadores tecnológicos estritamente necessários à execução do serviço.
 
-O usuário assume total responsabilidade por conteúdos enviados ao sistema.
+O resultado gerado poderá ser usado pelo usuário para fins pessoais lícitos, respeitados os direitos de terceiros e as condições dos provedores de inteligência artificial. Não garantimos exclusividade, originalidade ou possibilidade de registro do resultado.
 
-8. PROPRIEDADE INTELECTUAL
-Todos os elementos do sistema, incluindo tecnologia, interface, software, fluxos de processamento, design da plataforma e identidade visual são protegidos por legislação de propriedade intelectual e direitos autorais.
+10. PROPRIEDADE INTELECTUAL DO SERVIÇO
+Marca, site, interface, código, fluxos, design e demais elementos próprios do Meu Provador Virtual são protegidos por lei. É proibida sua reprodução ou exploração comercial sem autorização, exceto nos limites permitidos pela legislação.
 
-É proibida a reprodução, cópia ou exploração comercial sem autorização prévia.
+11. DISPONIBILIDADE E ALTERAÇÕES
+O serviço pode sofrer manutenção, limites de capacidade, indisponibilidade de fornecedores ou alterações de funcionalidade. Não garantimos operação contínua ou livre de erros. Poderemos atualizar pacotes, preços, modelos de inteligência artificial e estes Termos; mudanças relevantes serão publicadas no canal oficial.
 
-9. DISPONIBILIDADE DO SERVIÇO
-O Meu Provador Virtual poderá sofrer interrupções, passar por manutenção ou ser atualizado ou modificado sem aviso prévio.
+12. RESPONSABILIDADES
+Na extensão permitida por lei, o Meu Provador Virtual não responde por decisões de compra baseadas exclusivamente na simulação, diferenças entre a imagem gerada e o produto real, uso indevido feito pelo usuário, indisponibilidade causada por terceiros ou violações decorrentes de imagens enviadas sem autorização.
 
-Não há garantia de disponibilidade contínua do serviço.
+Nada nestes Termos exclui direitos obrigatórios previstos no Código de Defesa do Consumidor ou responsabilidade que não possa ser limitada por lei.
 
-10. LIMITAÇÃO DE RESPONSABILIDADE
-O Meu Provador Virtual não se responsabiliza por decisões de compra baseadas na simulação gerada, diferenças entre imagem simulada e produto real, uso indevido do serviço por terceiros ou conteúdos enviados pelos usuários.
+13. COMUNICAÇÕES
+Podemos enviar mensagens necessárias ao funcionamento do serviço, pagamento, segurança e suporte. Comunicações promocionais serão enviadas quando houver base legal adequada, e o usuário poderá solicitar sua interrupção a qualquer momento.
 
-O sistema funciona como ferramenta tecnológica de visualização simulada.
+14. PROTEÇÃO DE DADOS
+O tratamento de dados pessoais é descrito na Política de Privacidade abaixo, que integra estes Termos.
 
-11. PROTEÇÃO DE DADOS PESSOAIS (LGPD)
-O tratamento de dados pessoais segue os princípios da Lei Geral de Proteção de Dados – LGPD (Lei nº 13.709/2018).
+15. LEGISLAÇÃO E CONTATO
+Aplicam-se as leis brasileiras, especialmente a LGPD, o Marco Civil da Internet, o Código de Defesa do Consumidor e a legislação de direitos autorais. Fica preservado o foro legalmente assegurado ao consumidor.
 
-Os dados tratados podem incluir número de telefone, imagens enviadas, registros de uso do serviço e histórico de interações com a plataforma.
-
-Esses dados são utilizados exclusivamente para funcionamento do serviço, geração das imagens solicitadas, melhoria da experiência do usuário, segurança da plataforma e controle de uso da ferramenta.
-
-12. COMUNICAÇÕES E INFORMATIVOS
-Ao utilizar o serviço e interagir com o Meu Provador Virtual por meio do WhatsApp ou outros canais digitais, o usuário autoriza o envio de comunicações relacionadas ao funcionamento da plataforma.
-
-Essas comunicações poderão incluir avisos sobre atualizações do serviço, informações sobre novos recursos da plataforma, conteúdos educativos, comunicações institucionais e conteúdos promocionais ou informativos relacionados ao aplicativo.
-
-O envio dessas comunicações respeitará os princípios da Lei Geral de Proteção de Dados e demais normas aplicáveis.
-
-O usuário poderá solicitar a interrupção do recebimento de comunicações de caráter promocional a qualquer momento por meio dos canais de contato disponibilizados pela plataforma.
-
-13. CANCELAMENTO OU BLOQUEIO
-O acesso ao serviço poderá ser suspenso ou bloqueado em caso de violação destes Termos de Uso, uso fraudulento da plataforma, uso para fins ilegais ou tentativa de exploração indevida do sistema.
-
-14. ALTERAÇÃO DOS TERMOS
-Estes Termos de Uso poderão ser atualizados a qualquer momento. A versão vigente será sempre a publicada no endereço oficial do serviço.
-
-A continuidade de uso da plataforma após atualizações será considerada como concordância com a nova versão.
-
-15. LEGISLAÇÃO APLICÁVEL
-Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil, especialmente:
-
-Lei nº 13.709/2018 – Lei Geral de Proteção de Dados (LGPD)
-Lei nº 12.965/2014 – Marco Civil da Internet
-Lei nº 8.078/1990 – Código de Defesa do Consumidor
-Lei nº 9.610/1998 – Lei de Direitos Autorais
-
-16. CONTATO
-E-mail de contato: meuprovadorvirtual@gmail.com
-
-Ao continuar utilizando o Meu Provador Virtual, o usuário declara estar ciente e de acordo com estes Termos de Uso.
+Contato: meuprovadorvirtual@gmail.com
 
 
 POLÍTICA DE PRIVACIDADE – MEU PROVADOR VIRTUAL
-Última atualização: Março de 2026
+Última atualização: 16 de agosto de 2026
 
-1. INTRODUÇÃO
-A presente Política de Privacidade descreve como o Meu Provador Virtual coleta, utiliza, armazena e protege os dados pessoais dos usuários que utilizam a plataforma.
+1. CONTROLADOR E ESCOPO
+Esta Política explica como o Meu Provador Virtual, inscrito no CNPJ 66.535.748/0001-05, trata dados pessoais no site, no bot do WhatsApp, na geração de imagens, no checkout e no suporte. Para exercer direitos ou tirar dúvidas: meuprovadorvirtual@gmail.com.
 
-Nos comprometemos a tratar os dados pessoais com responsabilidade, transparência e segurança, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD) e demais legislações aplicáveis no Brasil.
+2. DADOS TRATADOS
+Podemos tratar:
+a) identificação e contato: número de telefone, nome e e-mail;
+b) conteúdo: foto-base, fotos de produtos ou looks, mensagens e comandos enviados;
+c) resultados: imagens geradas e identificadores técnicos associados;
+d) uso e conta: estado da conversa, saldo de créditos, pacote escolhido, origem do link da loja e histórico necessário à operação;
+e) pagamento: dados de referência da compra, status e identificadores da transação recebidos da InfinitePay;
+f) segurança e funcionamento: datas, horários, endereço IP quando disponível, registros de acesso, erros, eventos técnicos e prevenção a fraude.
 
-Ao utilizar o serviço, o usuário declara estar ciente das práticas descritas nesta Política de Privacidade.
+Não solicitamos o número completo do cartão no WhatsApp. Dados fornecidos diretamente no checkout são tratados pela InfinitePay.
 
-2. DADOS COLETADOS
-Durante a utilização do serviço, podemos coletar dados fornecidos pelo usuário como número de telefone, fotografias enviadas, imagens de produtos ou roupas para simulação e mensagens enviadas ao sistema.
+3. FINALIDADES E BASES LEGAIS
+Os dados são tratados para:
+a) prestar o serviço solicitado, manter a sessão, gerar e entregar a simulação — execução de contrato ou de procedimentos solicitados pelo titular;
+b) salvar a foto-base para uso futuro — consentimento ou execução continuada do serviço, conforme aplicável;
+c) processar compras, controlar créditos e emitir registros — execução de contrato e cumprimento de obrigações legais;
+d) proteger usuários, prevenir fraude, diagnosticar falhas e defender direitos — legítimo interesse, prevenção à fraude, exercício regular de direitos e cumprimento legal, conforme o caso;
+e) responder solicitações de privacidade e autoridades — cumprimento de obrigação legal ou regulatória;
+f) enviar publicidade — consentimento ou outra base legal válida, com possibilidade de oposição ou cancelamento.
 
-Também podem ser coletados dados gerados durante o uso do serviço, como imagens geradas pela inteligência artificial, histórico de utilização da ferramenta e registros técnicos do sistema.
+Quando a imagem puder revelar dados pessoais sensíveis, adotamos as bases e salvaguardas cabíveis conforme a LGPD e limitamos seu uso à finalidade solicitada.
 
-Informações técnicas como endereço IP, registros de acesso, data e horário das interações podem ser coletadas para garantir segurança e funcionamento da plataforma.
+4. FOTO-BASE: ARMAZENAMENTO, SEGURANÇA E EXCLUSÃO
+A foto-base é mantida em área privada do servidor, em arquivo criptografado com AES-256-GCM e acesso restrito. A referência necessária para localizar o arquivo fica associada à sessão do usuário.
 
-3. FINALIDADE DO USO DOS DADOS
-Os dados coletados podem ser utilizados para executar o funcionamento do Meu Provador Virtual, processar imagens enviadas, gerar simulações de roupas ou produtos, melhorar o desempenho da ferramenta, manter a segurança da plataforma, prevenir fraudes, prestar suporte ao usuário e enviar comunicações informativas relacionadas ao serviço.
+A foto-base permanece salva até ser substituída, excluída pelo usuário ou até o encerramento definitivo do serviço. Para exclusão, envie no WhatsApp: EXCLUIR MINHA FOTO.
 
-4. BASE LEGAL PARA TRATAMENTO DE DADOS
-O tratamento de dados pessoais ocorre com base nas hipóteses legais previstas na LGPD, incluindo execução do serviço solicitado pelo usuário, consentimento do usuário, legítimo interesse da plataforma e cumprimento de obrigações legais.
+Esse comando exclui a cópia criptografada e a referência mantidas pelo Meu Provador Virtual. Não remove automaticamente imagens que já estejam na conversa do WhatsApp, no aparelho do usuário, em backups externos ou em ambientes de operadores sujeitos a prazos próprios.
 
-5. USO DE IMAGENS
-As imagens enviadas pelos usuários são utilizadas exclusivamente para processamento da simulação de roupas ou produtos e geração da imagem final solicitada.
+5. PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
+Para criar a simulação, a foto-base e a imagem do produto são processadas por serviços do Google Gemini. O Meu Provador Virtual não utiliza deliberadamente as imagens para treinar modelos próprios nem cria banco comercial de fotografias de usuários.
 
-O Meu Provador Virtual não reivindica propriedade sobre as imagens enviadas pelos usuários.
+O tratamento realizado pelo Google depende da modalidade, configuração e termos vigentes do serviço contratado. Nos termos publicados pelo Google, serviços pagos e não pagos podem possuir regras diferentes sobre uso, retenção e revisão de conteúdo. Por isso, não prometemos que nenhum operador tecnológico realizará tratamento além da geração; aplicam-se também os termos e políticas do respectivo provedor.
 
-6. PROCESSAMENTO POR INTELIGÊNCIA ARTIFICIAL
-O serviço utiliza tecnologias de inteligência artificial e processamento automatizado de imagens para gerar simulações visuais de roupas ou produtos aplicados sobre a fotografia enviada pelo usuário.
+6. COMPARTILHAMENTO E OPERADORES
+Compartilhamos somente o necessário para operar o serviço com:
+a) Meta/WhatsApp — recebimento e envio de mensagens e imagens;
+b) Google Gemini — análise e geração de imagens;
+c) Upstash — armazenamento de sessão e dados operacionais em Redis;
+d) Contabo — hospedagem da aplicação e da foto-base criptografada;
+e) InfinitePay — checkout, pagamento e confirmação da compra;
+f) prestadores de segurança, suporte técnico, contabilidade ou assessoria, quando necessários e sujeitos a deveres de confidencialidade.
 
-Esse processamento ocorre de forma automatizada e pode envolver o uso de serviços de inteligência artificial de terceiros.
+Também poderemos compartilhar dados por obrigação legal, ordem de autoridade competente, prevenção a fraude, proteção de direitos ou em operação societária legítima, com as salvaguardas cabíveis.
 
-7. NÃO UTILIZAÇÃO DAS IMAGENS PARA TREINAMENTO DE IA
-As imagens enviadas pelos usuários não são utilizadas para treinamento de modelos de inteligência artificial ou criação de datasets, sendo utilizadas apenas para geração da simulação solicitada.
+7. TRANSFERÊNCIA INTERNACIONAL
+Alguns fornecedores possuem infraestrutura ou equipes fora do Brasil. Assim, dados podem ser processados em outros países. Buscamos utilizar fornecedores reconhecidos e mecanismos admitidos pela LGPD e pela regulamentação da ANPD, incluindo cláusulas contratuais e outras salvaguardas aplicáveis.
 
-8. LIMITAÇÕES DA INTELIGÊNCIA ARTIFICIAL
-Os resultados gerados pela inteligência artificial podem apresentar variações ou imperfeições visuais, podendo não representar exatamente o caimento real da roupa, proporções físicas ou cores do produto.
+8. PRAZOS DE RETENÇÃO
+Aplicamos os seguintes critérios:
+a) foto-base criptografada: até substituição, comando de exclusão ou encerramento definitivo do serviço;
+b) foto de produto, resultado e referências operacionais: durante o processamento e, quando associadas à sessão, por até 30 dias de inatividade; cópias presentes no WhatsApp seguem as regras da Meta e as escolhas do usuário;
+c) nome, e-mail, telefone, saldo e estado da sessão: em regra, por até 30 dias de inatividade, salvo quando outro prazo for necessário para compra, suporte, fraude ou obrigação legal;
+d) registros de compra, fiscais e de atendimento: pelos prazos legais e pelo tempo necessário ao exercício de direitos;
+e) logs técnicos e de segurança: pelo período necessário para segurança, diagnóstico, prevenção a fraude e cumprimento legal.
 
-As imagens geradas possuem caráter meramente ilustrativo.
+A eliminação pode ser adiada quando a conservação for exigida por lei, necessária ao exercício de direitos ou tecnicamente mantida em backup temporário protegido.
 
-9. COMPARTILHAMENTO DE DADOS
-Os dados poderão ser compartilhados apenas quando necessário para a operação do serviço, incluindo provedores de infraestrutura em nuvem, serviços de inteligência artificial e plataformas de comunicação utilizadas para interação com o usuário.
+9. SEGURANÇA
+Adotamos controles compatíveis com os riscos, como criptografia da foto-base, restrição de acesso ao servidor, proteção de credenciais, conexões seguras e registros técnicos. Nenhum sistema é totalmente imune; em caso de incidente relevante, adotaremos medidas de contenção, investigação e as comunicações exigidas pela LGPD e pela ANPD.
 
-10. SEGURANÇA DAS INFORMAÇÕES
-Adotamos medidas técnicas e administrativas para proteger os dados contra acessos não autorizados, vazamentos, perda de informações ou alterações indevidas.
+10. DIREITOS DO TITULAR
+O titular pode solicitar, conforme a LGPD: confirmação do tratamento; acesso; correção; anonimização, bloqueio ou eliminação; informação sobre compartilhamentos; portabilidade quando regulamentada e aplicável; revisão de decisões automatizadas; oposição; revogação do consentimento; e informação sobre as consequências de não consentir.
 
-11. RETENÇÃO DOS DADOS
-Os dados pessoais serão armazenados apenas pelo tempo necessário para execução do serviço, melhoria da plataforma, prevenção de fraudes ou cumprimento de obrigações legais.
+Solicitações devem ser enviadas a meuprovadorvirtual@gmail.com. Poderemos pedir informações mínimas para verificar a identidade e evitar fraude. A resposta observará os prazos legais.
 
-12. DIREITOS DOS TITULARES DE DADOS
-Nos termos da LGPD, o usuário possui direito de solicitar confirmação da existência de tratamento de dados, acesso aos dados pessoais, correção de informações, anonimização ou exclusão de dados, portabilidade e revogação do consentimento.
+11. DECISÕES AUTOMATIZADAS
+A inteligência artificial cria a imagem e pode aplicar filtros de segurança. O serviço não utiliza a simulação para tomar decisões que produzam efeitos jurídicos sobre o usuário. Se uma decisão automatizada de bloqueio afetar o acesso, o usuário poderá pedir revisão pelo canal de contato.
 
-13. PROIBIÇÃO DE USO INDEVIDO DA PLATAFORMA
-É proibido utilizar o Meu Provador Virtual para manipular imagens de terceiros sem autorização, criar conteúdo enganoso ou fraudulento, gerar conteúdo sexual ou pornográfico, produzir conteúdo envolvendo menores de idade ou qualquer conteúdo ilegal.
+12. MENORES DE IDADE
+O serviço não é destinado a menores de 18 anos e não deve receber suas imagens. Se identificarmos tratamento indevido de dados de menor, poderemos bloquear o uso e eliminar os dados, ressalvadas obrigações legais.
 
-14. ALTERAÇÕES NA POLÍTICA DE PRIVACIDADE
-Esta Política de Privacidade poderá ser atualizada periodicamente e a versão mais recente estará sempre disponível no canal oficial da plataforma.
+13. SITE, LINKS E SERVIÇOS DE TERCEIROS
+O site pode registrar dados técnicos essenciais de acesso e encaminhar o usuário ao WhatsApp ou ao checkout da InfinitePay. Ao entrar em um serviço de terceiro, aplicam-se também os respectivos termos e políticas. Não controlamos a retenção feita no aparelho, na conta do WhatsApp ou em páginas externas.
 
-15. LEGISLAÇÃO APLICÁVEL
-Esta Política de Privacidade é regida pela legislação brasileira, especialmente a Lei nº 13.709/2018 – LGPD, o Marco Civil da Internet (Lei nº 12.965/2014) e o Código de Defesa do Consumidor (Lei nº 8.078/1990).
+14. COMUNICAÇÕES
+Mensagens transacionais e de segurança são necessárias ao serviço. O usuário pode se opor a mensagens promocionais pelo próprio WhatsApp ou pelo e-mail de contato, sem impedir comunicações indispensáveis sobre compras, segurança ou solicitações.
+
+15. ALTERAÇÕES DESTA POLÍTICA
+Esta Política poderá ser atualizada para refletir mudanças legais, técnicas ou comerciais. A versão vigente e sua data estarão disponíveis em https://meuprovadorvirtual.com/politicas. Alterações relevantes poderão ser comunicadas pelos canais disponíveis.
 
 16. CONTATO
-E-mail de contato: meuprovadorvirtual@gmail.com
-
-Ao utilizar o Meu Provador Virtual, o usuário declara estar ciente e de acordo com esta Política de Privacidade.
+Meu Provador Virtual
+CNPJ: 66.535.748/0001-05
+E-mail: meuprovadorvirtual@gmail.com
+Site: https://meuprovadorvirtual.com
 `;
 
 function slugify(value: string) {
@@ -1172,17 +1176,17 @@ function FAQ() {
     {
       question: "Como as fotos e os dados pessoais são utilizados?",
       answer:
-        "As fotos são usadas para processar e gerar a simulação solicitada. Também podem ser tratados dados necessários ao funcionamento e à segurança do serviço, como número de telefone, mensagens, histórico de uso e registros técnicos. O Meu Provador Virtual não reivindica propriedade sobre as imagens e não as utiliza para treinar modelos de inteligência artificial.",
+        "As fotos são usadas para gerar a simulação solicitada. A foto-base fica salva de forma criptografada até você substituí-la ou enviar EXCLUIR MINHA FOTO. Não usamos as imagens para treinar modelos próprios; o processamento necessário por terceiros, como Meta/WhatsApp e Google Gemini, segue os termos, configurações e prazos desses fornecedores.",
     },
     {
       question: "As fotos e os dados ficam armazenados por quanto tempo?",
       answer:
-        "Os dados são mantidos apenas pelo período necessário para executar o serviço, melhorar a plataforma, prevenir fraudes ou cumprir obrigações legais. Com autorização da cliente, a foto base poderá ser armazenada para facilitar novas simulações. Ela pode solicitar a exclusão dessa foto ou revogar o consentimento a qualquer momento.",
+        "A foto-base criptografada permanece salva até você substituí-la ou enviar EXCLUIR MINHA FOTO. Os dados operacionais da sessão, como nome, e-mail, telefone, saldo e referências de imagens, podem permanecer por até 30 dias de inatividade; registros de compra e segurança seguem os prazos legais.",
     },
     {
       question: "Os dados são compartilhados? Como solicitar acesso ou exclusão?",
       answer:
-        "Os dados podem ser processados somente pelos serviços tecnológicos necessários à operação, como infraestrutura em nuvem, inteligência artificial e comunicação. Para pedir acesso, correção, anonimização, exclusão ou revogar o consentimento, envie uma solicitação para meuprovadorvirtual@gmail.com. Consulte os Termos e a Política de Privacidade para mais detalhes.",
+        "Usamos Meta/WhatsApp, Google Gemini, Upstash, Contabo e InfinitePay para comunicação, inteligência artificial, sessão, hospedagem e pagamento. Para pedir acesso, correção, exclusão, oposição ou revisão, escreva para meuprovadorvirtual@gmail.com. Consulte a página de políticas para os prazos e detalhes.",
     },
   ];
 
@@ -1461,7 +1465,7 @@ function PoliciesPage() {
         </div>
 
         <p className="mt-4 text-sm" style={{ color: "rgba(28,28,28,0.65)" }}>
-          Textos integrais vigentes, atualizados em março de 2026.
+          Textos integrais vigentes, atualizados em 16 de agosto de 2026.
         </p>
 
         <div className="mt-8 overflow-hidden rounded-[24px] border border-zinc-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
