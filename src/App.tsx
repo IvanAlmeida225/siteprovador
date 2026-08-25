@@ -843,24 +843,6 @@ function MarketingHero() {
           transition={{ delay: 0.08 }}
           className="relative mx-auto w-full max-w-[360px]"
         >
-          <div
-            className="absolute -left-8 top-16 z-10 hidden rounded-[22px] border border-zinc-200 bg-white p-4 shadow-xl sm:block"
-            style={{ transform: "rotate(-3deg)" }}
-          >
-            <div className="flex items-center gap-3">
-              <div
-                className="flex h-10 w-10 items-center justify-center rounded-full"
-                style={{ background: "rgba(28,28,28,0.08)" }}
-              >
-                <Users className="h-5 w-5" />
-              </div>
-              <div>
-                <div className="text-xs text-zinc-500">Mais oportunidades</div>
-                <div className="text-sm font-semibold">de experimentar</div>
-              </div>
-            </div>
-          </div>
-
           <div className="overflow-hidden rounded-[36px] border border-zinc-200 bg-white p-3 shadow-[0_26px_80px_rgba(0,0,0,0.15)]">
             <div className="overflow-hidden rounded-[28px] bg-zinc-50">
               <div className="aspect-[964/2144]">
