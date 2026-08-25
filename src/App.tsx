@@ -456,7 +456,7 @@ function Hero() {
                 <div className="overflow-hidden rounded-[28px] border border-zinc-200 bg-white shadow-[0_18px_60px_rgba(0,0,0,0.10)]">
                   <div className="aspect-[964/2144] bg-zinc-50">
                     <video
-                      src="/video-demo.mp4"
+                      src="/video-demo.mp4?v=20260824"
                       autoPlay
                       muted
                       loop
@@ -847,7 +847,7 @@ function MarketingHero() {
             <div className="overflow-hidden rounded-[28px] bg-zinc-50">
               <div className="aspect-[964/2144]">
                 <video
-                  src="/video-demo.mp4"
+                  src="/video-demo.mp4?v=20260824"
                   autoPlay
                   muted
                   loop
