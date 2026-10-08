@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /l/
+
+Sitemap: https://meuprovadorvirtual.com/sitemap.xml
