@@ -790,7 +790,7 @@ function MarketingHero() {
             className="mt-7 text-4xl font-bold leading-[1.04] tracking-[-0.04em] sm:text-5xl md:text-6xl"
             style={{ color: COLORS.dark }}
           >
-            Transforme o WhatsApp das suas clientes em novos provadores da sua loja.
+            Transforme o WhatsApp das suas clientes em um provador virtual com IA.
           </h1>
 
           <p
