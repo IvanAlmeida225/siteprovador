@@ -397,7 +397,7 @@ function TopNav() {
 
           <div className="flex min-w-[150px] justify-end">
             <PrimaryButton href="/criar-link">
-              Criar link grátis <ArrowRight className="h-4 w-4" />
+              Retirar créditos grátis <ArrowRight className="h-4 w-4" />
             </PrimaryButton>
           </div>
         </div>
@@ -567,13 +567,12 @@ function ShopkeeperSection() {
           </h2>
 
           <p className="mt-6 text-base leading-relaxed sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
-            Compartilhe o link da sua loja no WhatsApp e no Instagram e deixe suas clientes
-            testarem seus produtos gratuitamente no Meu Provador Virtual!
+            Retire seu pacote de créditos grátis e compartilhe a experiência do Meu Provador Virtual com suas clientes pelo WhatsApp e Instagram. Nossa equipe entra em contato para enviar o acesso.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <PrimaryButton href="/criar-link">
-              Criar link da loja
+              Solicitar créditos grátis
               <ArrowRight className="h-5 w-5" />
             </PrimaryButton>
             <a
@@ -684,7 +683,7 @@ function Benefits() {
     {
       icon: Users,
       title: "Teste gratuito para a cliente",
-      desc: "O link da loja leva a cliente para uma experiência gratuita, facilitando a primeira interação e reduzindo a dúvida antes da compra.",
+      desc: "O pacote gratuito permite apresentar o provador virtual às clientes e facilitar a primeira experiência antes da compra.",
     },
     {
       icon: MessageCircle,
@@ -799,15 +798,12 @@ function MarketingHero() {
             style={{ color: "rgba(28,28,28,0.72)" }}
           >
             Mais oportunidades para experimentar. Mais confiança para comprar.
-            Crie e compartilhe gratuitamente o link da sua loja. Sua loja não
-            paga nada, e cada cliente pode receber um primeiro teste grátis,
-            sujeito à disponibilidade mensal, para visualizar os looks no próprio
-            corpo, onde estiver e sem instalar aplicativo.
+            Solicite seu pacote de créditos grátis para compartilhar com suas clientes. Nossa equipe entrará em contato pelo WhatsApp para enviar o acesso e orientar a divulgação. Suas clientes poderão experimentar roupas virtualmente, onde estiverem e sem instalar aplicativo.
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <PrimaryButton href="/criar-link">
-              Criar link grátis da minha loja
+              Retirar créditos grátis
               <ArrowRight className="h-5 w-5" />
             </PrimaryButton>
             <a
@@ -922,7 +918,7 @@ function MarketOpportunity() {
               style={{ color: COLORS.dark }}
             >
               Um provador físico atende uma cliente por vez. O virtual acompanha
-              cada link compartilhado.
+              cada experiência compartilhada.
             </h2>
           </div>
           <p
@@ -1068,7 +1064,7 @@ function MarketingBenefits() {
     {
       icon: Sparkles,
       title: "Custo zero para a loja",
-      desc: "Criar, divulgar e manter o link da loja é grátis. A cliente também recebe o primeiro teste sem custo.",
+      desc: "A loja pode solicitar um pacote de créditos gratuitos para apresentar o provador virtual às clientes, com atendimento da nossa equipe.",
     },
   ];
 
@@ -1116,14 +1112,14 @@ function MarketingBenefits() {
 function FAQ() {
   const items = [
     {
-      question: "Como a loja cria seu link?",
+      question: "Como a loja solicita os créditos grátis?",
       answer:
-        "Acesse “Criar link”, informe o nome da loja e copie o endereço gerado. Ele identifica a origem da cliente e abre a conversa do Meu Provador Virtual no WhatsApp.",
+        "Acesse “Retirar créditos grátis”, informe seu número de WhatsApp com DDD e envie a solicitação. Nossa equipe entrará em contato para orientar e disponibilizar o acesso.",
     },
     {
-      question: "Onde posso compartilhar o link?",
+      question: "Como posso compartilhar com minhas clientes?",
       answer:
-        "No WhatsApp, na bio do Instagram, nos Stories, no Direct, em posts, no atendimento e em outros canais digitais da loja.",
+        "Após receber o acesso da nossa equipe, você poderá compartilhar com suas clientes pelo WhatsApp, Instagram, Stories, Direct e outros canais da loja.",
     },
     {
       question: "A cliente precisa instalar algum aplicativo?",
@@ -1131,9 +1127,9 @@ function FAQ() {
         "Não. Ela abre o link da loja e realiza todo o processo pelo WhatsApp.",
     },
     {
-      question: "A loja paga para criar ou compartilhar o link?",
+      question: "A loja paga para solicitar os créditos gratuitos?",
       answer:
-        "Não. Criar e compartilhar o link é totalmente gratuito para a loja. Não há mensalidade nem cobrança para oferecer o link às clientes. O primeiro teste da cliente também é grátis; se ela quiser continuar depois, poderá comprar novos créditos diretamente.",
+        "Não. A solicitação do pacote de créditos gratuitos não tem custo. Nossa equipe entrará em contato pelo WhatsApp para orientar o uso e o compartilhamento com suas clientes.",
     },
     {
       question: "A cliente paga para fazer o primeiro teste?",
@@ -1220,19 +1216,17 @@ function MarketingCTA() {
               className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl"
               style={{ color: COLORS.dark }}
             >
-              Transforme o link da sua loja em novos provadores.
+              Ofereça créditos grátis para suas clientes experimentarem.
             </h2>
             <p
               className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
               style={{ color: "rgba(28,28,28,0.72)" }}
             >
-              A loja não paga nada: crie e compartilhe seu link gratuitamente.
-              O primeiro teste da cliente pode ser grátis, sujeito à disponibilidade
-              mensal da campanha.
+              Solicite seu pacote gratuito pelo WhatsApp e receba nossa orientação para compartilhar a experiência com suas clientes. A liberação será realizada pela nossa equipe.
             </p>
             <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
               <PrimaryButton href="/criar-link">
-                Criar link grátis da minha loja
+                Retirar créditos grátis
                 <ArrowRight className="h-5 w-5" />
               </PrimaryButton>
               <a
@@ -1264,6 +1258,13 @@ function CreateLinkPage() {
   const [error, setError] = useState("");
   const digits = phone.replace(/\D/g, "");
   const validPhone = /^[1-9]{2}9?\d{8}$/.test(digits);
+  useEffect(() => {
+    if (!sent) return;
+    const timeout = window.setTimeout(() => {
+      window.location.assign("/");
+    }, 5000);
+    return () => window.clearTimeout(timeout);
+  }, [sent]);
 
   async function submitLead(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -1313,7 +1314,7 @@ function CreateLinkPage() {
               <CheckCircle2 className="mb-4 h-10 w-10" style={{ color: "#15803D" }} />
               <h2 className="text-2xl font-bold" style={{ color: COLORS.dark }}>Solicitação enviada</h2>
               <p className="mt-3" style={{ color: COLORS.gray }}>
-                Seu formulário foi enviado. Aguarde nosso contato pelo WhatsApp para confirmar a solicitação.
+                Recebemos sua solicitação. Nossa equipe entrará em contato pelo WhatsApp. Você voltará à página inicial em alguns segundos.
               </p>
             </div>
           ) : (
@@ -1335,7 +1336,7 @@ function CreateLinkPage() {
                 style={{ background: COLORS.primary }}>
                 {sending ? "Enviando..." : "Solicitar créditos grátis"} <ArrowRight className="h-5 w-5" />
               </button>
-              <p className="mt-4 text-xs" style={{ color: COLORS.gray }}>O atendimento e o envio dos créditos são feitos manualmente.</p>
+              <p className="mt-4 text-xs" style={{ color: COLORS.gray }}>Entraremos em contato pelo WhatsApp para dar continuidade à sua solicitação.</p>
             </>
           )}
         </form>
@@ -1455,7 +1456,7 @@ function Footer() {
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 font-semibold transition hover:bg-zinc-50"
               style={{ color: COLORS.dark }}
             >
-              Criar link grátis da loja
+              Retirar créditos grátis
             </a>
             <a
               href="/politicas"
