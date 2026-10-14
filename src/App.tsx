@@ -25,6 +25,7 @@ import { motion } from "motion/react";
 const WA_NUMBER = "553598762499";
 const SITE_URL = "https://meuprovadorvirtual.com";
 const WA_LINK = `https://wa.me/${WA_NUMBER}`;
+const LEADS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxLgTpXDDbpG1s4LFfXfYdAMowse0HI_X2QaAlXJQnY70Yk3gVb9DGySFPwEAzFiZ6t4A/exec";
 
 const EMBED = {
   suaFoto: "/modelo.png",
@@ -1256,17 +1257,34 @@ function MarketingCTA() {
 }
 
 function CreateLinkPage() {
-  const [shopName, setShopName] = useState("");
-  const [copied, setCopied] = useState(false);
+  const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+  const digits = phone.replace(/\D/g, "");
+  const validPhone = /^[1-9]{2}9?\d{8}$/.test(digits);
 
-  const slug = useMemo(() => slugify(shopName), [shopName]);
-  const generatedLink = slug ? `${SITE_URL}/l/${slug}` : "";
-
-  async function copyLink() {
-    if (!generatedLink) return;
-    await navigator.clipboard.writeText(generatedLink);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
+  async function submitLead(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!validPhone || !consent || sending) return;
+    setSending(true);
+    setError("");
+    try {
+      // Google Apps Script responde por redirecionamento. no-cors permite o envio,
+      // mas não disponibiliza confirmação de gravação para o navegador.
+      await fetch(LEADS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ phone: "55" + digits, source: "site-meu-provador", consent: true, website: "" })
+      });
+      setSent(true);
+    } catch {
+      setError("Não foi possível enviar sua solicitação. Tente novamente.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -1275,117 +1293,52 @@ function CreateLinkPage() {
         <div className="flex items-start justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: COLORS.dark }}>
-              Criar link grátis da loja
+              Retire seu pacote de créditos grátis
             </h1>
-
-            <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-              Digite apenas o nome da loja para gerar um link compartilhável, sem mensalidade e sem
-              nenhum custo para a loja. Quando a cliente abrir o link, será direcionada ao WhatsApp
-              com o código da loja na mensagem e poderá solicitar um primeiro teste grátis,
-              sujeito à disponibilidade mensal da campanha.
+            <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: COLORS.gray }}>
+              Solicite créditos gratuitos para compartilhar com suas clientes e oferecer a experiência de provar roupas virtualmente pelo WhatsApp.
             </p>
-
-            <div className="mt-5 rounded-[20px] border border-zinc-200 bg-white p-5 shadow-sm">
-              <p className="text-sm font-semibold" style={{ color: COLORS.dark }}>
-                Como compartilhar:
-              </p>
-              <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-                Depois de gerar o link, copie e envie para suas clientes pelo WhatsApp, coloque na bio
-                do Instagram ou envie no Direct. Criar e divulgar esse link é grátis para a loja, e
-                cada cliente pode conhecer o Meu Provador Virtual com um primeiro teste gratuito,
-                sujeito à disponibilidade mensal da campanha.
-              </p>
-            </div>
           </div>
-
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold transition hover:bg-zinc-50"
-            style={{ color: COLORS.dark }}
-          >
-            Voltar
-          </a>
+          <a href="#/" className="shrink-0 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold" style={{ color: COLORS.dark }}>Voltar</a>
         </div>
-
-        <div className="mt-9 rounded-[32px] border border-zinc-200 bg-white p-6 shadow-[0_22px_70px_rgba(0,0,0,0.10)] sm:p-8">
-          <div
-            className="rounded-[28px] border border-zinc-200 p-5 sm:p-6"
-            style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F5F5F4 100%)" }}
-          >
-            <div className="flex items-start gap-4">
-              <div
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-                style={{ background: COLORS.primary }}
-              >
-                1
-              </div>
-
-              <div className="w-full">
-                <label className="text-base font-bold" style={{ color: COLORS.dark }}>
-                  Insira o nome da sua loja
-                </label>
-
-                <p className="mt-1 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.65)" }}>
-                  Esse nome será usado para criar o link exclusivo e identificar a origem da cliente.
-                </p>
-
-                <input
-                  value={shopName}
-                  onChange={(event) => setShopName(event.target.value)}
-                  placeholder="Ex.: Ana Modas"
-                  className="mt-5 w-full rounded-full border-2 border-zinc-300 bg-white px-6 py-5 text-lg font-semibold outline-none transition focus:border-zinc-900 focus:shadow-[0_0_0_4px_rgba(28,28,28,0.08)]"
-                  style={{ color: COLORS.dark }}
-                />
-              </div>
+        <div className="mt-6 rounded-[20px] border border-zinc-200 bg-white p-5">
+          <p className="text-sm font-semibold" style={{ color: COLORS.dark }}>Como funciona?</p>
+          <p className="mt-2 text-sm leading-relaxed" style={{ color: COLORS.gray }}>
+            Informe seu WhatsApp. Nossa equipe entrará em contato para preparar e enviar seu acesso aos créditos gratuitos. Você poderá compartilhar a experiência com suas clientes.
+          </p>
+        </div>
+        <form onSubmit={submitLead} className="mt-6 rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_18px_60px_rgba(0,0,0,0.08)] sm:p-8">
+          {sent ? (
+            <div role="status">
+              <CheckCircle2 className="mb-4 h-10 w-10" style={{ color: "#15803D" }} />
+              <h2 className="text-2xl font-bold" style={{ color: COLORS.dark }}>Solicitação enviada</h2>
+              <p className="mt-3" style={{ color: COLORS.gray }}>
+                Seu formulário foi enviado. Aguarde nosso contato pelo WhatsApp para confirmar a solicitação.
+              </p>
             </div>
-          </div>
-
-          {generatedLink && (
-            <div className="mt-7 rounded-[24px] border border-zinc-200 p-5" style={{ background: COLORS.light }}>
-              <div className="text-sm font-semibold" style={{ color: COLORS.gray }}>
-                Link gerado
-              </div>
-
-              <div className="mt-2 break-all text-xl font-bold" style={{ color: COLORS.dark }}>
-                {generatedLink}
-              </div>
-
-              <div className="mt-5 flex flex-wrap gap-3">
-                <button
-                  type="button"
-                  onClick={copyLink}
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:shadow-md"
-                  style={{ background: COLORS.primary, color: COLORS.white }}
-                >
-                  <Copy className="h-4 w-4" />
-                  {copied ? "Link copiado" : "Copiar link"}
-                </button>
-              </div>
-            </div>
+          ) : (
+            <>
+              <label htmlFor="whatsapp-lojista" className="block text-lg font-bold" style={{ color: COLORS.dark }}>Seu número de WhatsApp</label>
+              <p className="mt-2 text-sm" style={{ color: COLORS.gray }}>Informe o número com DDD para receber nosso contato.</p>
+              <input id="whatsapp-lojista" type="tel" inputMode="tel" autoComplete="tel-national" required maxLength={20}
+                value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="(35) 99999-9999"
+                className="mt-5 w-full rounded-full border-2 border-zinc-300 bg-white px-6 py-5 text-lg font-semibold outline-none transition focus:border-zinc-900"
+                style={{ color: COLORS.dark }} />
+              {digits.length > 0 && !validPhone && <p className="mt-2 text-sm text-red-700">Informe um número válido com DDD.</p>}
+              <label className="mt-5 flex items-start gap-3 text-sm" style={{ color: COLORS.gray }}>
+                <input type="checkbox" className="mt-1" checked={consent} onChange={(event) => setConsent(event.target.checked)} />
+                Autorizo o contato do Meu Provador Virtual pelo WhatsApp sobre minha solicitação de créditos gratuitos.
+              </label>
+              {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}
+              <button type="submit" disabled={!validPhone || !consent || sending}
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-50"
+                style={{ background: COLORS.primary }}>
+                {sending ? "Enviando..." : "Solicitar créditos grátis"} <ArrowRight className="h-5 w-5" />
+              </button>
+              <p className="mt-4 text-xs" style={{ color: COLORS.gray }}>O atendimento e o envio dos créditos são feitos manualmente.</p>
+            </>
           )}
-
-          <div className="mt-8 rounded-[24px] border border-zinc-200 bg-white p-5">
-            <div>
-              <h2 className="text-xl font-bold tracking-tight" style={{ color: COLORS.dark }}>
-                Como divulgar no Instagram
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed" style={{ color: "rgba(28,28,28,0.72)" }}>
-                Use o passo a passo abaixo para adicionar o link nos Stories e direcionar suas clientes
-                para solicitar um teste gratuito, sujeito à disponibilidade mensal.
-              </p>
-            </div>
-
-            <div className="mt-5 overflow-hidden rounded-[20px] border border-zinc-200 bg-white">
-              <img
-                src="/tutorial-instagram-link.png"
-                alt="Passo a passo para divulgar o link da loja no Instagram"
-                className="h-auto w-full object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </section>
   );
