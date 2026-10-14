@@ -567,7 +567,7 @@ function ShopkeeperSection() {
           </h2>
 
           <p className="mt-6 text-base leading-relaxed sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
-            Retire seu pacote de créditos grátis e compartilhe a experiência do Meu Provador Virtual com suas clientes pelo WhatsApp e Instagram. Nossa equipe entra em contato para enviar o acesso.
+            Retire seu pacote de créditos grátis pelo WhatsApp e compartilhe a experiência do Meu Provador Virtual com suas clientes no WhatsApp e Instagram.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -798,7 +798,7 @@ function MarketingHero() {
             style={{ color: "rgba(28,28,28,0.72)" }}
           >
             Mais oportunidades para experimentar. Mais confiança para comprar.
-            Solicite seu pacote de créditos grátis para compartilhar com suas clientes. Nossa equipe entrará em contato pelo WhatsApp para enviar o acesso e orientar a divulgação. Suas clientes poderão experimentar roupas virtualmente, onde estiverem e sem instalar aplicativo.
+            Informe seu WhatsApp para receber seu pacote de créditos grátis e compartilhar com suas clientes. Elas poderão experimentar roupas virtualmente, onde estiverem e sem instalar aplicativo.
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
@@ -1064,7 +1064,7 @@ function MarketingBenefits() {
     {
       icon: Sparkles,
       title: "Custo zero para a loja",
-      desc: "A loja pode solicitar um pacote de créditos gratuitos para apresentar o provador virtual às clientes, com atendimento da nossa equipe.",
+      desc: "A loja pode solicitar um pacote de créditos gratuitos pelo WhatsApp para apresentar o provador virtual às clientes.",
     },
   ];
 
@@ -1114,12 +1114,12 @@ function FAQ() {
     {
       question: "Como a loja solicita os créditos grátis?",
       answer:
-        "Acesse “Retirar créditos grátis”, informe seu número de WhatsApp com DDD e envie a solicitação. Nossa equipe entrará em contato para orientar e disponibilizar o acesso.",
+        "Acesse “Retirar créditos grátis”, informe seu número de WhatsApp com DDD e envie a solicitação para receber seu pacote de créditos gratuitos pelo WhatsApp.",
     },
     {
       question: "Como posso compartilhar com minhas clientes?",
       answer:
-        "Após receber o acesso da nossa equipe, você poderá compartilhar com suas clientes pelo WhatsApp, Instagram, Stories, Direct e outros canais da loja.",
+        "Ao receber seu pacote de créditos pelo WhatsApp, você poderá compartilhar a experiência com suas clientes pelo WhatsApp, Instagram, Stories, Direct e outros canais da loja.",
     },
     {
       question: "A cliente precisa instalar algum aplicativo?",
@@ -1129,7 +1129,7 @@ function FAQ() {
     {
       question: "A loja paga para solicitar os créditos gratuitos?",
       answer:
-        "Não. A solicitação do pacote de créditos gratuitos não tem custo. Nossa equipe entrará em contato pelo WhatsApp para orientar o uso e o compartilhamento com suas clientes.",
+        "Não. A solicitação é gratuita. Informe seu número para receber o pacote de créditos pelo WhatsApp e compartilhar a experiência com suas clientes.",
     },
     {
       question: "A cliente paga para fazer o primeiro teste?",
@@ -1222,7 +1222,7 @@ function MarketingCTA() {
               className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
               style={{ color: "rgba(28,28,28,0.72)" }}
             >
-              Solicite seu pacote gratuito pelo WhatsApp e receba nossa orientação para compartilhar a experiência com suas clientes. A liberação será realizada pela nossa equipe.
+              Informe seu WhatsApp para receber seu pacote de créditos grátis e compartilhar a experiência com suas clientes.
             </p>
             <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
               <PrimaryButton href="/criar-link">
@@ -1326,7 +1326,7 @@ function CreateLinkPage() {
             <div className="max-w-3xl rounded-[20px] border border-zinc-200 bg-white p-5">
           <p className="text-sm font-semibold" style={{ color: COLORS.dark }}>Como funciona?</p>
           <p className="mt-2 text-sm leading-relaxed" style={{ color: COLORS.gray }}>
-            Informe seu WhatsApp. Nossa equipe entrará em contato para preparar e enviar seu acesso aos créditos gratuitos. Você poderá compartilhar a experiência com suas clientes.
+            Informe seu número de WhatsApp para receber seu pacote de créditos gratuitos e compartilhar a experiência com suas clientes.
           </p>
         </div>
 
@@ -1334,15 +1334,15 @@ function CreateLinkPage() {
           {sent ? (
             <div role="status">
               <CheckCircle2 className="mb-4 h-10 w-10" style={{ color: "#15803D" }} />
-              <h2 className="text-2xl font-bold" style={{ color: COLORS.dark }}>Solicitação enviada</h2>
+              <h2 className="text-2xl font-bold" style={{ color: COLORS.dark }}>Solicitação enviada!</h2>
               <p className="mt-3" style={{ color: COLORS.gray }}>
-                Recebemos sua solicitação. Nossa equipe entrará em contato pelo WhatsApp. Você voltará à página inicial em alguns segundos.
+                Sua solicitação foi recebida. Você receberá seu pacote de créditos grátis pelo WhatsApp. Em alguns segundos, voltará à página inicial.
               </p>
             </div>
           ) : (
             <>
               <label htmlFor="whatsapp-lojista" className="block text-lg font-bold" style={{ color: COLORS.dark }}>Seu número de WhatsApp</label>
-              <p className="mt-2 text-sm" style={{ color: COLORS.gray }}>Informe o número com DDD para receber nosso contato.</p>
+              <p className="mt-2 text-sm" style={{ color: COLORS.gray }}>Informe seu número com DDD para receber seus créditos grátis pelo WhatsApp.</p>
               <input id="whatsapp-lojista" type="tel" inputMode="tel" autoComplete="tel-national" required maxLength={20}
                 value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="(35) 99999-9999"
                 className="mt-5 w-full rounded-full border-2 border-zinc-300 bg-white px-6 py-5 text-lg font-semibold outline-none transition focus:border-zinc-900"
@@ -1350,7 +1350,7 @@ function CreateLinkPage() {
               {digits.length > 0 && !validPhone && <p className="mt-2 text-sm text-red-700">Informe um número válido com DDD.</p>}
               <label className="mt-5 flex items-start gap-3 text-sm" style={{ color: COLORS.gray }}>
                 <input type="checkbox" className="mt-1" checked={consent} onChange={(event) => setConsent(event.target.checked)} />
-                Autorizo o contato do Meu Provador Virtual pelo WhatsApp sobre minha solicitação de créditos gratuitos.
+                Autorizo o envio de mensagens do Meu Provador Virtual pelo WhatsApp relacionadas ao meu pacote de créditos gratuitos.
               </label>
               {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}
               <button type="submit" disabled={!validPhone || !consent || sending}
@@ -1358,7 +1358,7 @@ function CreateLinkPage() {
                 style={{ background: COLORS.primary }}>
                 {sending ? "Enviando..." : "Solicitar créditos grátis"} <ArrowRight className="h-5 w-5" />
               </button>
-              <p className="mt-4 text-xs" style={{ color: COLORS.gray }}>Entraremos em contato pelo WhatsApp para dar continuidade à sua solicitação.</p>
+              <p className="mt-4 text-xs" style={{ color: COLORS.gray }}>Seu pacote de créditos gratuitos será enviado pelo WhatsApp após a solicitação ser processada.</p>
             </>
           )}
         </form>
