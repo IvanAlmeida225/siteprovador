@@ -1302,13 +1302,35 @@ function CreateLinkPage() {
           </div>
           <a href="#/" className="shrink-0 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold" style={{ color: COLORS.dark }}>Voltar</a>
         </div>
-        <div className="mt-6 max-w-3xl rounded-[20px] border border-zinc-200 bg-white p-5">
+        <div className="mt-8 grid items-start gap-8 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-14">
+          <div className="mx-auto w-full max-w-[420px]">
+            <div className="mx-auto w-full max-w-[360px]">
+          <div className="overflow-hidden rounded-[36px] border border-zinc-200 bg-white p-3 shadow-[0_26px_80px_rgba(0,0,0,0.15)]">
+            <div className="overflow-hidden rounded-[28px] bg-zinc-50">
+              <div className="aspect-[964/2144]">
+                <video
+                  src="/video-demo.mp4?v=20260824"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+          <div className="w-full min-w-0">
+            <div className="max-w-3xl rounded-[20px] border border-zinc-200 bg-white p-5">
           <p className="text-sm font-semibold" style={{ color: COLORS.dark }}>Como funciona?</p>
           <p className="mt-2 text-sm leading-relaxed" style={{ color: COLORS.gray }}>
             Informe seu WhatsApp. Nossa equipe entrará em contato para preparar e enviar seu acesso aos créditos gratuitos. Você poderá compartilhar a experiência com suas clientes.
           </p>
         </div>
-        <div className="mt-8 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,360px)] lg:gap-12">\n        <form onSubmit={submitLead} className="rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_18px_60px_rgba(0,0,0,0.08)] sm:p-8">
+
+            <form onSubmit={submitLead} className="mt-6 rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_18px_60px_rgba(0,0,0,0.08)] sm:p-8">
           {sent ? (
             <div role="status">
               <CheckCircle2 className="mb-4 h-10 w-10" style={{ color: "#15803D" }} />
@@ -1340,23 +1362,7 @@ function CreateLinkPage() {
             </>
           )}
         </form>
-        <div className="mx-auto w-full max-w-[360px]">
-          <div className="overflow-hidden rounded-[36px] border border-zinc-200 bg-white p-3 shadow-[0_26px_80px_rgba(0,0,0,0.15)]">
-            <div className="overflow-hidden rounded-[28px] bg-zinc-50">
-              <div className="aspect-[964/2144]">
-                <video
-                  src="/video-demo.mp4?v=20260824"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
