@@ -1559,6 +1559,13 @@ function Footer() {
               Retirar créditos grátis
             </a>
             <a
+              href="/como-funciona/"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 font-semibold transition hover:bg-zinc-50"
+              style={{ color: COLORS.dark }}
+            >
+              Como funciona
+            </a>
+            <a
               href="/politicas"
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 font-semibold transition hover:bg-zinc-50"
               style={{ color: COLORS.dark }}
@@ -1576,6 +1583,67 @@ function Footer() {
   );
 }
 
+function GeoGuides() {
+  const guides = [
+    {
+      title: "Provador virtual pelo WhatsApp",
+      description: "Entenda como visualizar roupas com IA sem instalar outro aplicativo.",
+      href: "/provador-virtual-whatsapp/",
+    },
+    {
+      title: "Provador virtual para lojas",
+      description: "Veja como compartilhar o link da loja com suas clientes.",
+      href: "/provador-virtual-para-lojas/",
+    },
+    {
+      title: "Como experimentar roupas online",
+      description: "Passo a passo com foto de corpo inteiro e imagem da roupa.",
+      href: "/experimentar-roupas-online/",
+    },
+    {
+      title: "Como funciona a ferramenta",
+      description: "Conheça o processo, as dúvidas comuns e os limites da simulação.",
+      href: "/como-funciona/",
+    },
+  ];
+
+  return (
+    <section aria-labelledby="guias-geo" style={{ background: COLORS.light }}>
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-20">
+        <h2
+          id="guias-geo"
+          className="text-3xl font-bold tracking-tight sm:text-4xl"
+          style={{ color: COLORS.dark }}
+        >
+          Conheça mais sobre o provador virtual
+        </h2>
+        <p className="mt-3 max-w-3xl text-base text-zinc-600">
+          Entenda como a experiência funciona para quem compra e para quem vende roupas.
+        </p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {guides.map((guide) => (
+            <a
+              key={guide.href}
+              href={guide.href}
+              className="group rounded-[24px] border border-zinc-200 bg-white p-6 transition hover:border-zinc-400"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-lg font-semibold" style={{ color: COLORS.dark }}>
+                  {guide.title}
+                </h3>
+                <ArrowRight className="h-5 w-5 shrink-0 text-zinc-500 transition group-hover:translate-x-1" />
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                {guide.description}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HomePage() {
   return (
     <>
@@ -1585,6 +1653,7 @@ function HomePage() {
       <ProcessSection />
       <MarketingBenefits />
       <FAQ />
+      <GeoGuides />
       <MarketingCTA />
     </>
   );
