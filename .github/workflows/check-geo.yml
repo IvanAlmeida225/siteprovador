@@ -1,0 +1,22 @@
+name: Validar SEO e GEO
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter codigo
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instalar dependencias
+        run: npm install --no-audit --no-fund
+      - name: Compilar site
+        run: npm run build
+      - name: Validar SEO/GEO da distribuicao
+        run: node scripts/check-geo.mjs
