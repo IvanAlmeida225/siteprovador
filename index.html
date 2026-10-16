@@ -47,23 +47,63 @@
     <meta name="theme-color" content="#1C1C1C" />
     <script type="application/ld+json">
       {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Meu Provador Virtual",
-        "url": "https://meuprovadorvirtual.com/",
-        "description": "Provador virtual para lojas de moda que permite visualizar looks no próprio corpo pelo WhatsApp.",
-        "serviceType": "Provador virtual para lojas de moda",
-        "areaServed": "BR",
-        "audience": {
-          "@type": "BusinessAudience",
-          "audienceType": "Lojas e marcas de moda"
-        },
-        "provider": {
-          "@type": "Organization",
-          "name": "Meu Provador Virtual",
-          "email": "meuprovadorvirtual@gmail.com",
-          "url": "https://meuprovadorvirtual.com/"
-        }
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": "Organization",
+                        "@id": "https://meuprovadorvirtual.com/#organization",
+                        "name": "Meu Provador Virtual",
+                        "url": "https://meuprovadorvirtual.com/",
+                        "logo": "https://meuprovadorvirtual.com/logo.png",
+                        "email": "meuprovadorvirtual@gmail.com"
+                  },
+                  {
+                        "@type": "WebSite",
+                        "@id": "https://meuprovadorvirtual.com/#website",
+                        "name": "Meu Provador Virtual",
+                        "url": "https://meuprovadorvirtual.com/",
+                        "inLanguage": "pt-BR",
+                        "publisher": {
+                              "@id": "https://meuprovadorvirtual.com/#organization"
+                        }
+                  },
+                  {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://meuprovadorvirtual.com/#software",
+                        "name": "Meu Provador Virtual",
+                        "url": "https://meuprovadorvirtual.com/",
+                        "applicationCategory": "ShoppingApplication",
+                        "operatingSystem": "WhatsApp",
+                        "description": "Serviço de inteligência artificial que gera simulações visuais e ilustrativas de roupas em fotos enviadas pelo WhatsApp. Não determina medidas nem tamanhos.",
+                        "featureList": [
+                              "Simulação visual de roupas com IA",
+                              "Atendimento e entrega pelo WhatsApp",
+                              "Compartilhamento de links por lojas de moda"
+                        ],
+                        "publisher": {
+                              "@id": "https://meuprovadorvirtual.com/#organization"
+                        }
+                  },
+                  {
+                        "@type": "Service",
+                        "@id": "https://meuprovadorvirtual.com/#service",
+                        "name": "Provador virtual de roupas pelo WhatsApp",
+                        "serviceType": "Simulação visual de looks com inteligência artificial",
+                        "description": "Experiência digital de visualização de roupas para clientes e lojas de moda. Resultado ilustrativo, sem medição de tamanho.",
+                        "url": "https://meuprovadorvirtual.com/",
+                        "provider": {
+                              "@id": "https://meuprovadorvirtual.com/#organization"
+                        },
+                        "areaServed": {
+                              "@type": "Country",
+                              "name": "Brasil"
+                        },
+                        "audience": {
+                              "@type": "BusinessAudience",
+                              "audienceType": "Lojas e marcas de moda"
+                        }
+                  }
+            ]
       }
     </script>
   </head>
