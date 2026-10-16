@@ -797,8 +797,9 @@ function MarketingHero() {
             className="mx-auto mt-7 max-w-2xl text-base leading-relaxed sm:text-lg md:text-xl lg:mx-0"
             style={{ color: "rgba(28,28,28,0.72)" }}
           >
-            Mais oportunidades para experimentar. Mais confiança para comprar.
-            Informe seu WhatsApp para receber seu pacote de créditos grátis e compartilhar com suas clientes. Elas poderão experimentar roupas virtualmente, onde estiverem e sem instalar aplicativo.
+            Amplie os provadores da sua loja para o WhatsApp e permita que suas clientes
+            experimentem looks no próprio corpo, mesmo fora do horário comercial.
+            Solicite créditos grátis para começar e compartilhe a experiência com suas clientes.
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
