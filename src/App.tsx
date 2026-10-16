@@ -1252,6 +1252,20 @@ function MarketingCTA() {
 
 function CreateLinkPage() {
   const [phone, setPhone] = useState("");
+  const [shopName, setShopName] = useState("");
+  const [linkCopied, setLinkCopied] = useState(false);
+  const shopSlug = useMemo(() => slugify(shopName), [shopName]);
+  const storeLink = shopSlug ? `${SITE_URL}/l/${shopSlug}` : "";
+
+  async function copyStoreLink() {
+    if (!storeLink) return;
+    try {
+      await navigator.clipboard.writeText(storeLink);
+      setLinkCopied(true);
+    } catch {
+      setLinkCopied(false);
+    }
+  }
   const [consent, setConsent] = useState(false);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -1362,6 +1376,67 @@ function CreateLinkPage() {
             </>
           )}
         </form>
+
+            <div className="mt-6 rounded-[28px] border border-zinc-200 bg-white p-6 shadow-[0_12px_36px_rgba(0,0,0,0.05)] sm:p-8">
+              <h2 className="text-xl font-bold tracking-tight" style={{ color: COLORS.dark }}>
+                Crie seu link direto aqui
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed" style={{ color: COLORS.gray }}>
+                Informe o nome da sua loja para gerar um link que você pode compartilhar com suas clientes no WhatsApp ou Instagram.
+              </p>
+
+              <label htmlFor="nome-loja-link" className="mt-5 block text-sm font-semibold" style={{ color: COLORS.dark }}>
+                Nome da sua loja
+              </label>
+              <input
+                id="nome-loja-link"
+                type="text"
+                autoComplete="organization"
+                value={shopName}
+                onChange={(event) => {
+                  setShopName(event.target.value);
+                  setLinkCopied(false);
+                }}
+                placeholder="Ex.: Ana Modas"
+                maxLength={80}
+                className="mt-2 w-full rounded-full border-2 border-zinc-300 bg-white px-5 py-4 text-base outline-none transition focus:border-zinc-900"
+                style={{ color: COLORS.dark }}
+              />
+
+              {storeLink && (
+                <div className="mt-5">
+                  <p className="text-sm font-semibold" style={{ color: COLORS.dark }}>
+                    Link da sua loja
+                  </p>
+                  <div className="mt-2 break-all rounded-2xl border border-zinc-200 px-4 py-3 text-sm" style={{ background: COLORS.light, color: COLORS.dark }}>
+                    {storeLink}
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      onClick={copyStoreLink}
+                      className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white"
+                      style={{ background: COLORS.primary }}
+                    >
+                      {linkCopied ? <CheckCircle2 className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                      {linkCopied ? "Link copiado!" : "Copiar link"}
+                    </button>
+                    <a
+                      href={storeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-zinc-50"
+                      style={{ color: COLORS.dark }}
+                    >
+                      Abrir link <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+              )}
+              <p className="mt-5 text-xs leading-relaxed" style={{ color: COLORS.gray }}>
+                O link leva suas clientes ao provador no WhatsApp. Para receber o pacote de créditos grátis, utilize o formulário acima.
+              </p>
+            </div>
           </div>
         </div>
       </div>
