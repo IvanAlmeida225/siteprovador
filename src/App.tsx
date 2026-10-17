@@ -22,6 +22,14 @@ import {
 } from "lucide-react";
 import { motion } from "motion/react";
 
+declare global {
+  interface Window {
+    MPVAnalytics?: {
+      track: (name: string, parameters?: Record<string, string>) => void;
+    };
+  }
+}
+
 const WA_NUMBER = "553598762499";
 const SITE_URL = "https://meuprovadorvirtual.com";
 const WA_LINK = `https://wa.me/${WA_NUMBER}`;
@@ -220,6 +228,10 @@ Meu Provador Virtual
 CNPJ: 66.535.748/0001-05
 E-mail: meuprovadorvirtual@gmail.com
 Site: https://meuprovadorvirtual.com
+
+17. ANALISE OPCIONAL DE VISITAS
+Mediante autorizacao, o site utiliza o Google Analytics 4 para medir visitas, origem do trafego, paginas consultadas e eventos de interacao, como cliques para o WhatsApp e pedidos de creditos. O Google Analytics pode utilizar cookies e receber dados tecnicos de navegacao segundo as politicas do Google. Os eventos personalizados nao incluem numeros de telefone informados no formulario, imagens pessoais nem conteudo de conversas.
+O Analytics nao e carregado antes da autorizacao. A escolha pode ser recusada ou modificada a qualquer momento em "Preferencias de analise", no rodape do site. A recusa nao impede a utilizacao da ferramenta nem a solicitacao dos creditos. A retirada da autorizacao interrompe novos eventos e tenta remover os cookies analiticos de primeira parte identificados pelo site.
 `;
 
 function slugify(value: string) {
@@ -1294,6 +1306,12 @@ function CreateLinkPage() {
         mode: "no-cors",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify({ phone: "55" + digits, source: "site-meu-provador", consent: true, website: "" })
+      });
+      // Resposta no-cors nao permite confirmar a gravacao no Apps Script.
+      // Nunca incluir telefone, nome ou campos de formulario no Analytics.
+      window.MPVAnalytics?.track("mpv_lead_request_submitted", {
+        method: "apps_script",
+        delivery_status: "unverified"
       });
       setSent(true);
     } catch {
