@@ -19,4 +19,6 @@ jobs:
       - name: Compilar site
         run: npm run build
       - name: Validar SEO/GEO da distribuicao
-        run: node scripts/check-geo.mjs
+        run: |
+          node scripts/check-geo.mjs
+          node scripts/check-analytics.mjs
