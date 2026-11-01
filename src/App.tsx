@@ -409,7 +409,7 @@ function TopNav() {
 
           <div className="flex min-w-[150px] justify-end">
             <PrimaryButton href="/criar-link">
-              Retirar créditos grátis <ArrowRight className="h-4 w-4" />
+              Retirar 30 créditos grátis <ArrowRight className="h-4 w-4" />
             </PrimaryButton>
           </div>
         </div>
@@ -571,20 +571,20 @@ function ShopkeeperSection() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-xs font-semibold shadow-sm">
             <Store className="h-4 w-4" style={{ color: COLORS.primary }} />
-            <span style={{ color: COLORS.dark }}>Para lojistas</span>
+            <span style={{ color: COLORS.dark }}>Fase piloto para lojistas</span>
           </div>
 
           <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl" style={{ color: COLORS.dark }}>
-            Amplie a experiência da sua loja.
+            30 créditos grátis para sua loja experimentar com as clientes.
           </h2>
 
           <p className="mt-6 text-base leading-relaxed sm:text-lg" style={{ color: "rgba(28,28,28,0.72)" }}>
-            Retire seu pacote de créditos grátis pelo WhatsApp e compartilhe a experiência do Meu Provador Virtual com suas clientes no WhatsApp e Instagram.
+            Estamos convidando lojas parceiras para a fase piloto do Meu Provador Virtual. Receba um pacote de 30 créditos gratuitos pelo WhatsApp e ofereça às suas clientes a experiência de provar roupas de onde estiverem.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <PrimaryButton href="/criar-link">
-              Solicitar créditos grátis
+              Quero meus 30 créditos grátis
               <ArrowRight className="h-5 w-5" />
             </PrimaryButton>
             <a
@@ -795,7 +795,7 @@ function MarketingHero() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-xs font-semibold shadow-sm">
             <Smartphone className="h-4 w-4" style={{ color: COLORS.primary }} />
-            <span>O provador da sua loja, agora também no WhatsApp</span>
+            <span>Fase piloto para lojistas • 30 créditos grátis</span>
           </div>
 
           <h1
@@ -809,14 +809,15 @@ function MarketingHero() {
             className="mx-auto mt-7 max-w-2xl text-base leading-relaxed sm:text-lg md:text-xl lg:mx-0"
             style={{ color: "rgba(28,28,28,0.72)" }}
           >
-            Amplie os provadores da sua loja para o WhatsApp e permita que suas clientes
-            experimentem looks no próprio corpo, mesmo fora do horário comercial.
-            Solicite créditos grátis para começar e compartilhe a experiência com suas clientes.
+            Suas clientes nem sempre têm tempo de passar na loja para experimentar.
+            Estamos convidando lojas para a fase piloto do Meu Provador Virtual:
+            solicite 30 créditos gratuitos e ofereça a experiência de experimentar
+            roupas pelo WhatsApp, de onde estiverem e mesmo com a loja fechada.
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <PrimaryButton href="/criar-link">
-              Retirar créditos grátis
+              Quero 30 créditos grátis
               <ArrowRight className="h-5 w-5" />
             </PrimaryButton>
             <a
@@ -836,7 +837,7 @@ function MarketingHero() {
             style={{ color: "rgba(28,28,28,0.58)" }}
           >
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="h-4 w-4" /> Link grátis para a loja
+              <CheckCircle2 className="h-4 w-4" /> 30 créditos grátis na fase piloto
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CheckCircle2 className="h-4 w-4" /> Primeiro teste grátis para a cliente
@@ -1076,8 +1077,8 @@ function MarketingBenefits() {
     },
     {
       icon: Sparkles,
-      title: "Custo zero para a loja",
-      desc: "A loja pode solicitar um pacote de créditos gratuitos pelo WhatsApp para apresentar o provador virtual às clientes.",
+      title: "30 créditos grátis para começar",
+      desc: "Na fase piloto, a loja participante pode solicitar um pacote único de 30 créditos grátis para compartilhar a experiência com as clientes.",
     },
   ];
 
@@ -1125,9 +1126,19 @@ function MarketingBenefits() {
 function FAQ() {
   const items = [
     {
-      question: "Como a loja solicita os créditos grátis?",
+      question: "Como a loja solicita os 30 créditos grátis?", 
       answer:
-        "Acesse “Retirar créditos grátis”, informe seu número de WhatsApp com DDD e envie a solicitação para receber seu pacote de créditos gratuitos pelo WhatsApp.",
+        "Acesse “Retirar 30 créditos grátis”, informe seu número de WhatsApp com DDD e envie a solicitação. O pacote gratuito da fase piloto será disponibilizado pelo WhatsApp após o processamento da solicitação.",
+    },
+    {
+      question: "O que é a fase piloto?",
+      answer:
+        "Estamos convidando lojas parceiras a experimentar o Meu Provador Virtual com suas clientes. Cada loja participante pode solicitar uma única vez um pacote de 30 créditos gratuitos, disponibilizado pelo WhatsApp.",
+    },
+    {
+      question: "Preciso criar um link para receber os créditos?",
+      answer:
+        "Não. Para solicitar o pacote de 30 créditos grátis, basta informar o WhatsApp no formulário. A opção “Crie seu link direto aqui” é independente e serve para compartilhar o provador com suas clientes.",
     },
     {
       question: "Como posso compartilhar com minhas clientes?",
@@ -1142,7 +1153,7 @@ function FAQ() {
     {
       question: "A loja paga para solicitar os créditos gratuitos?",
       answer:
-        "Não. A solicitação é gratuita. Informe seu número para receber o pacote de créditos pelo WhatsApp e compartilhar a experiência com suas clientes.",
+        "Não. A participação na fase piloto é gratuita. Cada loja participante pode receber um pacote de 30 créditos para compartilhar a experiência com suas clientes pelo WhatsApp.",
     },
     {
       question: "A cliente paga para fazer o primeiro teste?",
@@ -1229,17 +1240,17 @@ function MarketingCTA() {
               className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl"
               style={{ color: COLORS.dark }}
             >
-              Ofereça créditos grátis para suas clientes experimentarem.
+              Sua loja pode começar com 30 créditos grátis.
             </h2>
             <p
               className="mx-auto mt-6 max-w-2xl text-base sm:text-lg"
               style={{ color: "rgba(28,28,28,0.72)" }}
             >
-              Informe seu WhatsApp para receber seu pacote de créditos grátis e compartilhar a experiência com suas clientes.
+              Participe da fase piloto do Meu Provador Virtual. Informe seu WhatsApp para solicitar o pacote gratuito e compartilhar a experiência com suas clientes.
             </p>
             <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
               <PrimaryButton href="/criar-link">
-                Retirar créditos grátis
+                Quero meus 30 créditos grátis
                 <ArrowRight className="h-5 w-5" />
               </PrimaryButton>
               <a
@@ -1327,10 +1338,10 @@ function CreateLinkPage() {
         <div className="flex items-start justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{ color: COLORS.dark }}>
-              Retire seu pacote de créditos grátis
+              Retire seu pacote de 30 créditos grátis
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-relaxed" style={{ color: COLORS.gray }}>
-              Solicite créditos gratuitos para compartilhar com suas clientes e oferecer a experiência de provar roupas virtualmente pelo WhatsApp.
+              Estamos convidando lojas parceiras para a fase piloto do Meu Provador Virtual. Compartilhe com suas clientes uma forma prática de experimentar roupas pelo WhatsApp, sem precisar ir até a loja.
             </p>
           </div>
           <a href="#/" className="shrink-0 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold" style={{ color: COLORS.dark }}>Voltar</a>
@@ -1359,7 +1370,7 @@ function CreateLinkPage() {
             <div className="max-w-3xl rounded-[20px] border border-zinc-200 bg-white p-5">
           <p className="text-sm font-semibold" style={{ color: COLORS.dark }}>Como funciona?</p>
           <p className="mt-2 text-sm leading-relaxed" style={{ color: COLORS.gray }}>
-            Informe seu número de WhatsApp para receber seu pacote de créditos gratuitos e compartilhar a experiência com suas clientes.
+            Informe seu WhatsApp para solicitar o pacote de 30 créditos gratuitos da fase piloto e compartilhar a experiência com suas clientes.
           </p>
         </div>
 
@@ -1369,13 +1380,13 @@ function CreateLinkPage() {
               <CheckCircle2 className="mb-4 h-10 w-10" style={{ color: "#15803D" }} />
               <h2 className="text-2xl font-bold" style={{ color: COLORS.dark }}>Solicitação enviada!</h2>
               <p className="mt-3" style={{ color: COLORS.gray }}>
-                Sua solicitação foi recebida. Você receberá seu pacote de créditos grátis pelo WhatsApp. Em alguns segundos, voltará à página inicial.
+                Sua solicitação foi enviada. Seu pacote de 30 créditos grátis da fase piloto será disponibilizado pelo WhatsApp após o processamento. Em alguns segundos, você voltará à página inicial.
               </p>
             </div>
           ) : (
             <>
               <label htmlFor="whatsapp-lojista" className="block text-lg font-bold" style={{ color: COLORS.dark }}>Seu número de WhatsApp</label>
-              <p className="mt-2 text-sm" style={{ color: COLORS.gray }}>Informe seu número com DDD para receber seus créditos grátis pelo WhatsApp.</p>
+              <p className="mt-2 text-sm" style={{ color: COLORS.gray }}>Informe seu número com DDD para receber o pacote de 30 créditos grátis pelo WhatsApp.</p>
               <input id="whatsapp-lojista" type="tel" inputMode="tel" autoComplete="tel-national" required maxLength={20}
                 value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="(35) 99999-9999"
                 className="mt-5 w-full rounded-full border-2 border-zinc-300 bg-white px-6 py-5 text-lg font-semibold outline-none transition focus:border-zinc-900"
@@ -1383,15 +1394,15 @@ function CreateLinkPage() {
               {digits.length > 0 && !validPhone && <p className="mt-2 text-sm text-red-700">Informe um número válido com DDD.</p>}
               <label className="mt-5 flex items-start gap-3 text-sm" style={{ color: COLORS.gray }}>
                 <input type="checkbox" className="mt-1" checked={consent} onChange={(event) => setConsent(event.target.checked)} />
-                Autorizo o envio de mensagens do Meu Provador Virtual pelo WhatsApp relacionadas ao meu pacote de créditos gratuitos.
+                Autorizo o envio de mensagens do Meu Provador Virtual pelo WhatsApp relacionadas à minha solicitação do pacote gratuito da fase piloto.
               </label>
               {error && <p role="alert" className="mt-3 text-sm text-red-700">{error}</p>}
               <button type="submit" disabled={!validPhone || !consent || sending}
                 className="mt-6 inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-50"
                 style={{ background: COLORS.primary }}>
-                {sending ? "Enviando..." : "Solicitar créditos grátis"} <ArrowRight className="h-5 w-5" />
+                {sending ? "Enviando..." : "Solicitar meus 30 créditos grátis"} <ArrowRight className="h-5 w-5" />
               </button>
-              <p className="mt-4 text-xs" style={{ color: COLORS.gray }}>Seu pacote de créditos gratuitos será enviado pelo WhatsApp após a solicitação ser processada.</p>
+              <p className="mt-4 text-xs" style={{ color: COLORS.gray }}>A participação na fase piloto é gratuita. O pacote será enviado pelo WhatsApp após o processamento da solicitação.</p>
             </>
           )}
         </form>
@@ -1453,7 +1464,7 @@ function CreateLinkPage() {
                 </div>
               )}
               <p className="mt-5 text-xs leading-relaxed" style={{ color: COLORS.gray }}>
-                O link leva suas clientes ao provador no WhatsApp. Para receber o pacote de créditos grátis, utilize o formulário acima.
+                O link leva suas clientes ao provador no WhatsApp. Para solicitar os 30 créditos grátis da fase piloto, utilize o formulário acima.
               </p>
             </div>
           </div>
@@ -1574,7 +1585,7 @@ function Footer() {
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-4 py-2 font-semibold transition hover:bg-zinc-50"
               style={{ color: COLORS.dark }}
             >
-              Retirar créditos grátis
+              Retirar 30 créditos grátis
             </a>
             <a
               href="/como-funciona/"
