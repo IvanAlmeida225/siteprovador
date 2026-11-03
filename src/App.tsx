@@ -1570,11 +1570,11 @@ function Footer() {
                 Meu Provador Virtual
               </span>
               <a
-                href="mailto:meuprovadorvirtual@gmail.com"
+                href="mailto:contato@meuprovadorvirtual.com"
                 className="text-xs"
                 style={{ color: "rgba(28,28,28,0.55)" }}
               >
-                meuprovadorvirtual@gmail.com
+                contato@meuprovadorvirtual.com
               </a>
             </div>
           </div>
