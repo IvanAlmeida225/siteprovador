@@ -32,6 +32,11 @@ for (const slug of slugs) {
   assert.ok(page.includes('<link rel="canonical" href="' + canonical + '">'), "Canonical incorreta: " + slug);
   assert.match(page, /<h1>[^<]+<\/h1>/);
   assert.ok(page.includes("/criar-link"), "CTA ausente: " + slug);
+  assert.ok(page.includes('class="brand-mark"'), "Logotipo circular ausente: " + slug);
+  assert.ok(page.includes('href="/#oportunidade"') && page.includes('href="/#rotina"'), "Navegacao inconsistente: " + slug);
+  assert.ok(page.includes("Retirar 30 créditos grátis"), "CTA da fase piloto inconsistente: " + slug);
+  assert.ok(page.includes('href="mailto:contato@meuprovadorvirtual.com"'), "Contato comercial ausente: " + slug);
+  assert.ok(!page.includes("meuprovadorvirtual@gmail.com"), "E-mail antigo no rodape: " + slug);
   assert.ok(sitemap.includes("<loc>" + canonical + "</loc>"), "Sitemap ausente: " + slug);
   const match = page.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
   assert.ok(match, "JSON-LD ausente: " + slug);
